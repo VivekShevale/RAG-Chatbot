@@ -1,0 +1,15 @@
+{
+  "scheme_id": "scheme_01_example_scheme_name",
+  "scheme_name_en": "",
+  "scheme_name_hi": "",
+  "scheme_name_mr": "",
+  "category": "",
+  "languages_available": ["en", "hi", "mr"],
+  "translation_status": {
+    "en": "native",
+    "hi": "native",
+    "mr": "native"
+  },
+  "source_url": "",
+  "date_collected": ""
+}

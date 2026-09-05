@@ -1,0 +1,21 @@
+[
+  {
+    "scheme_id": "scheme_01_vahan_aksamat_sahay",
+    "scheme_name_en": "Vahan Aksmat Sahay Scheme",
+    "scheme_name_hi": "वाहन अक्षमत सहाय योजना",
+    "scheme_name_mr": "वाहन अक्षमत सहाय योजना",
+    "category": "health and wellness",
+    "languages_available": {
+      "en",
+      "hi",
+      "mr"
+    },
+    "translation_status": {
+      "en": "native",
+      "hi": "native",
+      "mr": "native"
+    },
+    "source_url": "https://www.myscheme.gov.in/schemes/vass",
+    "date_collected": "2026-08-26"
+  }
+]

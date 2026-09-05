@@ -1,0 +1,33 @@
+name: Evaluation Gate
+
+# Runs the golden evaluation set on every PR to main.
+# Fails the build if faithfulness (or other key metrics) drop below threshold,
+# for ANY of the 3 languages. Fill in eval/scripts/run_eval.py as that
+# component is built in Phase C of the project checklist.
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run golden evaluation set
+        run: python eval/scripts/run_eval.py --fail-below 0.75
+
+      # run_eval.py should:
+      #  1. Load eval/golden_dataset/*.json (per language)
+      #  2. Run each question through the current pipeline
+      #  3. Score faithfulness (e.g. via RAGAS)
+      #  4. Exit non-zero if any language's score < --fail-below

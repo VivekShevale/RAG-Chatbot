@@ -1,0 +1,34 @@
+# --- Python ---
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- Environment / secrets ---
+.env
+*.key
+
+# --- Model weights & large artifacts (never commit these) ---
+finetune/checkpoints/*
+!finetune/checkpoints/.gitkeep
+models/*.gguf
+models/*.bin
+models/*.safetensors
+*.ckpt
+
+# --- Vector store / embeddings (regenerable from scripts, don't commit) ---
+data/processed/*.json
+!data/processed/.gitkeep
+chroma_db/
+*.sqlite3
+
+# --- Observability local data ---
+observability/langfuse/data/
+
+# --- OS / editor cruft ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Logs ---
+*.log

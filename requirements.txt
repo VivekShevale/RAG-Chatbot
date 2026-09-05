@@ -1,0 +1,40 @@
+# --- Core ---
+python-dotenv
+
+# --- Embeddings & Vector Store ---
+sentence-transformers
+chromadb
+
+# --- Retrieval ---
+rank-bm25
+
+# --- LLM (local via Ollama) ---
+ollama
+
+# --- Structured output validation ---
+pydantic
+
+# --- Voice: ASR / TTS ---
+openai-whisper
+piper-tts
+
+# --- Server / orchestration ---
+fastapi
+uvicorn
+websockets
+
+# --- Evaluation ---
+ragas
+
+# --- Fine-tuning ---
+transformers
+peft
+trl
+bitsandbytes
+datasets
+
+# --- Observability ---
+langfuse
+
+# --- Testing ---
+pytest

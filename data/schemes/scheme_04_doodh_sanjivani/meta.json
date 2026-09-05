@@ -1,0 +1,21 @@
+[
+  {
+    "scheme_id": "scheme_03_doodh_sanjivani_scheme",
+    "scheme_name_en": "Doodh Sanjivani Scheme",
+    "scheme_name_hi": "दूध संजीवनी योजना",
+    "scheme_name_mr": "दूध संजीवनी योजना",
+    "category": "child nutrition",
+    "languages_available": {
+      "en",
+      "hi",
+      "mr",
+    },
+    "translation_status": {
+      "en": "native",
+      "hi": "native",
+      "mr": "native"
+    },
+    "source_url": "https://www.myscheme.gov.in/",
+    "date_collected": "2026-09-04"
+  }
+]
