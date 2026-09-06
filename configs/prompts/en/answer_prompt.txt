@@ -13,3 +13,7 @@ Context:
 Question: {query}
 
 Answer:
+
+Return ONLY valid JSON with this shape (no markdown fences, no extra text):
+{{"answer": "...", "citations": [{{"scheme_id": "...", "section": "...", "language": "en"}}], "language": "en", "confidence": "high"}}
+If you do not have enough information, set answer to the refusal sentence and citations to [].

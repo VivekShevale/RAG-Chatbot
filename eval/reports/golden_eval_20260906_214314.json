@@ -1,0 +1,531 @@
+{
+  "summary": {
+    "total_questions": 10,
+    "overall": {
+      "retrieval_accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "by_language": {
+      "en": {
+        "count": 8,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "hi": {
+        "count": 2,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": null
+      }
+    },
+    "by_source": {
+      "faq": {
+        "count": 5,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "template": {
+        "count": 5,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      }
+    },
+    "by_section": {
+      "application_process": {
+        "count": 1,
+        "retrieval_accuracy": null,
+        "faithfulness": null
+      },
+      "benefit": {
+        "count": 1,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "details": {
+        "count": 1,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": null
+      },
+      "documents_required": {
+        "count": 1,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "eligibility": {
+        "count": 1,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": null
+      },
+      "faq": {
+        "count": 5,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q1",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What is PM POSHAN Scheme?",
+      "expected_answer": "**PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+      "generated_answer": "PM POSHAN is a centrally‑sponsored scheme of the Ministry of Education (Department of School Education & Literacy) that provides one hot‑cooked meal each day to children studying in Government and Government‑aided schools, aiming to improve their nutritional status and encourage regular school attendance【scheme_01_pm_poshan | faq】. It is implemented nationwide for all eligible children without discrimination of gender or social class【scheme_01_pm_poshan | details】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Unterminated string starting at: line 1 column 2 (char 1)"
+      }
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q2",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "Who is eligible to benefit from PM POSHAN?",
+      "expected_answer": "**All children studying in:**",
+      "generated_answer": "All children who are studying in **Government and Government‑aided schools** are eligible to receive the hot‑cooked meals under PM POSHAN. The scheme is universal and inclusive, providing benefits to every eligible child without any discrimination based on gender, caste, religion or social class【scheme_01_pm_poshan | faq】, 【scheme_01_pm_poshan | application_process】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q3",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What kind of meals are provided under this scheme?",
+      "expected_answer": "The scheme provides one **hot cooked meal** per school day that meets specific calorie and protein norms. The meal includes food **grains, pulses, vegetables, oil/fat, and condiments.**",
+      "generated_answer": "The **PM POSHAN** scheme provides **one hot‑cooked meal per school day** that meets prescribed calorie and protein norms. The meal includes **grains, pulses, vegetables, oil/fat and condiments**【scheme_01_pm_poshan | faq】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_04_doodh_sanjivani",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_04_doodh_sanjivani",
+          "section": "details",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "Answer repeats exactly the meal description given in the context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_eligibility",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "Who is eligible for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "Eligible beneficiaries are **all Indian‑citizen children who are studying in a Primary or Upper‑Primary class (Class 1st to 8th) in a Government or Government‑aided school**【scheme_01_pm_poshan | eligibility】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_documents_required",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What documents are required for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "No documents are required to avail the benefits of the PM POSHAN scheme. 【scheme_01_pm_poshan – documents_required】",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "documents_required",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "The answer matches the context stating no documents are required.",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_benefit",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is the benefit under PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "The PM POSHAN scheme provides **hot‑cooked meals** to children in government and government‑aided schools, with specific nutrition and food‑norm targets for each child per day:\n\n* **Nutrition norms per child per day**  \n  * Primary: 450 kcal and 12 g protein  \n  * Upper‑Primary: 700 kcal and 20 g protein  \n\n* **Food‑norms per child per day**  \n  * Primary: 100 g food grains, 20 g pulses, 50 g vegetables, 5 g oil/fat, plus salt & condiments as needed  \n  * Upper‑Primary: 150 g food grains, 30 g pulses, 75 g vegetables, 7.5 g oil/fat, plus salt & condiments as needed  \n\nThese meals are also extended to pre‑school (Bal Vatika) children before Class I.  \n*Source: scheme_01_pm_poshan – benefit section*",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "benefit",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "All details in the answer are directly stated in the provided context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_application_process",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "How do I apply for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kn4x88j1ehe93gr1q1kxpx95` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7040, Requested 969. Please try again in 67.499999ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_details",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "**PM POSHAN** (Prime Minister’s Overarching Scheme for Holistic Nourishment) is a centrally‑sponsored scheme of the Ministry of Education (Department of School Education & Literacy). It provides one hot‑cooked meal each day to children studying in Government and Government‑aided schools, aiming to improve their nutritional status and encourage regular school attendance【scheme_01_pm_poshan | faq】【scheme_01_pm_poshan | details】",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q1",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पीएम पोषण योजना क्या है?",
+      "expected_answer": "**पीएम पोषण** शिक्षा मंत्रालय द्वारा केंद्र प्रायोजित योजना है, जो सरकारी और सरकारी सहायता प्राप्त स्कूलों में पढ़ने वाले बच्चों को गर्म पका हुआ भोजन प्रदान करती है ताकि उनकी पोषण स्थिति में सुधार हो और **नियमित स्कूल उपस्थिति** को प्रोत्साहित किया जा सके।",
+      "generated_answer": "**पीएम पोषण योजना** (Scheme: scheme_01_pm_poshan, Section: faq)  \nशिक्षा मंत्रालय द्वारा केंद्र‑प्रायोजित योजना है, जो सरकारी और सरकारी‑सहायता प्राप्त स्कूलों में पढ़ने वाले सभी बच्चों को एक गर्म पका हुआ भोजन प्रदान करती है, ताकि उनकी पोषण स्थिति में सुधार हो और **नियमित स्कूल उपस्थिति** को प्रोत्साहित किया जा सके।",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Unterminated string starting at: line 1 column 31 (char 30)"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q2",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पीएम पोषण से कौन लाभान्वित हो सकता है?",
+      "expected_answer": "**सभी बच्चे जो पढ़ रहे हैं:**",
+      "generated_answer": "**PM Poshan (scheme_01_pm_poshan) – Section: faq**  \nPM पोषण योजना का लाभ **सभी पढ़ रहे बच्चों** को मिलता है। विशेष रूप से यह सरकारी और सरकारी‑सहायता प्राप्त स्कूलों में प्रथम से आठवीं कक्षा (और प्री‑स्कूल/बाल वाटिका) में पढ़ने वाले बच्चों को लक्षित करती है।  \n\n(स्रोत: Source 1)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "benefit",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    }
+  ]
+}

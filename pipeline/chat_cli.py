@@ -27,9 +27,16 @@ def print_answer(result: dict):
     print("\n" + "=" * 60)
     print("ANSWER:")
     print(result["answer"])
+    print(f"\nConfidence: {result.get('confidence', 'n/a')} | valid_json: {result.get('raw_valid', 'n/a')}")
     print("\nCITATIONS:")
-    for i, chunk in enumerate(result["cited_chunks"][:3], 1):
-        print(f"  {i}. {chunk['scheme_id']} | {chunk['section']} | lang={chunk['language']}")
+    citations = result.get("citations") or []
+    if citations:
+        for i, c in enumerate(citations, 1):
+            print(f"  {i}. {c.get('scheme_id')} | {c.get('section')} | {c.get('language')}")
+    else:
+        # fallback to retrieved chunks
+        for i, chunk in enumerate(result.get("cited_chunks", [])[:3], 1):
+            print(f"  {i}. {chunk.get('scheme_id')} | {chunk.get('section')} | {chunk.get('language')}")
     print("=" * 60 + "\n")
 
 

@@ -13,3 +13,8 @@
 प्रश्न: {query}
 
 उत्तर:
+
+
+केवल मान्य JSON लौटाएँ (मार्कडाउन बिना):
+{{"answer": "...", "citations": [{{"scheme_id": "...", "section": "...", "language": "hi"}}], "language": "hi", "confidence": "high"}}
+यदि पर्याप्त जानकारी न हो तो refusal वाक्य answer में लिखें और citations [] रखें।

@@ -1,0 +1,632 @@
+[
+  {
+    "id": "en_01",
+    "language": "en",
+    "scheme": "pm_poshan",
+    "question": "Who is eligible for PM Poshan?",
+    "answer": "A child is eligible for PM POSHAN if they are a citizen of India and are studying in a Primary or Upper‑Primary class (Class 1 to Class 8) in a Government or Government‑aided school.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "en",
+        "score": 0.14483141899108887
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "application_process",
+        "language": "en",
+        "score": 0.14861798286437988
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "en",
+        "score": 0.15012353658676147
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details",
+        "language": "en",
+        "score": 0.15254485607147217
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "en",
+        "score": 0.1644812822341919
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:04:24.169280"
+  },
+  {
+    "id": "en_02",
+    "language": "en",
+    "scheme": "tablet_assistance",
+    "question": "What documents are required for Tablet Assistance scheme?",
+    "answer": "The required documents are: passport‑size photograph, identity proof such as Aadhaar Card, caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th Standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "eligibility",
+        "language": "en",
+        "score": 0.14703404903411865
+      },
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "faq",
+        "language": "en",
+        "score": 0.15999120473861694
+      },
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "details",
+        "language": "en",
+        "score": 0.1609918475151062
+      },
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "documents_required",
+        "language": "en",
+        "score": 0.16734886169433594
+      },
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "benefit",
+        "language": "en",
+        "score": 0.17052346467971802
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:04:37.477164"
+  },
+  {
+    "id": "en_03",
+    "language": "en",
+    "scheme": "medical_checkup",
+    "question": "What is the benefit under Medical Checkup Assistance scheme?",
+    "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker; the organization/company pays 25% of this amount (₹487.50).",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "details",
+        "language": "en",
+        "score": 0.13809967041015625
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "en",
+        "score": 0.1417384147644043
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "benefit",
+        "language": "en",
+        "score": 0.16003954410552979
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "en",
+        "score": 0.18406903743743896
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "en",
+        "score": 0.185205340385437
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:04:43.661759"
+  },
+  {
+    "id": "en_04",
+    "language": "en",
+    "scheme": "vahan_aksmat",
+    "question": "Who can get help under Vahan Aksmat Sahay?",
+    "answer": "Victims of road traffic accidents who need immediate medical treatment, receive care at a hospital empanelled under the Vahan Aksmat Sahay Scheme, have a Medico Legal Case registered for the accident, and have police intimation with acknowledgment can get help.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "details",
+        "language": "en",
+        "score": 0.11218136548995972
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "eligibility",
+        "language": "en",
+        "score": 0.14089226722717285
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "faq",
+        "language": "en",
+        "score": 0.1466503143310547
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details",
+        "language": "en",
+        "score": 0.1861635446548462
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "en",
+        "score": 0.20289385318756104
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:04:49.414202"
+  },
+  {
+    "id": "en_05",
+    "language": "en",
+    "scheme": "doodh_sanjivani",
+    "question": "What is Doodh Sanjivani scheme?",
+    "answer": "The Doodh Sanjivani Scheme is a welfare initiative launched by the Women and Child Development Department of Gujarat to improve the nutritional status of children (aged 6 months to 6 years) and pregnant or lactating mothers in tribal and under‑developed communities. It is implemented through Anganwadi centres, covering 138 tribal and developing communities across 20 districts of the state.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "details",
+        "language": "en",
+        "score": 0.1219707727432251
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "en",
+        "score": 0.13022452592849731
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "en",
+        "score": 0.14352548122406006
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details",
+        "language": "en",
+        "score": 0.20541906356811523
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "en",
+        "score": 0.20766210556030273
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:04:53.498842"
+  },
+  {
+    "id": "hi_01",
+    "language": "hi",
+    "scheme": "pm_poshan",
+    "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+    "answer": "पात्रता के लिए आवेदक को भारत का नागरिक होना चाहिए और वह सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8) में पढ़ रहा होना चाहिए।",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.10580724477767944
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details",
+        "language": "hi",
+        "score": 0.10884714126586914
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "application_process",
+        "language": "hi",
+        "score": 0.12775027751922607
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.1312481164932251
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.13717174530029297
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:04:58.738034"
+  },
+  {
+    "id": "hi_02",
+    "language": "hi",
+    "scheme": "tablet_assistance",
+    "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+    "answer": "इस योजना के लिए आवश्यक दस्तावेज़ हैं: पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र, और विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "details",
+        "language": "hi",
+        "score": 0.1444469690322876
+      },
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "eligibility",
+        "language": "hi",
+        "score": 0.1492152214050293
+      },
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.1628330945968628
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "eligibility",
+        "language": "hi",
+        "score": 0.17503684759140015
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.17589420080184937
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:04.189102"
+  },
+  {
+    "id": "hi_03",
+    "language": "hi",
+    "scheme": "medical_checkup",
+    "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+    "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। प्रत्येक श्रमिक के लिए यह जांच ₹1,950 की निश्चित राशि पर प्रदान की जाती है, जिसमें से 25 % यानी ₹487.50 का भुगतान संगठन/कंपनी द्वारा किया जाता है।",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "details",
+        "language": "hi",
+        "score": 0.141576886177063
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "benefit",
+        "language": "hi",
+        "score": 0.15856033563613892
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.16634875535964966
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.17179667949676514
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "details",
+        "language": "hi",
+        "score": 0.1735858917236328
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:09.914776"
+  },
+  {
+    "id": "hi_04",
+    "language": "hi",
+    "scheme": "vahan_aksmat",
+    "question": "वाहन अक्षमत सहाय योजना किसे मिलती है?",
+    "answer": "वाहन अक्षमत सहाय योजना का लाभ उन व्यक्तियों को मिलता है जो सड़क यातायात दुर्घटना के पीड़ित हैं और जिन्हें तत्काल चिकित्सा उपचार की आवश्यकता है, साथ ही उनके पास पुलिस सूचना, मेडिको‑लीगल केस पंजीकरण और योजना के तहत सूचीबद्ध अस्पताल में उपचार की सुविधा उपलब्ध है।",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "details",
+        "language": "hi",
+        "score": 0.11574423313140869
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.18242955207824707
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.18449819087982178
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.1896330714225769
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.1898559331893921
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:19.182870"
+  },
+  {
+    "id": "hi_05",
+    "language": "hi",
+    "scheme": "doodh_sanjivani",
+    "question": "दूध संजीवनी योजना क्या है?",
+    "answer": "दूध संजीवनी योजना महिला और बाल विकास विभाग, गुजरात द्वारा शुरू की गई एक कल्याणकारी पहल है, जिसका उद्देश्य आदिवासी और अविकसित समुदायों में 6 महीने से 6 साल के बच्चों तथा आंगनवाड़ी केंद्रों में पंजीकृत गर्भवती और स्तनपान कराने वाली माताओं की पोषण स्थिति में सुधार करना है। यह योजना 20 जिलों में 138 आदिवासी और विकासशील समुदायों को लक्षित करती है और आंगनवाड़ी केंद्रों के माध्यम से लागू की जाती है।",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "details",
+        "language": "hi",
+        "score": 0.10708063840866089
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.12193375825881958
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.1339436173439026
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.1726529598236084
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "hi",
+        "score": 0.19195276498794556
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:23.249663"
+  },
+  {
+    "id": "mr_01",
+    "language": "mr",
+    "scheme": "pm_poshan",
+    "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+    "answer": "भारताचा नागरिक असलेले आणि सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १ ते ८) वर्गात शिकणारे मुलं पात्र आहेत.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details",
+        "language": "mr",
+        "score": 0.11877506971359253
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.12148284912109375
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.1250644326210022
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.14305251836776733
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.14387428760528564
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:27.314676"
+  },
+  {
+    "id": "mr_02",
+    "language": "mr",
+    "scheme": "tablet_assistance",
+    "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+    "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, व विभागाला आवश्यक असलेली इतर कागदपत्रे.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "details",
+        "language": "mr",
+        "score": 0.15959912538528442
+      },
+      {
+        "scheme_id": "scheme_05_tablet_assistance",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.16023313999176025
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "documents_required",
+        "language": "mr",
+        "score": 0.16634106636047363
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "application_process",
+        "language": "mr",
+        "score": 0.17435145378112793
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "benefit",
+        "language": "mr",
+        "score": 0.17694556713104248
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:39.907451"
+  },
+  {
+    "id": "mr_03",
+    "language": "mr",
+    "scheme": "medical_checkup",
+    "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+    "answer": "या योजनेअंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते. पूर्ण वैद्यकीय तपासणीसाठी प्रति कामगार निश्चित रक्कम ₹1,950 आहे, ज्यापैकी 25% म्हणजे ₹487.50 रक्कम संस्था/कंपनीने भरायची आहे.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "benefit",
+        "language": "mr",
+        "score": 0.13916844129562378
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "details",
+        "language": "mr",
+        "score": 0.1413097381591797
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "details",
+        "language": "mr",
+        "score": 0.151630699634552
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.15264391899108887
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "eligibility",
+        "language": "mr",
+        "score": 0.15857255458831787
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:43.794279"
+  },
+  {
+    "id": "mr_04",
+    "language": "mr",
+    "scheme": "vahan_aksmat",
+    "question": "वाहन अक्षम सहाय योजना कोणाला मिळते?",
+    "answer": "वाहन अक्षमत सहाय योजना रस्ते वाहतूक अपघाताचा पीडित, ज्यांना तातडीचे वैद्यकीय उपचार आवश्यक आहेत, सूचीबद्ध रुग्णालयात उपचार घेतले आहेत, मेडिको‑लीगल केस नोंदवलेला आहे आणि पोलिसांकडून अपघाताची पावती उपलब्ध आहे, अशा व्यक्तींना मिळते.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "details",
+        "language": "mr",
+        "score": 0.12995672225952148
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.1823737621307373
+      },
+      {
+        "scheme_id": "scheme_02_vahan_aksmat_sahay",
+        "section": "application_process",
+        "language": "mr",
+        "score": 0.18498653173446655
+      },
+      {
+        "scheme_id": "scheme_03_medical_checkup_assistance",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.18659478425979614
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.1884479522705078
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:05:48.048815"
+  },
+  {
+    "id": "mr_05",
+    "language": "mr",
+    "scheme": "doodh_sanjivani",
+    "question": "दूध संजीवनी योजना म्हणजे काय?",
+    "answer": "दूध संजीवनी योजना ही गुजरातच्या महिला आणि बाल विकास विभागाने सुरू केलेली एक कल्याणकारी उपक्रम आहे, ज्याचा उद्देश आदिवासी व अविकसित समुदायातील 6 महिने ते 6 वर्षे वयोगटातील मुले आणि अंगणवाडी केंद्रांमध्ये नोंदणीकृत गर्भवती व स्तनदा मातांची पोषण स्थिती सुधारणे आहे. ही योजना 20 जिल्ह्यांतील 138 आदिवासी व विकासशील समुदायांमध्ये अंगणवाडी केंद्रांद्वारे अंमलात आणली जाते.",
+    "cited_chunks": [
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "details",
+        "language": "mr",
+        "score": 0.10137659311294556
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.13433057069778442
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.13985788822174072
+      },
+      {
+        "scheme_id": "scheme_04_doodh_sanjivani",
+        "section": "faq",
+        "language": "mr",
+        "score": 0.16714328527450562
+      },
+      {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details",
+        "language": "mr",
+        "score": 0.17411643266677856
+      }
+    ],
+    "rating": "Good",
+    "note": "",
+    "timestamp": "2026-09-06T22:06:00.039688"
+  }
+]

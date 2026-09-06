@@ -13,3 +13,7 @@
 प्रश्न: {query}
 
 उत्तर:
+
+फक्त वैध JSON या स्वरूपात परत करा (कोणतेही markdown fences किंवा अतिरिक्त मजकूर नको):
+{{"answer": "...", "citations": [{{"scheme_id": "...", "section": "...", "language": "mr"}}], "language": "mr", "confidence": "high"}}
+जर पुरेशी माहिती उपलब्ध नसेल, तर उत्तरात नकारात्मक वाक्य द्या आणि citations रिकामे ठेवा: []

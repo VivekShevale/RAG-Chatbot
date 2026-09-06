@@ -1,0 +1,3349 @@
+{
+  "summary": {
+    "total_questions": 120,
+    "overall": {
+      "retrieval_accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "by_language": {
+      "en": {
+        "count": 40,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "hi": {
+        "count": 40,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "mr": {
+        "count": 40,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      }
+    },
+    "by_source": {
+      "faq": {
+        "count": 45,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "template": {
+        "count": 75,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      }
+    },
+    "by_section": {
+      "application_process": {
+        "count": 15,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "benefit": {
+        "count": 15,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "details": {
+        "count": 15,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": null
+      },
+      "documents_required": {
+        "count": 15,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "eligibility": {
+        "count": 15,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      },
+      "faq": {
+        "count": 45,
+        "retrieval_accuracy": 1.0,
+        "faithfulness": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q1",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What is PM POSHAN Scheme?",
+      "expected_answer": "**PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+      "generated_answer": "PM POSHAN is a centrally‑sponsored scheme of the Ministry of Education (Department of School Education & Literacy) that provides one hot‑cooked meal each day to children studying in Government and Government‑aided schools, aiming to improve their nutritional status and encourage regular school attendance【scheme_01_pm_poshan | faq】. It is implemented nationwide for all eligible children without discrimination of gender or social class【scheme_01_pm_poshan | details】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q2",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "Who is eligible to benefit from PM POSHAN?",
+      "expected_answer": "**All children studying in:**",
+      "generated_answer": "All children who are studying in Government and Government‑aided schools are eligible to benefit from PM POSHAN. (The scheme is universal and inclusive, covering every child in these schools without discrimination.)【scheme_01_pm_poshan, faq】【scheme_01_pm_poshan, details】",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Unterminated string starting at: line 1 column 30 (char 29)"
+      }
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q3",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What kind of meals are provided under this scheme?",
+      "expected_answer": "The scheme provides one **hot cooked meal** per school day that meets specific calorie and protein norms. The meal includes food **grains, pulses, vegetables, oil/fat, and condiments.**",
+      "generated_answer": "The scheme provides **one hot‑cooked meal each school day** that meets specific calorie and protein standards. The meal consists of **food grains, pulses, vegetables, oil/fat, and condiments**【scheme_01_pm_poshan | faq】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_04_doodh_sanjivani",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_04_doodh_sanjivani",
+          "section": "details",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "All claims match the provided context about one hot cooked meal per school day and its components",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_eligibility",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "Who is eligible for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "All children who meet the following criteria are eligible for **PM POSHAN**:\n\n- Must be a citizen of India.  \n- Must be studying in a Primary or Upper‑Primary class (Class 1 to Class 8).  \n- Must be enrolled in a Government or Government‑aided school.  \n\n**Source:** scheme_01_pm_poshan, **eligibility** section.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_documents_required",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What documents are required for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "No documents are required to avail the benefits of the PM POSHAN scheme. 【scheme_01_pm_poshan | documents_required】",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "documents_required",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "Context explicitly says no documents are required for availing the scheme.",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_benefit",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is the benefit under PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "**Benefit under PM POSHAN (Prime Minister’s Overarching Scheme for Holistic Nourishment):**  \n\n- **Hot‑cooked meals** are provided to children in Government and Government‑aided schools, including pre‑school/Bal Vatika children.  \n- **Nutrition norms per child per day**  \n  - *Primary*: 450 kcal and 12 g protein  \n  - *Upper Primary*: 700 kcal and 20 g protein  \n- **Food‑grain norms per child per day**  \n  - *Primary*: 100 g grains, 20 g pulses, 50 g vegetables, 5 g oil/fat, salt & condiments as needed  \n  - *Upper Primary*: 150 g grains, 30 g pulses, 75 g vegetables, 7.5 g oil/fat, salt & condiments as needed  \n\n(Referenced from **scheme_01_pm_poshan – benefit** section.)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "benefit",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "Answer's details on hot meals, nutrition and food norms are directly stated in the context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_application_process",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "How do I apply for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "There is no separate application to be made. PM POSHAN is automatically available to all children studying in Government and Government‑aided schools, so no formal application process is required【Source 2: application_process】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "Answer correctly reflects the context that there is no application process and the scheme applies to all children in government and government-aided schools.",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_details",
+      "language": "en",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected_answer": null,
+      "generated_answer": "**PM POSHAN (Prime Minister’s Overarching Scheme for Holistic Nourishment)** is a centrally‑sponsored scheme of the Ministry of Education (Department of School Education & Literacy) that provides one hot cooked meal each day to children studying in Government and Government‑aided schools. Its purpose is to improve the nutritional status of eligible children, encourage regular school attendance—especially among disadvantaged and poor children—and help them concentrate better in class【scheme_01_pm_poshan | faq】, 【scheme_01_pm_poshan | details】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q1",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पीएम पोषण योजना क्या है?",
+      "expected_answer": "**पीएम पोषण** शिक्षा मंत्रालय द्वारा केंद्र प्रायोजित योजना है, जो सरकारी और सरकारी सहायता प्राप्त स्कूलों में पढ़ने वाले बच्चों को गर्म पका हुआ भोजन प्रदान करती है ताकि उनकी पोषण स्थिति में सुधार हो और **नियमित स्कूल उपस्थिति** को प्रोत्साहित किया जा सके।",
+      "generated_answer": "**PM पोषण योजना** (Scheme: scheme_01_pm_poshan, Section: faq)  \nयह शिक्षा मंत्रालय द्वारा केंद्र‑प्रायोजित योजना है, जिसमें सरकारी और सरकारी‑सहायता प्राप्त स्कूलों में पढ़ने वाले सभी बच्चों को एक गर्म पका हुआ भोजन प्रदान किया जाता है, ताकि उनकी पोषण स्थिति में सुधार हो और नियमित स्कूल उपस्थिति को प्रोत्साहित किया जा सके।",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q2",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पीएम पोषण से कौन लाभान्वित हो सकता है?",
+      "expected_answer": "**सभी बच्चे जो पढ़ रहे हैं:**",
+      "generated_answer": "**PM पोषण** योजना के तहत **सरकारी और सरकारी‑सहायता प्राप्त स्कूलों में पढ़ रहे सभी बच्चे** लाभान्वित होते हैं। इसमें पहली से आठवीं कक्षा के लगभग 11.8 करोड़ बच्चे तथा प्राथमिक विद्यालयों में प्री‑स्कूल/बाल वाटिका (पहली कक्षा से पहले) के बच्चे भी शामिल हैं【Source 1: faq】【Source 6: benefit】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "benefit",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q3",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "इस योजना के तहत किस तरह का भोजन प्रदान किया जाता है?",
+      "expected_answer": "यह योजना प्रत्येक स्कूल दिवस पर एक **गर्म पका हुआ भोजन** प्रदान करती है, जो निर्धारित कैलोरी और प्रोटीन मानदंडों को पूरा करता है। भोजन में **अनाज, दालें, सब्जियाँ, तेल/वसा और मसाले** शामिल होते हैं।",
+      "generated_answer": "**योजना:** PM पोषण (scheme_01_pm_poshan)  \n**उपयोग किया गया खंड:** faq  \n\nयह योजना प्रत्येक स्कूल दिवस पर एक **गर्म पका हुआ भोजन** प्रदान करती है, जो निर्धारित कैलोरी और प्रोटीन मानदंडों को पूरा करता है। भोजन में **अनाज, दालें, सब्जियाँ, तेल/वसा और मसाले** शामिल होते हैं।",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_04_doodh_sanjivani",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_04_doodh_sanjivani",
+          "section": "details",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_eligibility",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना के लिए कौन पात्र है?",
+      "expected_answer": null,
+      "generated_answer": "**पात्रता (Scheme: scheme_01_pm_poshan, Section: eligibility)**  \n- आवेदक को **भारत का नागरिक** होना चाहिए।  \n- आवेदक को **सरकारी या सरकारी सहायता प्राप्त स्कूल** में **प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8)** में पढ़ रहा होना चाहिए।  \n\nइन शर्तों को पूरा करने वाले सभी पढ़ते‑बढ़ते बच्चे इस योजना के लाभार्थी बन सकते हैं।",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "Answer lists exactly the eligibility criteria stated in the context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_documents_required",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना के लिए कौन से दस्तावेज चाहिए?",
+      "expected_answer": null,
+      "generated_answer": "**योजना का नाम:** पीएम पोषण  \n**उपयोग किया गया खंड:** documents_required  \n\n**दस्तावेज़:** इस योजना का लाभ उठाने के लिए किसी दस्तावेज़ की आवश्यकता नहीं है। (Source 6)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "documents_required",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_benefit",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना का लाभ क्या है?",
+      "expected_answer": null,
+      "generated_answer": "**पीएम पोषण** ( scheme_01_pm_poshan – Section: faq )  \n- इस योजना के तहत सरकारी और सरकारी‑सहायता प्राप्त स्कूलों में पढ़ने वाले सभी बच्चों को प्रतिदिन **गर्म पका हुआ भोजन** दिया जाता है।  \n- इससे बच्चों की **पोषण स्थिति में सुधार**, **भूख कम होना**, **नियमित स्कूल उपस्थिति** को प्रोत्साहन और **कक्षा की गतिविधियों पर बेहतर ध्यान** संभव होता है।  \n\n**समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना** ( scheme_01_pm_poshan – Section: faq )  \n- पीएम पोषण **एकीकृत बाल विकास सेवा (आईसीडीएस)** की व्यापक पहल का हिस्सा है, जिससे यह राष्ट्रीय स्तर पर बच्चों के समग्र पोषण एवं विकास को सुदृढ़ करता है।  \n\nइस प्रकार, पीएम पोषण योजना का मुख्य लाभ है **बच्चों को पोषक‑संतुलित गर्म भोजन प्रदान करके उनकी पोषण स्थिति सुधारना और स्कूल में नियमित उपस्थिति एवं सीखने की क्षमता बढ़ाना**।",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "benefit",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "All claims about benefits and being part of ICDS are directly stated in the context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_application_process",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना के लिए आवेदन कैसे करें?",
+      "expected_answer": null,
+      "generated_answer": "**योजना का नाम:** पीएम पोषण  \n**उपयोग किया गया खंड:** application_process  \n\n**आवेदन प्रक्रिया:** इस योजना के लिए कोई आवेदन प्रक्रिया नहीं है। पीएम पोषण सरकारी और सरकारी सहायता प्राप्त स्कूलों में पढ़ने वाले सभी बच्चों पर समान रूप से लागू होता है, इसलिए अभ्यर्थियों को अलग से आवेदन करने की आवश्यकता नहीं है।",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "Answer correctly states there is no application process, as indicated in the context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_details",
+      "language": "hi",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना क्या है?",
+      "expected_answer": null,
+      "generated_answer": "**एकीकृत बाल विकास सेवा (आईसीडीएस)** — PM पोषण इस व्यापक योजना के अंतर्गत संचालित होता है【Source 3 | faq】।",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_01_pm_poshan_q1",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पीएम पोषण योजना म्हणजे काय?",
+      "expected_answer": "**पीएम पोषण** ही शिक्षण मंत्रालयाची केंद्र पुरस्कृत योजना आहे जी सरकारी आणि सरकारी अनुदानित शाळांमध्ये शिकणाऱ्या मुलांना गरम शिजवलेले जेवण देते, ज्यामुळे त्यांची पोषण स्थिती सुधारते आणि **नियमित शाळेतील उपस्थितीला** प्रोत्साहन मिळते.",
+      "generated_answer": "**पीएम पोषण योजना** – ही शिक्षण मंत्रालयाच्या **शालेय शिक्षण आणि साक्षरता विभाग**ची केंद्र पुरस्कृत योजना आहे. या योजनेअंतर्गत सरकारी व सरकारी अनुदानित शाळांमध्ये शिकणाऱ्या मुलांना गरम शिजवलेले जेवण दिले जाते, ज्यामुळे त्यांच्या पोषण स्थितीचा सुधार होतो आणि नियमित शाळेतील उपस्थितीला प्रोत्साहन मिळते【Source 1】【Source 2】.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_01_pm_poshan_q2",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पीएम पोषणचा लाभ घेण्यासाठी कोण पात्र आहे?",
+      "expected_answer": "**खालील ठिकाणी शिकणारी सर्व मुले:**",
+      "generated_answer": "**योजना:** PM पोषण (scheme_01_pm_poshan)  \n**विभाग:** शिक्षण मंत्रालय – शालेय शिक्षण व साक्षरता विभाग  \n\n**पात्रता:**  \n- सरकारी व सरकारी अनुदानित (गाव) शाळांमध्ये शिकणारी **सर्व मुले**.  \n- लिंग, जात, धर्म किंवा सामाजिक वर्गाचा कोणताही भेदभाव नाही; सर्व पात्र मुलांना लाभ मिळतो.  \n\n(संदर्भ: Source 1, Source 3)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_01_pm_poshan_q3",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "या योजनेअंतर्गत कोणत्या प्रकारचे जेवण दिले जाते?",
+      "expected_answer": "ही योजना प्रत्येक शालेय दिवशी एक **गरम शिजवलेले जेवण** देते, जे ठरावीक उष्मांक आणि प्रथिनांच्या निकषांची पूर्तता करते. या जेवणात **अन्नधान्य, डाळी, भाज्या, तेल/चरबी आणि मसाले** यांचा समावेश असतो.",
+      "generated_answer": "**PM पोषण योजना** (शिक्षण मंत्रालय, शालेय शिक्षण व साक्षरता विभाग) अंतर्गत प्रत्येक शालेय दिवशी **गरम शिजवलेले जेवण** दिले जाते. या जेवणात **अन्नधान्य, डाळी, भाज्या, तेल/चरबी आणि मसाले** यांचा समावेश असतो.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_04_doodh_sanjivani",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_template_scheme_01_pm_poshan_eligibility",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पंतप्रधान पोषण-सर्वांगीण पोषणासाठी पंतप्रधानांची व्यापक योजना साठी कोण पात्र आहे?",
+      "expected_answer": null,
+      "generated_answer": "**योजना:** PM पोषण (scheme_01_pm_poshan) – शिक्षण मंत्रालयाच्या **शालेय शिक्षण आणि साक्षरता विभाग**ची केंद्र‑पुरस्कृत योजना.  \n\n**पात्रता (Eligibility):**  \n1. अर्जदार **भारताचा नागरिक** असावा.  \n2. अर्जदार **सरकारी किंवा सरकारी अनुदानित शाळेत** प्राथमिक किंवा उच्च प्राथमिक वर्गात (इयत्ता १ ते ८) शिकत असावा.  \n\nया अटी पूर्ण करणारी सर्व मुले ही पंतप्रधान पोषण‑सर्वांगीण पोषणासाठीच्या व्यापक योजनेचा लाभ घेऊ शकतात.  \n\n(उपलब्ध दस्तऐवजांच्या आधारे)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "Answer lists exactly the eligibility criteria stated in the context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "mr_template_scheme_01_pm_poshan_documents_required",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पंतप्रधान पोषण-सर्वांगीण पोषणासाठी पंतप्रधानांची व्यापक योजना साठी कोणती कागदपत्रे लागतात?",
+      "expected_answer": null,
+      "generated_answer": "**योजना:** पीएम पोषण (Prime Minister’s Poshan)  \n**विभाग:** दस्तऐवज आवश्यकतेचा विभाग (Source 6 – documents_required)\n\n**उत्तर:** या योजनेचा लाभ घेण्यासाठी कोणत्याही कागदपत्रांची आवश्यकता नाही.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "benefit",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "documents_required",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_template_scheme_01_pm_poshan_benefit",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पंतप्रधान पोषण-सर्वांगीण पोषणासाठी पंतप्रधानांची व्यापक योजना चा लाभ काय आहे?",
+      "expected_answer": null,
+      "generated_answer": "**योजनेचे नाव:** पीएम पोषण (Prime Minister’s Poshan Yojana)  \n**विभाग:** शिक्षण मंत्रालय – शालेय शिक्षण व साक्षरता विभाग  \n\n**लाभ (Benefit):**  \n- **दररोजचे पोषण मानके** – प्राथमिक शाळांसाठी 450 कॅलरी व 12 ग्रॅम प्रथिने; उच्च प्राथमिक शाळांसाठी 700 कॅलरी व 20 ग्रॅम प्रथिने.  \n- **दररोजचे अन्न नियम** – प्राथमिक शाळांसाठी 100 ग्रॅम अन्नधान्य, 20 ग्रॅम डाळ, 50 ग्रॅम भाज्या, 5 ग्रॅम तेल व चरबी; उच्च प्राथमिक शाळांसाठी 150 ग्रॅम अन्नधान्य, 30 ग्रॅम डाळ, 75 ग्रॅम भाज्या, 7.5 ग्रॅम तेल व चरबी (मीठ व मसाले गरजेनुसार).  \n- **व्याप्ती** – संपूर्ण भारतातील **11.20 लाख शाळांमध्ये** शिकणाऱ्या **11.8 कोटीपेक्षा जास्त मुलांना** (इयत्ता १‑८) गरम शिजवलेले जेवण मिळते.  \n- **विस्तारित कव्हरेज** – प्राथमिक शाळांमधील पूर्वशाळा (बालवाटिका) मुलांसाठीही समान पोषण सुविधा उपलब्ध आहे.  \n\nही सर्व सुविधा मुलांच्या पोषण स्थितीचा सुधार, भूक कमी करणे आणि शाळेत नियमित उपस्थिती वाढविण्यासाठी दिल्या जातात. (स्रोत: Source 6)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "benefit",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": true,
+        "reason": "All claims are directly supported by the provided context",
+        "judge_error": null
+      }
+    },
+    {
+      "id": "mr_template_scheme_01_pm_poshan_application_process",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पंतप्रधान पोषण-सर्वांगीण पोषणासाठी पंतप्रधानांची व्यापक योजना साठी अर्ज कसा करावा?",
+      "expected_answer": null,
+      "generated_answer": "**योजनेचे नाव:** पीएम पोषण (प्रधानमंत्री पोषण)  \n**विभाग:** शिक्षण मंत्रालय – शालेय शिक्षण व साक्षरता विभाग  \n\n**अर्ज कसा करावा:**  \nया योजनेसाठी कोणतीही अर्ज प्रक्रिया नाही. सरकारी व सरकारी अनुदानित शाळांमध्ये शिकणाऱ्या सर्व पात्र मुलांना पीएम पोषण आपोआप लागू होते. त्यामुळे पालक किंवा विद्यार्थी स्वतंत्रपणे अर्ज करीत नाहीत; शाळा ही योजना त्यांच्या विद्यार्थ्यांसाठी स्वयंचलितपणे अंमलात आणते.  \n\n(स्रोत: Source 6)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "matched_via": "section_intent_routing"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "section_intent_routing"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_template_scheme_01_pm_poshan_details",
+      "language": "mr",
+      "scheme_id": "scheme_01_pm_poshan",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पंतप्रधान पोषण-सर्वांगीण पोषणासाठी पंतप्रधानांची व्यापक योजना म्हणजे काय?",
+      "expected_answer": null,
+      "generated_answer": "**योजनेचे नाव:** **पंतप्रधान पोषण (PM Poshan)**  \n**विभाग:** शिक्षण मंत्रालय – शालेय शिक्षण व साक्षरता विभाग  \n\n**व्याख्या (संदर्भ):**  \nपंतप्रधान पोषण ही शिक्षण मंत्रालयाच्या शालेय शिक्षण व साक्षरता विभागाची केंद्र‑पुरस्कृत योजना आहे. ही योजना एकात्मिक बाल विकास सेवा (**ICDS**) च्या व्यापक उपक्रमाचा भाग म्हणून कार्य करते. यामध्ये सरकारी व सरकारी अनुदानित शाळांतील मुलांना गरम शिजवलेले जेवण दिले जाते, ज्यामुळे त्यांच्या पोषण स्थितीचा सुधार होतो आणि नियमित शाळेतील उपस्थितीला प्रोत्साहन मिळते.  \n\n(संदर्भ: Source 1 – details; Source 2 – FAQ; Source 3 – FAQ)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "en_faq_scheme_02_vahan_aksmat_sahay_q1",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What is the highest amount of financial coverage available for the most severe road accident injuries under this medical assistance program?",
+      "expected_answer": "The maximum treatment package available is ₹45,000 for Pelvic Injury-External Fixation with Implant, which includes stabilization with external fixation and haemodynamic stabilization.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_02_vahan_aksmat_sahay_q2",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "Do I need to pay any upfront costs at the hospital when I receive emergency treatment for my road accident injuries?",
+      "expected_answer": "No. Empanelled hospitals provide completely cashless treatment, so neither you nor your family members need to make upfront payments for covered treatments.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_02_vahan_aksmat_sahay_q3",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What specific legal documentation must be completed at the hospital before I can receive treatment benefits under this accident support scheme?",
+      "expected_answer": "A Medico Legal Case must be registered with the local police station, and a police intimation copy with police acknowledgment is required for the road traffic accident.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_02_vahan_aksmat_sahay_eligibility",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "Who is eligible for Vahan Aksmat Sahay Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_02_vahan_aksmat_sahay_documents_required",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What documents are required for Vahan Aksmat Sahay Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_02_vahan_aksmat_sahay_benefit",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is the benefit under Vahan Aksmat Sahay Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_02_vahan_aksmat_sahay_application_process",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "How do I apply for Vahan Aksmat Sahay Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_02_vahan_aksmat_sahay_details",
+      "language": "en",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is Vahan Aksmat Sahay Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_02_vahan_aksmat_sahay_q1",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "इस चिकित्सा सहायता कार्यक्रम के तहत सबसे गंभीर सड़क दुर्घटना की चोटों के लिए अधिकतम वित्तीय कवरेज कितना है?",
+      "expected_answer": "अधिकतम उपचार पैकेज ₹45,000 है। यह पेल्विक इंजरी-इम्प्लांट के साथ बाहरी स्थिरीकरण के लिए है और इसमें बाहरी फिक्सेशन तथा हीमोडायनामिक स्थिरीकरण शामिल है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_02_vahan_aksmat_sahay_q2",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "सड़क दुर्घटना की चोटों के लिए आपातकालीन उपचार लेते समय क्या मुझे अस्पताल में कोई अग्रिम भुगतान करना होगा?",
+      "expected_answer": "नहीं। सूचीबद्ध अस्पताल पूरी तरह कैशलेस उपचार प्रदान करते हैं, इसलिए कवर किए गए उपचार के लिए रोगी या परिवार को अग्रिम भुगतान नहीं करना पड़ता।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_02_vahan_aksmat_sahay_q3",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "इस योजना के लाभ पाने से पहले अस्पताल में कौन-से कानूनी दस्तावेज पूरे किए जाने चाहिए?",
+      "expected_answer": "स्थानीय पुलिस स्टेशन में मेडिको लीगल केस दर्ज होना चाहिए और सड़क दुर्घटना के लिए पुलिस पावती सहित पुलिस सूचना उपलब्ध होनी चाहिए।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_02_vahan_aksmat_sahay_eligibility",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना के लिए कौन पात्र है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_02_vahan_aksmat_sahay_documents_required",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना के लिए कौन से दस्तावेज चाहिए?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_02_vahan_aksmat_sahay_benefit",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना का लाभ क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_02_vahan_aksmat_sahay_application_process",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना के लिए आवेदन कैसे करें?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_02_vahan_aksmat_sahay_details",
+      "language": "hi",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_02_vahan_aksmat_sahay_q1",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "या वैद्यकीय सहाय्य कार्यक्रमांतर्गत सर्वात गंभीर रस्ते अपघाती दुखापतींसाठी उपलब्ध कमाल आर्थिक कव्हरेज किती आहे?",
+      "expected_answer": "कमाल उपचार पॅकेज ₹45,000 आहे. हे इम्प्लांटसह पेल्विक इंजरी-एक्स्टर्नल फिक्सेशनसाठी आहे आणि त्यात बाह्य फिक्सेशन व हिमोडायनामिक स्थिरीकरण समाविष्ट आहे.",
+      "generated_answer": "**योजना:** वहन अक्षमत सहाय (Scheme 02) – विभाग : FAQ  \n\nया वैद्यकीय सहाय्य कार्यक्रमांतर्गत सर्वात गंभीर रस्ते अपघाती दुखापतींसाठी उपलब्ध कमाल आर्थिक कव्हरेज **₹45,000** आहे.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "details",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "eligibility",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_02_vahan_aksmat_sahay_q2",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "रस्ते अपघातातील दुखापतींसाठी आपत्कालीन उपचार घेताना मला रुग्णालयात आगाऊ पैसे द्यावे लागतील का?",
+      "expected_answer": "नाही. सूचीबद्ध रुग्णालये पूर्णपणे रोखरहित उपचार देतात, त्यामुळे समाविष्ट उपचारांसाठी रुग्ण किंवा कुटुंबीयांना आगाऊ पैसे द्यावे लागत नाहीत.",
+      "generated_answer": "**योजना:** scheme_02_vahan_aksmat_sahay  \n**विभाग:** FAQ  \n\nनाही. सूचीबद्ध रुग्णालये पूर्णपणे रोखरहित उपचार देतात, त्यामुळे समाविष्ट उपचारांसाठी रुग्ण किंवा कुटुंबीयांना आगाऊ पैसे द्यावे लागत नाहीत.",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "eligibility",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_02_vahan_aksmat_sahay_q3",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "या अपघात सहाय्य योजनेचा लाभ घेण्यापूर्वी रुग्णालयात कोणती कायदेशीर कागदपत्रे पूर्ण करावी लागतात?",
+      "expected_answer": "स्थानिक पोलिस ठाण्यात मेडिको लीगल केस नोंदवणे आवश्यक आहे आणि रस्ते अपघाताची पोलिस सूचना व तिची पावती आवश्यक आहे.",
+      "generated_answer": "**योजना:** वहन आकस्मात सहाय्य योजना (scheme_02_vahan_aksmat_sahay)  \n**वापरलेला विभाग:** faq आणि documents_required  \n\n**आवश्यक कायदेशीर कागदपत्रे:**  \n1. स्थानिक पोलिस ठाण्यात **मेडिको‑लीगल केस** नोंदवणे.  \n2. रस्ते अपघाताची **पोलिस सूचना** व त्याची **पावती**.  \n3. या दोन्हींची स्कॅन केलेली प्रत (मेडिको‑लीगल केस रजिस्टरची प्रत आणि पोलिस सूचनेची पावती) उपचाराच्या वेळी सादर करावी.  \n\n(स्रोत: Source 1 faq आणि Source 4 documents_required)",
+      "retrieved_sections": [
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "faq",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "application_process",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "eligibility",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "documents_required",
+          "matched_via": "vector"
+        },
+        {
+          "scheme_id": "scheme_02_vahan_aksmat_sahay",
+          "section": "faq",
+          "matched_via": "vector"
+        }
+      ],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": true,
+        "matched_via": "vector"
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    {
+      "id": "mr_template_scheme_02_vahan_aksmat_sahay_eligibility",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना साठी कोण पात्र आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_02_vahan_aksmat_sahay_documents_required",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना साठी कोणती कागदपत्रे लागतात?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_02_vahan_aksmat_sahay_benefit",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना चा लाभ काय आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_02_vahan_aksmat_sahay_application_process",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना साठी अर्ज कसा करावा?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_02_vahan_aksmat_sahay_details",
+      "language": "mr",
+      "scheme_id": "scheme_02_vahan_aksmat_sahay",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "वाहन अक्षमत सहाय योजना म्हणजे काय?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_03_medical_checkup_assistance_q1",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "Who administers the Full Medical Checkup Assistance Scheme?",
+      "expected_answer": "The scheme is administered by the Gujarat Labour Welfare Board under the Labour, Skill Development & Employment Department, Government of Gujarat.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_03_medical_checkup_assistance_q2",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What is the objective of the scheme?",
+      "expected_answer": "The objective is to provide comprehensive health check-ups for eligible male and female Shramyogis above the specified age thresholds.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_03_medical_checkup_assistance_q3",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "How much is the fixed amount for the medical check-up?",
+      "expected_answer": "The fixed amount is ₹1,950 per worker for a complete medical check-up, with 25% of this amount, ₹487.50, to be paid by the organization/company.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_03_medical_checkup_assistance_eligibility",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "Who is eligible for Full Medical Checkup Assistance Scheme- Gujarat Labour Welfare Board?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_03_medical_checkup_assistance_documents_required",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What documents are required for Full Medical Checkup Assistance Scheme- Gujarat Labour Welfare Board?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_03_medical_checkup_assistance_benefit",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is the benefit under Full Medical Checkup Assistance Scheme- Gujarat Labour Welfare Board?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_03_medical_checkup_assistance_application_process",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "How do I apply for Full Medical Checkup Assistance Scheme- Gujarat Labour Welfare Board?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_03_medical_checkup_assistance_details",
+      "language": "en",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is Full Medical Checkup Assistance Scheme- Gujarat Labour Welfare Board?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_03_medical_checkup_assistance_q1",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पूर्ण चिकित्सा जांच सहायता योजना का प्रशासन कौन करता है?",
+      "expected_answer": "इस योजना का प्रशासन गुजरात श्रम कल्याण बोर्ड द्वारा, श्रम, कौशल विकास और रोजगार विभाग, गुजरात सरकार के अंतर्गत किया जाता है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_03_medical_checkup_assistance_q2",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "योजना का उद्देश्य क्या है?",
+      "expected_answer": "योजना का उद्देश्य निर्धारित आयु सीमा से अधिक आयु वाले पात्र पुरुष और महिला श्रमयोगियों को व्यापक स्वास्थ्य जांच की सुविधा प्रदान करना है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_03_medical_checkup_assistance_q3",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "चिकित्सा जांच के लिए निश्चित राशि कितनी है?",
+      "expected_answer": "पूर्ण चिकित्सा जांच के लिए प्रति श्रमिक ₹1,950 की निश्चित राशि है, जिसमें से 25% यानी ₹487.50 संगठन/कंपनी द्वारा भुगतान किया जाना है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_03_medical_checkup_assistance_eligibility",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण चिकित्सा जांच सहायता योजना- गुजरात श्रम कल्याण बोर्ड के लिए कौन पात्र है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_03_medical_checkup_assistance_documents_required",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण चिकित्सा जांच सहायता योजना- गुजरात श्रम कल्याण बोर्ड के लिए कौन से दस्तावेज चाहिए?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_03_medical_checkup_assistance_benefit",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण चिकित्सा जांच सहायता योजना- गुजरात श्रम कल्याण बोर्ड का लाभ क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_03_medical_checkup_assistance_application_process",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण चिकित्सा जांच सहायता योजना- गुजरात श्रम कल्याण बोर्ड के लिए आवेदन कैसे करें?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_03_medical_checkup_assistance_details",
+      "language": "hi",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण चिकित्सा जांच सहायता योजना- गुजरात श्रम कल्याण बोर्ड क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_03_medical_checkup_assistance_q1",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पूर्ण वैद्यकीय तपासणी सहाय्य योजनेचे प्रशासन कोण करते?",
+      "expected_answer": "या योजनेचे प्रशासन गुजरात कामगार कल्याण मंडळाद्वारे, कामगार, कौशल्य विकास आणि रोजगार विभाग, गुजरात सरकारच्या अंतर्गत केले जाते।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_03_medical_checkup_assistance_q2",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "योजनेचा उद्देश काय आहे?",
+      "expected_answer": "निर्धारित वयोमर्यादेपेक्षा जास्त वय असलेल्या पात्र पुरुष आणि महिला श्रमयोगींना सर्वसमावेशक आरोग्य तपासणीची सुविधा देणे हा योजनेचा उद्देश आहे.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_03_medical_checkup_assistance_q3",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "वैद्यकीय तपासणीसाठी निश्चित रक्कम किती आहे?",
+      "expected_answer": "पूर्ण वैद्यकीय तपासणीसाठी प्रति कामगार ₹1,950 ची निश्चित रक्कम आहे. त्यापैकी 25% म्हणजे ₹487.50 रक्कम संस्था/कंपनीने भरायची आहे.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_03_medical_checkup_assistance_eligibility",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना- गुजरात कामगार कल्याण मंडळ साठी कोण पात्र आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_03_medical_checkup_assistance_documents_required",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना- गुजरात कामगार कल्याण मंडळ साठी कोणती कागदपत्रे लागतात?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_03_medical_checkup_assistance_benefit",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना- गुजरात कामगार कल्याण मंडळ चा लाभ काय आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_03_medical_checkup_assistance_application_process",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना- गुजरात कामगार कल्याण मंडळ साठी अर्ज कसा करावा?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_03_medical_checkup_assistance_details",
+      "language": "mr",
+      "scheme_id": "scheme_03_medical_checkup_assistance",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना- गुजरात कामगार कल्याण मंडळ म्हणजे काय?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_04_doodh_sanjivani_q1",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What is the main objective of the \"Doodh Sanjivani Scheme\"?",
+      "expected_answer": "The scheme aims to improve the nutritional status of children and mothers in tribal and underdeveloped communities.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_04_doodh_sanjivani_q2",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "Who is eligible for the scheme?",
+      "expected_answer": "Children aged 6 months to 6 years and pregnant or lactating mothers registered at Anganwadi centers are eligible for the scheme.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_04_doodh_sanjivani_q3",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What type of milk is provided under the scheme?",
+      "expected_answer": "Fortified flavored milk is provided under the scheme to enhance nutritional intake.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_04_doodh_sanjivani_eligibility",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "Who is eligible for Doodh Sanjivani Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_04_doodh_sanjivani_documents_required",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What documents are required for Doodh Sanjivani Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_04_doodh_sanjivani_benefit",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is the benefit under Doodh Sanjivani Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_04_doodh_sanjivani_application_process",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "How do I apply for Doodh Sanjivani Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_04_doodh_sanjivani_details",
+      "language": "en",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is Doodh Sanjivani Scheme?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_04_doodh_sanjivani_q1",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "\"दूध संजीवनी योजना\" का मुख्य उद्देश्य क्या है?",
+      "expected_answer": "इस योजना का उद्देश्य आदिवासी और अविकसित समुदायों में बच्चों और माताओं की पोषण स्थिति में सुधार करना है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_04_doodh_sanjivani_q2",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "योजना के लिए कौन पात्र है?",
+      "expected_answer": "6 महीने से 6 साल की उम्र के बच्चे तथा आंगनवाड़ी केंद्रों में पंजीकृत गर्भवती या स्तनपान कराने वाली माताएँ योजना के लिए पात्र हैं।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_04_doodh_sanjivani_q3",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "योजना के तहत किस प्रकार का दूध दिया जाता है?",
+      "expected_answer": "पोषण संबंधी सेवन को बढ़ाने के लिए फोर्टिफाइड फ्लेवर वाला दूध दिया जाता है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_04_doodh_sanjivani_eligibility",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना के लिए कौन पात्र है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_04_doodh_sanjivani_documents_required",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना के लिए कौन से दस्तावेज चाहिए?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_04_doodh_sanjivani_benefit",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना का लाभ क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_04_doodh_sanjivani_application_process",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना के लिए आवेदन कैसे करें?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_04_doodh_sanjivani_details",
+      "language": "hi",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_04_doodh_sanjivani_q1",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "'दूध संजीवनी योजना'चा मुख्य उद्देश काय आहे?",
+      "expected_answer": "आदिवासी आणि अविकसित समुदायातील मुले आणि मातांची पोषण स्थिती सुधारणे हा या योजनेचा मुख्य उद्देश आहे.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_04_doodh_sanjivani_q2",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "या योजनेसाठी कोण पात्र आहे?",
+      "expected_answer": "6 महिने ते 6 वर्षे वयोगटातील मुले तसेच अंगणवाडी केंद्रात नोंदणी केलेल्या गर्भवती किंवा स्तनदा माता या योजनेसाठी पात्र आहेत.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_04_doodh_sanjivani_q3",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "या योजनेअंतर्गत कोणत्या प्रकारचे दूध दिले जाते?",
+      "expected_answer": "पोषणाचे सेवन वाढवण्यासाठी फोर्टिफाइड फ्लेवर्ड दूध दिले जाते.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_04_doodh_sanjivani_eligibility",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना साठी कोण पात्र आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_04_doodh_sanjivani_documents_required",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना साठी कोणती कागदपत्रे लागतात?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_04_doodh_sanjivani_benefit",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना चा लाभ काय आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_04_doodh_sanjivani_application_process",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना साठी अर्ज कसा करावा?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_04_doodh_sanjivani_details",
+      "language": "mr",
+      "scheme_id": "scheme_04_doodh_sanjivani",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "दूध संजीवनी योजना म्हणजे काय?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_05_tablet_assistance_q1",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "Who administers the scheme?",
+      "expected_answer": "The scheme is administered by the Director, Scheduled Caste Welfare, Government of Gujarat.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_05_tablet_assistance_q2",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What benefit is provided under the scheme?",
+      "expected_answer": "Eligible students studying in 12th Standard and belonging to the Scheduled Caste category receive a tablet by paying a token fee of ₹1,000.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_faq_scheme_05_tablet_assistance_q3",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "What are the eligibility criteria?",
+      "expected_answer": "The student must belong to the Scheduled Caste category of Gujarat and must be studying in 12th Standard. There is no income limit.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_05_tablet_assistance_eligibility",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "Who is eligible for Tablet Assistance to Scheduled Caste Students of 12th Standard?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_05_tablet_assistance_documents_required",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What documents are required for Tablet Assistance to Scheduled Caste Students of 12th Standard?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_05_tablet_assistance_benefit",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is the benefit under Tablet Assistance to Scheduled Caste Students of 12th Standard?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_05_tablet_assistance_application_process",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "How do I apply for Tablet Assistance to Scheduled Caste Students of 12th Standard?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "en_template_scheme_05_tablet_assistance_details",
+      "language": "en",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "What is Tablet Assistance to Scheduled Caste Students of 12th Standard?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_05_tablet_assistance_q1",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "इस योजना का संचालन कौन करता है?",
+      "expected_answer": "इस योजना का संचालन निदेशक, अनुसूचित जाति कल्याण, गुजरात सरकार द्वारा किया जाता है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_05_tablet_assistance_q2",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "इस योजना के तहत क्या लाभ मिलता है?",
+      "expected_answer": "12वीं कक्षा में पढ़ने वाले पात्र अनुसूचित जाति के छात्रों को ₹1,000 का सांकेतिक शुल्क देकर एक टैबलेट मिलता है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_faq_scheme_05_tablet_assistance_q3",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पात्रता की क्या शर्तें हैं?",
+      "expected_answer": "छात्र गुजरात की अनुसूचित जाति श्रेणी से संबंधित होना चाहिए और 12वीं कक्षा में पढ़ रहा होना चाहिए। आय की कोई सीमा नहीं है।",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_05_tablet_assistance_eligibility",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता के लिए कौन पात्र है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_05_tablet_assistance_documents_required",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता के लिए कौन से दस्तावेज चाहिए?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_05_tablet_assistance_benefit",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता का लाभ क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_05_tablet_assistance_application_process",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता के लिए आवेदन कैसे करें?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "hi_template_scheme_05_tablet_assistance_details",
+      "language": "hi",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता क्या है?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_05_tablet_assistance_q1",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "या योजनेचे प्रशासन कोण करते?",
+      "expected_answer": "या योजनेचे प्रशासन अनुसूचित जाती कल्याण संचालक, गुजरात सरकारद्वारे केले जाते.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_05_tablet_assistance_q2",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "या योजनेअंतर्गत कोणता लाभ दिला जातो?",
+      "expected_answer": "12 वीमध्ये शिकणाऱ्या पात्र अनुसूचित जातीच्या विद्यार्थ्यांना ₹1,000 टोकन शुल्क भरून एक टॅब्लेट मिळतो.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_faq_scheme_05_tablet_assistance_q3",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "faq",
+      "source": "faq",
+      "difficulty": "easy",
+      "question": "पात्रतेच्या अटी काय आहेत?",
+      "expected_answer": "विद्यार्थी गुजरातच्या अनुसूचित जाती प्रवर्गातील असावा आणि 12 वीमध्ये शिकत असावा. उत्पन्नाची कोणतीही मर्यादा नाही.",
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_05_tablet_assistance_eligibility",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "eligibility",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12 वीच्या अनुसूचित जातीच्या विद्यार्थ्यांना टॅब्लेट सहाय्य साठी कोण पात्र आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_05_tablet_assistance_documents_required",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "documents_required",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12 वीच्या अनुसूचित जातीच्या विद्यार्थ्यांना टॅब्लेट सहाय्य साठी कोणती कागदपत्रे लागतात?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_05_tablet_assistance_benefit",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "benefit",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12 वीच्या अनुसूचित जातीच्या विद्यार्थ्यांना टॅब्लेट सहाय्य चा लाभ काय आहे?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_05_tablet_assistance_application_process",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "application_process",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12 वीच्या अनुसूचित जातीच्या विद्यार्थ्यांना टॅब्लेट सहाय्य साठी अर्ज कसा करावा?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    },
+    {
+      "id": "mr_template_scheme_05_tablet_assistance_details",
+      "language": "mr",
+      "scheme_id": "scheme_05_tablet_assistance",
+      "expected_section": "details",
+      "source": "template",
+      "difficulty": "medium",
+      "question": "12 वीच्या अनुसूचित जातीच्या विद्यार्थ्यांना टॅब्लेट सहाय्य म्हणजे काय?",
+      "expected_answer": null,
+      "generated_answer": null,
+      "retrieved_sections": [],
+      "retrieval_accuracy": {
+        "correct_chunk_retrieved": null,
+        "matched_via": null
+      },
+      "faithfulness": {
+        "faithful": null,
+        "reason": null,
+        "judge_error": "'\"answer\"'"
+      }
+    }
+  ]
+}

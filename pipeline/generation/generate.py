@@ -1,23 +1,33 @@
 """
 pipeline/generation/generate.py
 
-Generate answers using Groq API + language-specific prompts.
+Generate structured answers using Groq API + language-specific prompts.
+Validates JSON with Pydantic; retries once on parse/validation failure.
 """
 
+import json
 import os
+import re
 from pathlib import Path
-from typing import Optional
 
 from dotenv import load_dotenv
 from groq import Groq
+
+from pipeline.generation.schemas import StructuredAnswer
 
 load_dotenv()
 
 # ---------- Config ----------
 PROMPTS_DIR = Path("configs/prompts")
-GROQ_MODEL = "openai/gpt-oss-120b"   # or "llama-3.1-8b-instant" for faster/cheaper
+GROQ_MODEL = "openai/gpt-oss-120b"  # or "llama-3.3-70b-versatile" / "llama-3.1-8b-instant"
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+REFUSAL_BY_LANG = {
+    "en": "I don't have enough information to answer this question based on the available documents.",
+    "hi": "उपलब्ध दस्तावेजों के आधार पर मेरे पास इस प्रश्न का उत्तर देने के लिए पर्याप्त जानकारी नहीं है।",
+    "mr": "उपलब्ध दस्तऐवजांच्या आधारे या प्रश्नाचे उत्तर देण्यासाठी माझ्याकडे पुरेशी माहिती नाही.",
+}
 
 
 def load_prompt(language: str) -> str:
@@ -42,49 +52,104 @@ def format_context(chunks: list[dict]) -> str:
     return "\n\n".join(parts)
 
 
+def _extract_json(text: str) -> dict:
+    """Parse JSON from model output; strip markdown fences if present."""
+    text = text.strip()
+    fence = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
+    if fence:
+        text = fence.group(1).strip()
+    # If model prepends junk, try first { ... } block
+    if not text.startswith("{"):
+        match = re.search(r"\{[\s\S]*\}", text)
+        if match:
+            text = match.group(0)
+    return json.loads(text)
+
+
 def generate_answer(
     query: str,
     retrieved_chunks: list[dict],
-    language: str = "en"
+    language: str = "en",
 ) -> dict:
     """
-    Generate an answer using Groq.
+    Generate a structured answer using Groq.
 
     Returns:
         {
             "answer": str,
+            "citations": list[dict],
+            "language": str,
+            "confidence": str,
             "cited_chunks": list[dict],
-            "language": str
+            "raw_valid": bool,
+            "parse_error": str | None,
         }
     """
+    refusal = REFUSAL_BY_LANG.get(language, REFUSAL_BY_LANG["en"])
+
     if not retrieved_chunks:
         return {
-            "answer": "I don't have enough information to answer this question based on the available documents.",
+            "answer": refusal,
+            "citations": [],
+            "language": language,
+            "confidence": "low",
             "cited_chunks": [],
-            "language": language
+            "raw_valid": True,
+            "parse_error": None,
         }
 
     prompt_template = load_prompt(language)
     context = format_context(retrieved_chunks)
+    full_prompt = prompt_template.format(context=context, query=query)
 
-    full_prompt = prompt_template.format(
-        context=context,
-        query=query
-    )
+    last_error = None
+    raw = ""
 
-    response = client.chat.completions.create(
-        model=GROQ_MODEL,
-        messages=[
-            {"role": "user", "content": full_prompt}
-        ],
-        temperature=0.2,      # low temperature = more factual
-        max_tokens=1024,
-    )
+    for attempt in range(2):
+        messages = [{"role": "user", "content": full_prompt}]
+        if attempt == 1:
+            messages.append(
+                {
+                    "role": "user",
+                    "content": (
+                        "Previous output was invalid JSON. "
+                        "Reply with ONLY valid JSON matching the required schema. "
+                        "No markdown, no extra text."
+                    ),
+                }
+            )
 
-    answer = response.choices[0].message.content.strip()
+        response = client.chat.completions.create(
+            model=GROQ_MODEL,
+            messages=messages,
+            temperature=0.2,
+            max_tokens=1024,
+        )
+        raw = response.choices[0].message.content.strip()
 
+        try:
+            data = _extract_json(raw)
+            parsed = StructuredAnswer.model_validate(data)
+            return {
+                "answer": parsed.answer,
+                "citations": [c.model_dump() for c in parsed.citations],
+                "language": parsed.language,
+                "confidence": parsed.confidence,
+                "cited_chunks": retrieved_chunks,
+                "raw_valid": True,
+                "parse_error": None,
+            }
+        except Exception as e:
+            last_error = e
+            continue
+
+    # Graceful failure after retry
     return {
-        "answer": answer,
+        "answer": raw if raw else refusal,
+        "citations": [],
+        "language": language,
+        "confidence": "low",
         "cited_chunks": retrieved_chunks,
-        "language": language
+        "raw_valid": False,
+        "parse_error": str(last_error),
     }
