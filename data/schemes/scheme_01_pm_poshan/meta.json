@@ -4,11 +4,7 @@
   "scheme_name_hi": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना",
   "scheme_name_mr": "पंतप्रधान पोषण-सर्वांगीण पोषणासाठी पंतप्रधानांची व्यापक योजना",
   "category": "health & wellness",
-  "languages_available": [
-    "en",
-    "hi",
-    "mr"
-  ],
+  "languages_available": ["en", "hi", "mr"],
   "translation_status": {
     "en": "native",
     "hi": "native",

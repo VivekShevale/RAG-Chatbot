@@ -1,21 +1,15 @@
-[
-  {
-    "scheme_id": "scheme_full_medical_checkup_assistance_glwb",
-    "scheme_name_en": "Full Medical Checkup Assistance Scheme- Gujarat Labour Welfare Board",
-    "scheme_name_hi": "पूर्ण चिकित्सा जांच सहायता योजना- गुजरात श्रम कल्याण बोर्ड",
-    "scheme_name_mr": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना- गुजरात कामगार कल्याण मंडळ",
-    "category": "health and wellness",
-    "languages_available": {
-      "en",
-      "hi",
-      "mr"
-    },
-    "translation_status": {
-      "en": "native",
-      "hi": "native",
-      "mr": "native"
-    },
-    "source_url": "https://www.myscheme.gov.in/mr/schemes/sfmcas-glwb",
-    "date_collected": "2026-09-04"
-  }
-]
+{
+  "scheme_id": "scheme_03_medical_checkup_assistance",
+  "scheme_name_en": "Full Medical Checkup Assistance Scheme - Gujarat Labour Welfare Board",
+  "scheme_name_hi": "पूर्ण चिकित्सा जांच सहायता योजना- गुजरात श्रम कल्याण बोर्ड",
+  "scheme_name_mr": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना- गुजरात कामगार कल्याण मंडळ",
+  "category": "health and wellness",
+  "languages_available": ["en", "hi", "mr"],
+  "translation_status": {
+    "en": "native",
+    "hi": "native",
+    "mr": "native"
+  },
+  "source_url": "https://www.myscheme.gov.in/mr/schemes/sfmcas-glwb",
+  "date_collected": "2026-09-04"
+}

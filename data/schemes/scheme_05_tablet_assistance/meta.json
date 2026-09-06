@@ -1,21 +1,15 @@
-[
-  {
-    "scheme_id": "scheme_01_tablet_assistance_sc_12th",
-    "scheme_name_en": "Tablet Assistance to Scheduled Caste Students of 12th Standard",
-    "scheme_name_hi": "12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता",
-    "scheme_name_mr": "12 वीच्या अनुसूचित जातीच्या विद्यार्थ्यांना टॅब्लेट सहाय्य",
-    "category": "education_learning",
-    "languages_available": {
-      "en",
-      "hi",
-      "mr"
-    },
-    "translation_status": {
-      "en": "native",
-      "hi": "native",
-      "mr": "native"
-    },
-    "source_url": "https://www.myscheme.gov.in/schemes/tascs12s",
-    "date_collected": "2026-09-04"
-  }
-]
+{
+  "scheme_id": "scheme_05_tablet_assistance",
+  "scheme_name_en": "Tablet Assistance to Scheduled Caste Students of 12th Standard",
+  "scheme_name_hi": "12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता",
+  "scheme_name_mr": "12 वीच्या अनुसूचित जातीच्या विद्यार्थ्यांना टॅब्लेट सहाय्य",
+  "category": "education_learning",
+  "languages_available": ["en", "hi", "mr"],
+  "translation_status": {
+    "en": "native",
+    "hi": "native",
+    "mr": "native"
+  },
+  "source_url": "https://www.myscheme.gov.in/schemes/tascs12s",
+  "date_collected": "2026-09-04"
+}
