@@ -8,8 +8,8 @@ chromadb
 # --- Retrieval ---
 rank-bm25
 
-# --- LLM (local via Ollama) ---
-ollama
+# --- LLM (Groq) ---
+groq
 
 # --- Structured output validation ---
 pydantic
