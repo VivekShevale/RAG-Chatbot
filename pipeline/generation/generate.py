@@ -20,6 +20,7 @@ load_dotenv()
 # ---------- Config ----------
 PROMPTS_DIR = Path("configs/prompts")
 GROQ_MODEL = "openai/gpt-oss-120b"  # or "llama-3.3-70b-versatile" / "llama-3.1-8b-instant"
+DEFAULT_TEMPERATURE = 0.2
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
@@ -70,9 +71,17 @@ def generate_answer(
     query: str,
     retrieved_chunks: list[dict],
     language: str = "en",
+    temperature: float = DEFAULT_TEMPERATURE,
 ) -> dict:
     """
     Generate a structured answer using Groq.
+
+    Args:
+        query: User question
+        retrieved_chunks: Chunks from retrieve()
+        language: "en" | "hi" | "mr"
+        temperature: Sampling temperature (0.0 = deterministic, higher = more variance).
+                     Default 0.2 for production; pass 0.0 / 0.7 for variance tests.
 
     Returns:
         {
@@ -83,6 +92,7 @@ def generate_answer(
             "cited_chunks": list[dict],
             "raw_valid": bool,
             "parse_error": str | None,
+            "temperature": float,
         }
     """
     refusal = REFUSAL_BY_LANG.get(language, REFUSAL_BY_LANG["en"])
@@ -96,6 +106,7 @@ def generate_answer(
             "cited_chunks": [],
             "raw_valid": True,
             "parse_error": None,
+            "temperature": temperature,
         }
 
     prompt_template = load_prompt(language)
@@ -122,7 +133,7 @@ def generate_answer(
         response = client.chat.completions.create(
             model=GROQ_MODEL,
             messages=messages,
-            temperature=0.2,
+            temperature=temperature,
             max_tokens=1024,
         )
         raw = response.choices[0].message.content.strip()
@@ -138,6 +149,7 @@ def generate_answer(
                 "cited_chunks": retrieved_chunks,
                 "raw_valid": True,
                 "parse_error": None,
+                "temperature": temperature,
             }
         except Exception as e:
             last_error = e
@@ -152,4 +164,5 @@ def generate_answer(
         "cited_chunks": retrieved_chunks,
         "raw_valid": False,
         "parse_error": str(last_error),
+        "temperature": temperature,
     }
