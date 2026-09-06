@@ -39,8 +39,8 @@ import json
 import re
 from pathlib import Path
 
-DATA_DIR = Path(r"D:\RAG-Chatbot\data\schemes")
-OUTPUT_PATH = Path(r"D:\RAG-Chatbot\data\processed\chunks.json")
+DATA_DIR = Path("data/schemes")
+OUTPUT_PATH = Path("data/processed/chunks.json")
 
 # Section headers we expect. Matching is keyword/substring based (not exact
 # equality) and language-aware, because scheme docs use English headers in
@@ -96,16 +96,26 @@ FAQ_Q_PATTERN = re.compile(r"^\*\*Q(\d+):\s*(.+?)\*\*\s*$")
 FAQ_A_PATTERN = re.compile(r"^A(\d+):\s*(.+)$")
 
 
-def split_into_sections(markdown_text: str) -> dict:
+def split_into_sections(markdown_text: str) -> tuple:
     """
-    Splits a markdown file into a dict of {normalized_section_name: section_body_text}.
-    Ignores the top-level '# Title' line (title is pulled from meta.json instead,
-    but we don't fail if meta.json is missing).
+    Splits a markdown file into a dict of {normalized_section_name: section_body_text},
+    and separately returns the document's title (the '# Title' line).
+
+    The title used to be discarded entirely. It's now captured and returned
+    because retrieval quality for structural sections (documents_required,
+    eligibility, etc.) depends on it — see build_index.py's contextual
+    embedding step, which prepends this title back before embedding, since
+    the raw section body (e.g. a bare bullet list of document names) often
+    never restates the scheme name or section type itself.
+
+    Returns:
+        (title: str | None, sections: dict)
     """
     lines = markdown_text.splitlines()
     sections = {}
     current_section = None
     buffer = []
+    title = None
 
     def flush():
         if current_section is not None:
@@ -119,14 +129,15 @@ def split_into_sections(markdown_text: str) -> dict:
             current_section = classify_section(raw_name)
             buffer = []
         elif line.strip().startswith("# "):
-            # top-level title line, skip — not a section
+            if title is None:
+                title = line.strip()[2:].strip()
             continue
         else:
             if current_section is not None:
                 buffer.append(line)
 
     flush()
-    return sections
+    return title, sections
 
 
 def parse_faq_section(faq_text: str) -> list:
@@ -187,7 +198,10 @@ def build_chunks_for_scheme(scheme_dir: Path) -> list:
         with open(file_path, "r", encoding="utf-8") as f:
             text = f.read()
 
-        sections = split_into_sections(text)
+        title, sections = split_into_sections(text)
+        if title is None:
+            print(f"  [warn] {scheme_id}/{lang}: no '# Title' line found — "
+                  f"scheme_title will be null for this language, hurting retrieval context")
 
         for section_name, section_body in sections.items():
             if section_name == "faq":
@@ -200,6 +214,7 @@ def build_chunks_for_scheme(scheme_dir: Path) -> list:
                         "language": lang,
                         "section": "faq",
                         "faq_index": faq_index,
+                        "scheme_title": title,
                         "text": f"Q: {question}\nA: {answer}",
                         "source_url": source_urls.get(lang),
                     })
@@ -211,6 +226,7 @@ def build_chunks_for_scheme(scheme_dir: Path) -> list:
                     "language": lang,
                     "section": section_name,
                     "faq_index": None,
+                    "scheme_title": title,
                     "text": section_body.strip(),
                     "source_url": source_urls.get(lang),
                 })

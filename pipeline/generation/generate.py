@@ -31,9 +31,10 @@ def format_context(chunks: list[dict]) -> str:
     """Turn retrieved chunks into a readable context block."""
     parts = []
     for i, chunk in enumerate(chunks, 1):
+        scheme_label = chunk.get("scheme_title") or chunk.get("scheme_id")
         header = (
             f"[Source {i}] "
-            f"Scheme: {chunk.get('scheme_id')} | "
+            f"Scheme: {scheme_label} | "
             f"Section: {chunk.get('section')} | "
             f"Language: {chunk.get('language')}"
         )

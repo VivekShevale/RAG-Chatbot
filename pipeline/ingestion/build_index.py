@@ -2,6 +2,18 @@
 pipeline/ingestion/build_index.py
 
 Builds a persistent ChromaDB vector index from data/processed/chunks.json
+
+IMPORTANT — E5 embedding prefixes:
+intfloat/multilingual-e5-* models were trained with instruction prefixes:
+"passage: " for indexed documents, "query: " for search queries. Skipping
+this measurably hurts retrieval quality, especially for non-English text,
+because the model relies on the prefix to align cross-lingual embeddings.
+
+We can't let Chroma's built-in embedding_function auto-embed the raw
+"documents" text (that would either bake "passage: " into the stored/
+returned text, or skip the prefix entirely). Instead we embed manually with
+the correct prefix, then hand Chroma pre-computed vectors — the stored
+"documents" text stays clean (no prefix) for citations and LLM context.
 """
 
 import argparse
@@ -9,7 +21,7 @@ import json
 from pathlib import Path
 
 from chromadb import PersistentClient
-from chromadb.utils import embedding_functions
+from sentence_transformers import SentenceTransformer
 
 # ---------- Config ----------
 CHUNKS_PATH = Path("data/processed/chunks.json")
@@ -35,10 +47,10 @@ def build_index(rebuild: bool = False):
     # Create persistent Chroma client
     client = PersistentClient(path=str(CHROMA_PATH))
 
-    # Embedding function (multilingual-e5)
-    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name=EMBEDDING_MODEL
-    )
+    # Load the embedding model directly (not via Chroma's wrapper) so we
+    # control exactly what text gets embedded (with the "passage: " prefix).
+    print(f"Loading embedding model: {EMBEDDING_MODEL} (first run downloads it, may take a while)")
+    model = SentenceTransformer(EMBEDDING_MODEL)
 
     # Handle rebuild
     if rebuild:
@@ -48,25 +60,26 @@ def build_index(rebuild: bool = False):
         except Exception:
             pass  # collection didn't exist
 
-    # Get or create collection
+    # Get or create collection. No embedding_function attached here — we
+    # supply our own pre-computed embeddings on every add() and query().
     collection = client.get_or_create_collection(
         name=COLLECTION_NAME,
-        embedding_function=embedding_fn,
         metadata={"hnsw:space": "cosine"}  # cosine is standard for e5 models
     )
 
     # Prepare data for Chroma
     ids = []
-    documents = []
+    documents = []       # clean text, no prefix — this is what gets displayed/cited
+    embedding_inputs = []  # "passage: " + text — this is what gets embedded
     metadatas = []
 
     for i, chunk in enumerate(chunks):
-        # Create a unique ID
         chunk_id = f"{chunk['scheme_id']}_{chunk['language']}_{chunk['section']}_{chunk.get('faq_index') or 'none'}_{i}"
-        
+
         ids.append(chunk_id)
         documents.append(chunk["text"])
-        
+        embedding_inputs.append(f"passage: {chunk['text']}")
+
         # Chroma metadata values must be str, int, float or bool
         metadatas.append({
             "scheme_id": str(chunk["scheme_id"]),
@@ -80,9 +93,14 @@ def build_index(rebuild: bool = False):
     batch_size = 100
     for start in range(0, len(ids), batch_size):
         end = start + batch_size
+        batch_embeddings = model.encode(
+            embedding_inputs[start:end],
+            normalize_embeddings=True,   # cosine similarity expects normalized vectors
+        ).tolist()
         collection.add(
             ids=ids[start:end],
             documents=documents[start:end],
+            embeddings=batch_embeddings,
             metadatas=metadatas[start:end],
         )
         print(f"Added chunks {start} → {end-1}")
