@@ -1,0 +1,282 @@
+{
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "by_language": {
+      "en": {
+        "n": 5,
+        "passed": 5,
+        "pass_rate": 1.0
+      },
+      "hi": {
+        "n": 5,
+        "passed": 5,
+        "pass_rate": 1.0
+      },
+      "mr": {
+        "n": 5,
+        "passed": 5,
+        "pass_rate": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "refuse_en_01",
+      "language": "en",
+      "question": "How do I apply for PM Awas Yojana in Mumbai?",
+      "answer": "I don't have enough information to answer this question based on the available documents.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_04_doodh_sanjivani"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:23.740717"
+    },
+    {
+      "id": "refuse_en_02",
+      "language": "en",
+      "question": "What is the scholarship amount under National Merit Scholarship 2024?",
+      "answer": "I don't have enough information to answer this question based on the available documents.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:25.016162"
+    },
+    {
+      "id": "refuse_en_03",
+      "language": "en",
+      "question": "What is the eligibility for Ayushman Bharat in Gujarat?",
+      "answer": "I don't have enough information to answer this question based on the available documents.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:26.315237"
+    },
+    {
+      "id": "refuse_en_04",
+      "language": "en",
+      "question": "How much subsidy does PM Surya Ghar give for solar panels?",
+      "answer": "I don't have enough information to answer this question based on the available documents.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 6,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:27.325890"
+    },
+    {
+      "id": "refuse_en_05",
+      "language": "en",
+      "question": "What documents are needed for a passport in Pune?",
+      "answer": "I don't have enough information to answer this question based on the available documents.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_04_doodh_sanjivani",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:28.417534"
+    },
+    {
+      "id": "refuse_hi_01",
+      "language": "hi",
+      "question": "मुंबई में पीएम आवास योजना के लिए कैसे आवेदन करें?",
+      "answer": "उपलब्ध दस्तावेजों के आधार पर मेरे पास इस प्रश्न का उत्तर देने के लिए पर्याप्त जानकारी नहीं है।",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:29.557320"
+    },
+    {
+      "id": "refuse_hi_02",
+      "language": "hi",
+      "question": "राष्ट्रीय मेरिट छात्रवृत्ति 2024 की राशि कितनी है?",
+      "answer": "उपलब्ध दस्तावेजों के आधार पर मेरे पास इस प्रश्न का उत्तर देने के लिए पर्याप्त जानकारी नहीं है।",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 6,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:30.853503"
+    },
+    {
+      "id": "refuse_hi_03",
+      "language": "hi",
+      "question": "गुजरात में आयुष्मान भारत की पात्रता क्या है?",
+      "answer": "उपलब्ध दस्तावेजों के आधार पर मेरे पास इस प्रश्न का उत्तर देने के लिए पर्याप्त जानकारी नहीं है।",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_02_vahan_aksmat_sahay",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:32.296192"
+    },
+    {
+      "id": "refuse_hi_04",
+      "language": "hi",
+      "question": "पीएम सूर्य घर योजना में सोलर पैनल पर कितनी सब्सिडी मिलती है?",
+      "answer": "उपलब्ध दस्तावेजों के आधार पर मेरे पास इस प्रश्न का उत्तर देने के लिए पर्याप्त जानकारी नहीं है।",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:36.541516"
+    },
+    {
+      "id": "refuse_hi_05",
+      "language": "hi",
+      "question": "पुणे में पासपोर्ट के लिए कौन से दस्तावेज चाहिए?",
+      "answer": "उपलब्ध दस्तावेजों के आधार पर मेरे पास इस प्रश्न का उत्तर देने के लिए पर्याप्त जानकारी नहीं है।",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_02_vahan_aksmat_sahay",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_04_doodh_sanjivani",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:46.214722"
+    },
+    {
+      "id": "refuse_mr_01",
+      "language": "mr",
+      "question": "मुंबईत पीएम आवास योजनेसाठी अर्ज कसा करावा?",
+      "answer": "उपलब्ध दस्तऐवजांच्या आधारे या प्रश्नाचे उत्तर देण्यासाठी माझ्याकडे पुरेशी माहिती नाही.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:16:57.784732"
+    },
+    {
+      "id": "refuse_mr_02",
+      "language": "mr",
+      "question": "राष्ट्रीय मेरीट शिष्यवृत्ती 2024 ची रक्कम किती आहे?",
+      "answer": "उपलब्ध दस्तऐवजांच्या आधारे या प्रश्नाचे उत्तर देण्यासाठी माझ्याकडे पुरेशी माहिती नाही.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:17:11.611995"
+    },
+    {
+      "id": "refuse_mr_03",
+      "language": "mr",
+      "question": "गुजरातमध्ये आयुष्मान भारतची पात्रता काय आहे?",
+      "answer": "उपलब्ध दस्तऐवजांच्या आधारे या प्रश्नाचे उत्तर देण्यासाठी माझ्याकडे पुरेशी माहिती नाही.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 6,
+      "retrieved_schemes": [
+        "scheme_02_vahan_aksmat_sahay",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_04_doodh_sanjivani",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:17:23.282914"
+    },
+    {
+      "id": "refuse_mr_04",
+      "language": "mr",
+      "question": "पीएम सूर्य घर योजनेत सोलर पॅनेलवर किती सबसिडी मिळते?",
+      "answer": "उपलब्ध दस्तऐवजांच्या आधारे या प्रश्नाचे उत्तर देण्यासाठी माझ्याकडे पुरेशी माहिती नाही.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_01_pm_poshan"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:17:28.811135"
+    },
+    {
+      "id": "refuse_mr_05",
+      "language": "mr",
+      "question": "पुण्यात पासपोर्टसाठी कोणती कागदपत्रे लागतात?",
+      "answer": "उपलब्ध दस्तऐवजांच्या आधारे या प्रश्नाचे उत्तर देण्यासाठी माझ्याकडे पुरेशी माहिती नाही.",
+      "refused": true,
+      "citations": [],
+      "n_retrieved": 5,
+      "retrieved_schemes": [
+        "scheme_02_vahan_aksmat_sahay",
+        "scheme_03_medical_checkup_assistance",
+        "scheme_04_doodh_sanjivani",
+        "scheme_05_tablet_assistance"
+      ],
+      "raw_valid": true,
+      "passed": true,
+      "timestamp": "2026-09-06T22:17:49.447467"
+    }
+  ]
+}
