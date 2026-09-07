@@ -33,7 +33,8 @@ that surfaced this bug.
 
 from collections import Counter
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple
+import time
 
 from chromadb import PersistentClient
 from sentence_transformers import SentenceTransformer
@@ -176,53 +177,64 @@ class Retriever:
         query: str,
         language: Optional[str] = None,
         top_k: int = 5,
-        search_all_languages: bool = False
+        search_all_languages: bool = False,
     ) -> list[dict]:
-        """
-        Retrieve relevant chunks using vector search, with deterministic
-        section-intent routing layered on top (see module docstring).
+        """Same public API as before — returns only chunks."""
+        chunks, _ = self.retrieve_with_timings(
+            query=query,
+            language=language,
+            top_k=top_k,
+            search_all_languages=search_all_languages,
+        )
+        return chunks
 
-        Args:
-            query: User question
-            language: "en" | "hi" | "mr"  (ignored if search_all_languages=True)
-            top_k: Number of vector-search chunks to return
-            search_all_languages: If True, search across all languages
+    def retrieve_with_timings(
+        self,
+        query: str,
+        language: Optional[str] = None,
+        top_k: int = 5,
+        search_all_languages: bool = False,
+    ) -> Tuple[list[dict], dict]:
+        """
+        Same retrieval logic as retrieve(), plus stage timings.
 
         Returns:
-            List of dicts, each containing:
-            {
-                "text": ...,
-                "scheme_id": ...,
-                "scheme_title": ...,
-                "language": ...,
-                "section": ...,
-                "faq_index": ...,
-                "source_url": ...,
-                "score": ...,          # distance (lower is better); None if
-                                       # injected via section-intent routing
-                "matched_via": "vector" | "section_intent_routing",
-            }
+            (chunks, timings) where timings has:
+              vector_search_ms, section_intent_ms,
+              section_intent_triggered, retrieval_total_ms
         """
-        vector_results = self._vector_search(query, language, top_k, search_all_languages)
+        t0 = time.perf_counter()
 
-        # Section-intent routing only applies to a single target language
-        # (it needs one concrete language to fetch the exact chunk in).
-        # Skip it entirely for cross-language search.
+        t_vec0 = time.perf_counter()
+        vector_results = self._vector_search(
+            query, language, top_k, search_all_languages
+        )
+        vector_ms = (time.perf_counter() - t_vec0) * 1000
+
+        # Cross-language / no language → vector only
         if search_all_languages or not language:
-            return vector_results
+            total_ms = (time.perf_counter() - t0) * 1000
+            timings = {
+                "vector_search_ms": round(vector_ms, 2),
+                "section_intent_ms": 0.0,
+                "section_intent_triggered": False,
+                "retrieval_total_ms": round(total_ms, 2),
+            }
+            return vector_results, timings
 
+        t_si0 = time.perf_counter()
         intent_section = detect_section_intent(query, language)
-        if not intent_section:
-            return vector_results
 
-        # Anchor scheme = majority vote among top 3 vector hits. Validated
-        # against all 15 real eval questions: the correct scheme is reliably
-        # the top hit (or ties for it) even in cases where the correct
-        # SECTION fails to rank — scheme identification and section
-        # identification are separate problems with very different
-        # reliability profiles in this corpus.
-        if not vector_results:
-            return vector_results
+        if not intent_section or not vector_results:
+            section_intent_ms = (time.perf_counter() - t_si0) * 1000
+            total_ms = (time.perf_counter() - t0) * 1000
+            timings = {
+                "vector_search_ms": round(vector_ms, 2),
+                "section_intent_ms": round(section_intent_ms, 2),
+                "section_intent_triggered": False,
+                "retrieval_total_ms": round(total_ms, 2),
+            }
+            return vector_results, timings
 
         top_for_vote = vector_results[:3]
         scheme_votes = Counter(r["scheme_id"] for r in top_for_vote)
@@ -233,13 +245,34 @@ class Retriever:
             for r in vector_results
         )
         if already_present:
-            return vector_results
+            section_intent_ms = (time.perf_counter() - t_si0) * 1000
+            total_ms = (time.perf_counter() - t0) * 1000
+            timings = {
+                "vector_search_ms": round(vector_ms, 2),
+                "section_intent_ms": round(section_intent_ms, 2),
+                "section_intent_triggered": True,
+                "retrieval_total_ms": round(total_ms, 2),
+            }
+            return vector_results, timings
 
-        forced_chunk = self._fetch_exact_chunk(anchor_scheme_id, intent_section, language)
-        if forced_chunk:
-            return vector_results + [forced_chunk]
+        forced_chunk = self._fetch_exact_chunk(
+            anchor_scheme_id, intent_section, language
+        )
+        section_intent_ms = (time.perf_counter() - t_si0) * 1000
+        section_intent_triggered = forced_chunk is not None
 
-        return vector_results
+        results = (
+            vector_results + [forced_chunk] if forced_chunk else vector_results
+        )
+
+        total_ms = (time.perf_counter() - t0) * 1000
+        timings = {
+            "vector_search_ms": round(vector_ms, 2),
+            "section_intent_ms": round(section_intent_ms, 2),
+            "section_intent_triggered": section_intent_triggered,
+            "retrieval_total_ms": round(total_ms, 2),
+        }
+        return results, timings
 
 
 # Convenience function so you can also do:
@@ -250,9 +283,23 @@ def retrieve(
     query: str,
     language: Optional[str] = None,
     top_k: int = 5,
-    search_all_languages: bool = False
+    search_all_languages: bool = False,
 ) -> list[dict]:
     global _retriever
     if _retriever is None:
         _retriever = Retriever()
     return _retriever.retrieve(query, language, top_k, search_all_languages)
+
+
+def retrieve_with_timings(
+    query: str,
+    language: Optional[str] = None,
+    top_k: int = 5,
+    search_all_languages: bool = False,
+) -> Tuple[list[dict], dict]:
+    global _retriever
+    if _retriever is None:
+        _retriever = Retriever()
+    return _retriever.retrieve_with_timings(
+        query, language, top_k, search_all_languages
+    )

@@ -9,6 +9,7 @@ import json
 import os
 import re
 from pathlib import Path
+import time
 
 from dotenv import load_dotenv
 from groq import Groq
@@ -107,6 +108,11 @@ def generate_answer(
             "raw_valid": True,
             "parse_error": None,
             "temperature": temperature,
+            "timings_ms": {
+                "llm_ms": 0.0,
+                "parse_validate_ms": 0.0,
+                "generation_total_ms": 0.0,
+            },
         }
 
     prompt_template = load_prompt(language)
@@ -115,6 +121,8 @@ def generate_answer(
 
     last_error = None
     raw = ""
+    llm_ms = 0.0
+    parse_ms = 0.0
 
     for attempt in range(2):
         messages = [{"role": "user", "content": full_prompt}]
@@ -130,17 +138,21 @@ def generate_answer(
                 }
             )
 
+        t_llm0 = time.perf_counter()
         response = client.chat.completions.create(
             model=GROQ_MODEL,
             messages=messages,
             temperature=temperature,
             max_tokens=1024,
         )
+        llm_ms += (time.perf_counter() - t_llm0) * 1000
         raw = response.choices[0].message.content.strip()
 
+        t_parse0 = time.perf_counter()
         try:
             data = _extract_json(raw)
             parsed = StructuredAnswer.model_validate(data)
+            parse_ms += (time.perf_counter() - t_parse0) * 1000
             return {
                 "answer": parsed.answer,
                 "citations": [c.model_dump() for c in parsed.citations],
@@ -150,8 +162,14 @@ def generate_answer(
                 "raw_valid": True,
                 "parse_error": None,
                 "temperature": temperature,
+                "timings_ms": {
+                    "llm_ms": round(llm_ms, 2),
+                    "parse_validate_ms": round(parse_ms, 2),
+                    "generation_total_ms": round(llm_ms + parse_ms, 2),
+                },
             }
         except Exception as e:
+            parse_ms += (time.perf_counter() - t_parse0) * 1000
             last_error = e
             continue
 
@@ -165,4 +183,9 @@ def generate_answer(
         "raw_valid": False,
         "parse_error": str(last_error),
         "temperature": temperature,
+        "timings_ms": {
+            "llm_ms": round(llm_ms, 2),
+            "parse_validate_ms": round(parse_ms, 2),
+            "generation_total_ms": round(llm_ms + parse_ms, 2),
+        },
     }

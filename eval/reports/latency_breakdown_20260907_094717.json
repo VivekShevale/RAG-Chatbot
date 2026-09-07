@@ -1,0 +1,1249 @@
+{
+  "config": {
+    "repeats": 5,
+    "prompts": [
+      {
+        "id": "en_01",
+        "language": "en",
+        "question": "Who is eligible for PM POSHAN?"
+      },
+      {
+        "id": "en_02",
+        "language": "en",
+        "question": "What documents are required for Tablet Assistance scheme?"
+      },
+      {
+        "id": "en_03",
+        "language": "en",
+        "question": "What is the benefit under Medical Checkup Assistance scheme?"
+      },
+      {
+        "id": "hi_01",
+        "language": "hi",
+        "question": "पीएम पोषण योजना के लिए कौन पात्र है?"
+      },
+      {
+        "id": "hi_02",
+        "language": "hi",
+        "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?"
+      },
+      {
+        "id": "hi_03",
+        "language": "hi",
+        "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?"
+      },
+      {
+        "id": "mr_01",
+        "language": "mr",
+        "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?"
+      },
+      {
+        "id": "mr_02",
+        "language": "mr",
+        "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?"
+      },
+      {
+        "id": "mr_03",
+        "language": "mr",
+        "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?"
+      }
+    ]
+  },
+  "summary": {
+    "overall": {
+      "n": 45,
+      "vector_search_ms": {
+        "n": 45,
+        "mean": 354.73,
+        "p50": 276.78,
+        "p95": 554.34,
+        "min": 227.65,
+        "max": 2372.62
+      },
+      "section_intent_ms": {
+        "n": 45,
+        "mean": 1.41,
+        "p50": 1.81,
+        "p95": 3.25,
+        "min": 0.08,
+        "max": 5.66
+      },
+      "retrieval_total_ms": {
+        "n": 45,
+        "mean": 356.15,
+        "p50": 279.51,
+        "p95": 556.94,
+        "min": 227.75,
+        "max": 2372.76
+      },
+      "generation_total_ms": {
+        "n": 45,
+        "mean": 8228.2,
+        "p50": 8237.11,
+        "p95": 24563.61,
+        "min": 889.37,
+        "max": 24692.05
+      },
+      "total_ms": {
+        "n": 45,
+        "mean": 8906.13,
+        "p50": 8524.0,
+        "p95": 24875.68,
+        "min": 1131.21,
+        "max": 25290.31
+      },
+      "section_intent_triggered_rate": 1.0
+    },
+    "by_language": {
+      "en": {
+        "n": 15,
+        "vector_search_ms": {
+          "n": 15,
+          "mean": 330.31,
+          "p50": 258.32,
+          "p95": 642.3,
+          "min": 228.54,
+          "max": 1192.92
+        },
+        "section_intent_ms": {
+          "n": 15,
+          "mean": 1.02,
+          "p50": 0.11,
+          "p95": 3.62,
+          "min": 0.08,
+          "max": 5.66
+        },
+        "retrieval_total_ms": {
+          "n": 15,
+          "mean": 331.33,
+          "p50": 258.41,
+          "p95": 645.31,
+          "min": 230.47,
+          "max": 1198.59
+        },
+        "generation_total_ms": {
+          "n": 15,
+          "mean": 2519.64,
+          "p50": 1204.24,
+          "p95": 6663.32,
+          "min": 889.37,
+          "max": 7325.78
+        },
+        "total_ms": {
+          "n": 15,
+          "mean": 3811.54,
+          "p50": 1494.32,
+          "p95": 10407.17,
+          "min": 1131.21,
+          "max": 16955.51
+        },
+        "section_intent_triggered_rate": 1.0
+      },
+      "hi": {
+        "n": 15,
+        "vector_search_ms": {
+          "n": 15,
+          "mean": 282.56,
+          "p50": 274.65,
+          "p95": 353.83,
+          "min": 234.15,
+          "max": 397.92
+        },
+        "section_intent_ms": {
+          "n": 15,
+          "mean": 1.59,
+          "p50": 2.03,
+          "p95": 2.96,
+          "min": 0.1,
+          "max": 3.51
+        },
+        "retrieval_total_ms": {
+          "n": 15,
+          "mean": 284.15,
+          "p50": 274.95,
+          "p95": 354.56,
+          "min": 236.46,
+          "max": 400.12
+        },
+        "generation_total_ms": {
+          "n": 15,
+          "mean": 7744.67,
+          "p50": 8239.55,
+          "p95": 8569.0,
+          "min": 2366.89,
+          "max": 8586.93
+        },
+        "total_ms": {
+          "n": 15,
+          "mean": 8031.17,
+          "p50": 8524.0,
+          "p95": 8833.43,
+          "min": 2648.18,
+          "max": 8875.2
+        },
+        "section_intent_triggered_rate": 1.0
+      },
+      "mr": {
+        "n": 15,
+        "vector_search_ms": {
+          "n": 15,
+          "mean": 451.34,
+          "p50": 295.09,
+          "p95": 1125.72,
+          "min": 227.65,
+          "max": 2372.62
+        },
+        "section_intent_ms": {
+          "n": 15,
+          "mean": 1.64,
+          "p50": 2.03,
+          "p95": 3.14,
+          "min": 0.1,
+          "max": 3.29
+        },
+        "retrieval_total_ms": {
+          "n": 15,
+          "mean": 452.98,
+          "p50": 298.39,
+          "p95": 1127.72,
+          "min": 227.75,
+          "max": 2372.76
+        },
+        "generation_total_ms": {
+          "n": 15,
+          "mean": 14420.27,
+          "p50": 11444.15,
+          "p95": 24608.83,
+          "min": 3171.02,
+          "max": 24692.05
+        },
+        "total_ms": {
+          "n": 15,
+          "mean": 14875.69,
+          "p50": 11713.45,
+          "p95": 25039.2,
+          "min": 3481.66,
+          "max": 25290.31
+        },
+        "section_intent_triggered_rate": 1.0
+      }
+    },
+    "by_path": {
+      "section_intent": {
+        "n": 45,
+        "vector_search_ms": {
+          "n": 45,
+          "mean": 354.73,
+          "p50": 276.78,
+          "p95": 554.34,
+          "min": 227.65,
+          "max": 2372.62
+        },
+        "section_intent_ms": {
+          "n": 45,
+          "mean": 1.41,
+          "p50": 1.81,
+          "p95": 3.25,
+          "min": 0.08,
+          "max": 5.66
+        },
+        "retrieval_total_ms": {
+          "n": 45,
+          "mean": 356.15,
+          "p50": 279.51,
+          "p95": 556.94,
+          "min": 227.75,
+          "max": 2372.76
+        },
+        "generation_total_ms": {
+          "n": 45,
+          "mean": 8228.2,
+          "p50": 8237.11,
+          "p95": 24563.61,
+          "min": 889.37,
+          "max": 24692.05
+        },
+        "total_ms": {
+          "n": 45,
+          "mean": 8906.13,
+          "p50": 8524.0,
+          "p95": 24875.68,
+          "min": 1131.21,
+          "max": 25290.31
+        },
+        "section_intent_triggered_rate": 1.0
+      },
+      "pure_vector": {
+        "n": 0,
+        "vector_search_ms": {
+          "n": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "min": null,
+          "max": null
+        },
+        "section_intent_ms": {
+          "n": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "min": null,
+          "max": null
+        },
+        "retrieval_total_ms": {
+          "n": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "min": null,
+          "max": null
+        },
+        "generation_total_ms": {
+          "n": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "min": null,
+          "max": null
+        },
+        "total_ms": {
+          "n": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "min": null,
+          "max": null
+        },
+        "section_intent_triggered_rate": null
+      }
+    }
+  },
+  "runs": [
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 1192.92,
+      "section_intent_ms": 5.66,
+      "retrieval_total_ms": 1198.59,
+      "llm_ms": 1360.26,
+      "parse_validate_ms": 1.24,
+      "generation_total_ms": 1361.5,
+      "total_ms": 16955.51,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:44.847424"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 245.18,
+      "section_intent_ms": 2.75,
+      "retrieval_total_ms": 247.94,
+      "llm_ms": 1013.65,
+      "parse_validate_ms": 0.27,
+      "generation_total_ms": 1013.93,
+      "total_ms": 1262.81,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:46.312042"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 228.54,
+      "section_intent_ms": 1.92,
+      "retrieval_total_ms": 230.47,
+      "llm_ms": 1204.16,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 1204.24,
+      "total_ms": 1435.7,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:47.948527"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 406.32,
+      "section_intent_ms": 1.86,
+      "retrieval_total_ms": 408.19,
+      "llm_ms": 1160.66,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 1160.72,
+      "total_ms": 1569.88,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:49.720193"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 241.31,
+      "section_intent_ms": 2.09,
+      "retrieval_total_ms": 243.41,
+      "llm_ms": 1267.09,
+      "parse_validate_ms": 0.09,
+      "generation_total_ms": 1267.18,
+      "total_ms": 1511.48,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:51.433061"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 290.06,
+      "section_intent_ms": 0.11,
+      "retrieval_total_ms": 290.17,
+      "llm_ms": 939.17,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 939.24,
+      "total_ms": 1230.36,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:52.864429"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 240.85,
+      "section_intent_ms": 0.09,
+      "retrieval_total_ms": 240.95,
+      "llm_ms": 889.31,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 889.37,
+      "total_ms": 1131.21,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:54.197588"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 236.47,
+      "section_intent_ms": 0.1,
+      "retrieval_total_ms": 236.57,
+      "llm_ms": 917.98,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 918.04,
+      "total_ms": 1155.62,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:55.555699"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 250.64,
+      "section_intent_ms": 0.11,
+      "retrieval_total_ms": 250.76,
+      "llm_ms": 936.04,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 936.1,
+      "total_ms": 1187.91,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:56.944490"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 258.32,
+      "section_intent_ms": 0.09,
+      "retrieval_total_ms": 258.41,
+      "llm_ms": 932.0,
+      "parse_validate_ms": 0.09,
+      "generation_total_ms": 932.09,
+      "total_ms": 1191.39,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:40:58.337087"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 282.74,
+      "section_intent_ms": 0.11,
+      "retrieval_total_ms": 282.85,
+      "llm_ms": 1210.47,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 1210.55,
+      "total_ms": 1494.32,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:00.032549"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 246.85,
+      "section_intent_ms": 0.09,
+      "retrieval_total_ms": 246.94,
+      "llm_ms": 6084.39,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 6084.47,
+      "total_ms": 6332.36,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:06.565794"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 273.94,
+      "section_intent_ms": 0.09,
+      "retrieval_total_ms": 274.04,
+      "llm_ms": 7325.72,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 7325.78,
+      "total_ms": 7600.74,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:14.368934"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 261.1,
+      "section_intent_ms": 0.08,
+      "retrieval_total_ms": 261.19,
+      "llm_ms": 6171.94,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 6172.02,
+      "total_ms": 6434.09,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:21.004254"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 299.36,
+      "section_intent_ms": 0.09,
+      "retrieval_total_ms": 299.46,
+      "llm_ms": 6379.3,
+      "parse_validate_ms": 0.11,
+      "generation_total_ms": 6379.41,
+      "total_ms": 6679.77,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:27.885598"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 293.67,
+      "section_intent_ms": 2.73,
+      "retrieval_total_ms": 296.41,
+      "llm_ms": 8380.19,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 8380.26,
+      "total_ms": 8697.65,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:36.785113"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 267.49,
+      "section_intent_ms": 1.81,
+      "retrieval_total_ms": 269.3,
+      "llm_ms": 8239.47,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 8239.55,
+      "total_ms": 8509.97,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:45.498766"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 258.8,
+      "section_intent_ms": 1.78,
+      "retrieval_total_ms": 260.59,
+      "llm_ms": 8237.05,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 8237.11,
+      "total_ms": 8498.61,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:41:54.201710"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 266.33,
+      "section_intent_ms": 2.08,
+      "retrieval_total_ms": 268.42,
+      "llm_ms": 7311.12,
+      "parse_validate_ms": 0.09,
+      "generation_total_ms": 7311.21,
+      "total_ms": 7580.52,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:01.985308"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 234.15,
+      "section_intent_ms": 2.3,
+      "retrieval_total_ms": 236.46,
+      "llm_ms": 8154.03,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 8154.09,
+      "total_ms": 8391.51,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:10.577119"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 276.78,
+      "section_intent_ms": 3.51,
+      "retrieval_total_ms": 280.3,
+      "llm_ms": 2366.82,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 2366.89,
+      "total_ms": 2648.18,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:13.426996"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 284.62,
+      "section_intent_ms": 2.54,
+      "retrieval_total_ms": 287.17,
+      "llm_ms": 8586.84,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 8586.93,
+      "total_ms": 8875.2,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:22.503734"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 283.15,
+      "section_intent_ms": 2.03,
+      "retrieval_total_ms": 285.19,
+      "llm_ms": 8382.18,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 8382.25,
+      "total_ms": 8668.39,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:31.373339"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 397.92,
+      "section_intent_ms": 2.2,
+      "retrieval_total_ms": 400.12,
+      "llm_ms": 8414.3,
+      "parse_validate_ms": 0.09,
+      "generation_total_ms": 8414.39,
+      "total_ms": 8815.53,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:40.389826"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 241.11,
+      "section_intent_ms": 2.07,
+      "retrieval_total_ms": 243.19,
+      "llm_ms": 8561.26,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 8561.32,
+      "total_ms": 8805.37,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:49.396504"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 334.93,
+      "section_intent_ms": 0.1,
+      "retrieval_total_ms": 335.03,
+      "llm_ms": 8317.08,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 8317.16,
+      "total_ms": 8653.01,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:42:58.250420"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 268.93,
+      "section_intent_ms": 0.11,
+      "retrieval_total_ms": 269.04,
+      "llm_ms": 8387.3,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 8387.37,
+      "total_ms": 8658.02,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:43:07.110295"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 266.46,
+      "section_intent_ms": 0.13,
+      "retrieval_total_ms": 266.6,
+      "llm_ms": 7311.76,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 7311.84,
+      "total_ms": 7579.36,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:43:14.891909"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 289.38,
+      "section_intent_ms": 0.12,
+      "retrieval_total_ms": 289.5,
+      "llm_ms": 8233.41,
+      "parse_validate_ms": 0.09,
+      "generation_total_ms": 8233.51,
+      "total_ms": 8524.0,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:43:23.616560"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 274.65,
+      "section_intent_ms": 0.3,
+      "retrieval_total_ms": 274.95,
+      "llm_ms": 7286.18,
+      "parse_validate_ms": 0.05,
+      "generation_total_ms": 7286.23,
+      "total_ms": 7562.16,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:43:31.380865"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 290.61,
+      "section_intent_ms": 2.27,
+      "retrieval_total_ms": 292.89,
+      "llm_ms": 3170.97,
+      "parse_validate_ms": 0.05,
+      "generation_total_ms": 3171.02,
+      "total_ms": 3481.66,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:43:35.064125"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 256.6,
+      "section_intent_ms": 2.03,
+      "retrieval_total_ms": 258.64,
+      "llm_ms": 9374.55,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 9374.62,
+      "total_ms": 9634.27,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:43:44.899901"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 285.53,
+      "section_intent_ms": 1.86,
+      "retrieval_total_ms": 287.39,
+      "llm_ms": 9365.49,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 9365.55,
+      "total_ms": 9653.93,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:43:54.755654"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 253.89,
+      "section_intent_ms": 2.22,
+      "retrieval_total_ms": 256.12,
+      "llm_ms": 9261.74,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 9261.8,
+      "total_ms": 9518.97,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:44:04.478324"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 277.7,
+      "section_intent_ms": 1.8,
+      "retrieval_total_ms": 279.51,
+      "llm_ms": 9334.75,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 9334.81,
+      "total_ms": 9615.25,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:44:14.293578"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 329.22,
+      "section_intent_ms": 2.25,
+      "retrieval_total_ms": 331.48,
+      "llm_ms": 24545.16,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 24545.22,
+      "total_ms": 24877.63,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:44:39.373221"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 353.64,
+      "section_intent_ms": 3.07,
+      "retrieval_total_ms": 356.72,
+      "llm_ms": 24573.08,
+      "parse_validate_ms": 0.09,
+      "generation_total_ms": 24573.17,
+      "total_ms": 24931.58,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:45:04.505640"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 352.28,
+      "section_intent_ms": 2.2,
+      "retrieval_total_ms": 354.49,
+      "llm_ms": 23480.6,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 23480.66,
+      "total_ms": 23836.14,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:45:28.543654"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 295.09,
+      "section_intent_ms": 3.29,
+      "retrieval_total_ms": 298.39,
+      "llm_ms": 24568.15,
+      "parse_validate_ms": 0.06,
+      "generation_total_ms": 24568.21,
+      "total_ms": 24867.9,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:45:53.615919"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5,
+        "section_intent_routing": 1
+      },
+      "n_retrieved": 6,
+      "vector_search_ms": 591.34,
+      "section_intent_ms": 2.79,
+      "retrieval_total_ms": 594.13,
+      "llm_ms": 24691.98,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 24692.05,
+      "total_ms": 25290.31,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:46:19.111071"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "repeat": 1,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 227.65,
+      "section_intent_ms": 0.1,
+      "retrieval_total_ms": 227.75,
+      "llm_ms": 10319.91,
+      "parse_validate_ms": 0.07,
+      "generation_total_ms": 10319.99,
+      "total_ms": 10548.63,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:46:29.861522"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "repeat": 2,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 268.2,
+      "section_intent_ms": 0.12,
+      "retrieval_total_ms": 268.32,
+      "llm_ms": 11443.79,
+      "parse_validate_ms": 0.36,
+      "generation_total_ms": 11444.15,
+      "total_ms": 11713.45,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:46:41.776221"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "repeat": 3,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 300.78,
+      "section_intent_ms": 0.18,
+      "retrieval_total_ms": 300.96,
+      "llm_ms": 11990.94,
+      "parse_validate_ms": 0.1,
+      "generation_total_ms": 11991.03,
+      "total_ms": 12293.04,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:46:54.274740"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "repeat": 4,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 314.88,
+      "section_intent_ms": 0.21,
+      "retrieval_total_ms": 315.09,
+      "llm_ms": 11618.85,
+      "parse_validate_ms": 0.09,
+      "generation_total_ms": 11618.95,
+      "total_ms": 11935.62,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:47:06.416868"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "repeat": 5,
+      "section_intent_triggered": true,
+      "matched_via": {
+        "vector": 5
+      },
+      "n_retrieved": 5,
+      "vector_search_ms": 2372.62,
+      "section_intent_ms": 0.14,
+      "retrieval_total_ms": 2372.76,
+      "llm_ms": 8562.76,
+      "parse_validate_ms": 0.08,
+      "generation_total_ms": 8562.84,
+      "total_ms": 10936.96,
+      "raw_valid": true,
+      "timestamp": "2026-09-07T09:47:17.741063"
+    }
+  ]
+}

@@ -127,3 +127,24 @@ up from 11 Good + 4 Wrong.
    process — even when retrieval failed, the system said "I don't have
    enough information" rather than hallucinating, which is exactly the
    intended fallback behavior from Phase B's design.
+
+## Latency budget (Phase B6)
+
+Instrumented retrieval (vector + section-intent) and generation on a fixed
+9-prompt set × 5 repeats (en/hi/mr). Generation dominates end-to-end latency;
+retrieval stays ~250–300 ms P50 even when section-intent routing fires.
+Section-intent’s extra `collection.get()` is cheap relative to embedding +
+LLM time — keep routing for quality.
+
+| Bucket | total P50 (ms) | total P95 (ms) | retr P50 | gen P50 |
+|--------|----------------|----------------|----------|---------|
+| Overall | 8524 | 24876 | 280 | 8237 |
+| en | 1494 | ~10k | 258 | 1204 |
+| hi | 8524 | ~8.8k | 275 | 8240 |
+| mr | 11713 | ~25k | 298 | 11444 |
+
+All 45 runs in this set triggered section-intent (eligibility / documents /
+benefit keywords). English is ~1.5 s P50; Hindi and especially Marathi are
+much slower on generation (longest tails on document-list answers). First
+request shows embedding-model warmup (~1.2 s retrieval); use P50/P95, not
+mean. Report: `eval/reports/latency_breakdown_20260907_094717.json`.
