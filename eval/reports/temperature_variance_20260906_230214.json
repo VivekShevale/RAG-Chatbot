@@ -1,0 +1,2356 @@
+{
+  "config": {
+    "temperatures": [
+      0.0,
+      0.7
+    ],
+    "repeats": 5,
+    "prompts": [
+      {
+        "id": "en_01",
+        "language": "en",
+        "question": "Who is eligible for PM POSHAN?"
+      },
+      {
+        "id": "en_02",
+        "language": "en",
+        "question": "What documents are required for Tablet Assistance scheme?"
+      },
+      {
+        "id": "en_03",
+        "language": "en",
+        "question": "What is the benefit under Medical Checkup Assistance scheme?"
+      },
+      {
+        "id": "hi_01",
+        "language": "hi",
+        "question": "पीएम पोषण योजना के लिए कौन पात्र है?"
+      },
+      {
+        "id": "hi_02",
+        "language": "hi",
+        "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?"
+      },
+      {
+        "id": "hi_03",
+        "language": "hi",
+        "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?"
+      },
+      {
+        "id": "mr_01",
+        "language": "mr",
+        "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?"
+      },
+      {
+        "id": "mr_02",
+        "language": "mr",
+        "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?"
+      },
+      {
+        "id": "mr_03",
+        "language": "mr",
+        "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?"
+      }
+    ],
+    "model_note": "Uses whatever GROQ_MODEL is configured in generate.py"
+  },
+  "summary": {
+    "overall": {
+      "n_runs": 90,
+      "json_validity_rate": 1.0,
+      "unique_answers": 61,
+      "exact_match_consistency": 0.014,
+      "confidence_dist": {
+        "high": 90
+      },
+      "avg_answer_length": 248.1
+    },
+    "by_language": {
+      "en": {
+        "n_runs": 30,
+        "json_validity_rate": 1.0,
+        "unique_answers": 17,
+        "exact_match_consistency": 0.055,
+        "confidence_dist": {
+          "high": 30
+        },
+        "avg_answer_length": 245.5
+      },
+      "hi": {
+        "n_runs": 30,
+        "json_validity_rate": 1.0,
+        "unique_answers": 20,
+        "exact_match_consistency": 0.051,
+        "confidence_dist": {
+          "high": 30
+        },
+        "avg_answer_length": 253.9
+      },
+      "mr": {
+        "n_runs": 30,
+        "json_validity_rate": 1.0,
+        "unique_answers": 24,
+        "exact_match_consistency": 0.021,
+        "confidence_dist": {
+          "high": 30
+        },
+        "avg_answer_length": 245.0
+      }
+    },
+    "by_temperature": {
+      "0.0": {
+        "n_runs": 45,
+        "json_validity_rate": 1.0,
+        "unique_answers": 22,
+        "exact_match_consistency": 0.042,
+        "confidence_dist": {
+          "high": 45
+        },
+        "avg_answer_length": 246.5
+      },
+      "0.7": {
+        "n_runs": 45,
+        "json_validity_rate": 1.0,
+        "unique_answers": 44,
+        "exact_match_consistency": 0.001,
+        "confidence_dist": {
+          "high": 45
+        },
+        "avg_answer_length": 249.7
+      }
+    },
+    "by_language_temperature": {
+      "en|0.0": {
+        "language": "en",
+        "temperature": 0.0,
+        "n_runs": 15,
+        "json_validity_rate": 1.0,
+        "unique_answers": 7,
+        "exact_match_consistency": 0.114,
+        "confidence_dist": {
+          "high": 15
+        },
+        "avg_answer_length": 246.3,
+        "mean_prompt_consistency": 0.4
+      },
+      "en|0.7": {
+        "language": "en",
+        "temperature": 0.7,
+        "n_runs": 15,
+        "json_validity_rate": 1.0,
+        "unique_answers": 14,
+        "exact_match_consistency": 0.01,
+        "confidence_dist": {
+          "high": 15
+        },
+        "avg_answer_length": 244.6,
+        "mean_prompt_consistency": 0.033
+      },
+      "hi|0.0": {
+        "language": "hi",
+        "temperature": 0.0,
+        "n_runs": 15,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.21,
+        "confidence_dist": {
+          "high": 15
+        },
+        "avg_answer_length": 250.1,
+        "mean_prompt_consistency": 0.733
+      },
+      "hi|0.7": {
+        "language": "hi",
+        "temperature": 0.7,
+        "n_runs": 15,
+        "json_validity_rate": 1.0,
+        "unique_answers": 15,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 15
+        },
+        "avg_answer_length": 257.7,
+        "mean_prompt_consistency": 0.0
+      },
+      "mr|0.0": {
+        "language": "mr",
+        "temperature": 0.0,
+        "n_runs": 15,
+        "json_validity_rate": 1.0,
+        "unique_answers": 10,
+        "exact_match_consistency": 0.076,
+        "confidence_dist": {
+          "high": 15
+        },
+        "avg_answer_length": 243.1,
+        "mean_prompt_consistency": 0.267
+      },
+      "mr|0.7": {
+        "language": "mr",
+        "temperature": 0.7,
+        "n_runs": 15,
+        "json_validity_rate": 1.0,
+        "unique_answers": 15,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 15
+        },
+        "avg_answer_length": 246.9,
+        "mean_prompt_consistency": 0.0
+      }
+    },
+    "by_prompt_temperature": {
+      "en|0.0|en_01": {
+        "language": "en",
+        "temperature": 0.0,
+        "prompt_id": "en_01",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 2,
+        "exact_match_consistency": 0.6,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 173.4
+      },
+      "en|0.0|en_02": {
+        "language": "en",
+        "temperature": 0.0,
+        "prompt_id": "en_02",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 2,
+        "exact_match_consistency": 0.4,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 372.0
+      },
+      "en|0.0|en_03": {
+        "language": "en",
+        "temperature": 0.0,
+        "prompt_id": "en_03",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 3,
+        "exact_match_consistency": 0.2,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 193.6
+      },
+      "en|0.7|en_01": {
+        "language": "en",
+        "temperature": 0.7,
+        "prompt_id": "en_01",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 174.0
+      },
+      "en|0.7|en_02": {
+        "language": "en",
+        "temperature": 0.7,
+        "prompt_id": "en_02",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 4,
+        "exact_match_consistency": 0.1,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 372.8
+      },
+      "en|0.7|en_03": {
+        "language": "en",
+        "temperature": 0.7,
+        "prompt_id": "en_03",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 187.0
+      },
+      "hi|0.0|hi_01": {
+        "language": "hi",
+        "temperature": 0.0,
+        "prompt_id": "hi_01",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 2,
+        "exact_match_consistency": 0.6,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 156.0
+      },
+      "hi|0.0|hi_02": {
+        "language": "hi",
+        "temperature": 0.0,
+        "prompt_id": "hi_02",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 2,
+        "exact_match_consistency": 0.6,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 361.4
+      },
+      "hi|0.0|hi_03": {
+        "language": "hi",
+        "temperature": 0.0,
+        "prompt_id": "hi_03",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 1,
+        "exact_match_consistency": 1.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 233.0
+      },
+      "hi|0.7|hi_01": {
+        "language": "hi",
+        "temperature": 0.7,
+        "prompt_id": "hi_01",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 219.2
+      },
+      "hi|0.7|hi_02": {
+        "language": "hi",
+        "temperature": 0.7,
+        "prompt_id": "hi_02",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 349.6
+      },
+      "hi|0.7|hi_03": {
+        "language": "hi",
+        "temperature": 0.7,
+        "prompt_id": "hi_03",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 204.2
+      },
+      "mr|0.0|mr_01": {
+        "language": "mr",
+        "temperature": 0.0,
+        "prompt_id": "mr_01",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 4,
+        "exact_match_consistency": 0.1,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 176.4
+      },
+      "mr|0.0|mr_02": {
+        "language": "mr",
+        "temperature": 0.0,
+        "prompt_id": "mr_02",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 2,
+        "exact_match_consistency": 0.6,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 327.4
+      },
+      "mr|0.0|mr_03": {
+        "language": "mr",
+        "temperature": 0.0,
+        "prompt_id": "mr_03",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 4,
+        "exact_match_consistency": 0.1,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 225.4
+      },
+      "mr|0.7|mr_01": {
+        "language": "mr",
+        "temperature": 0.7,
+        "prompt_id": "mr_01",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 139.2
+      },
+      "mr|0.7|mr_02": {
+        "language": "mr",
+        "temperature": 0.7,
+        "prompt_id": "mr_02",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 322.4
+      },
+      "mr|0.7|mr_03": {
+        "language": "mr",
+        "temperature": 0.7,
+        "prompt_id": "mr_03",
+        "n_runs": 5,
+        "json_validity_rate": 1.0,
+        "unique_answers": 5,
+        "exact_match_consistency": 0.0,
+        "confidence_dist": {
+          "high": 5
+        },
+        "avg_answer_length": 279.0
+      }
+    }
+  },
+  "runs": [
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "Indian citizen children studying in Class 1 to Class 8 (Primary or Upper Primary) in Government or Government‑aided schools are eligible for PM POSHAN.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:22.715705"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "Children who are Indian citizens and are studying in Class 1 to Class 8 (Primary or Upper Primary) in Government or Government‑aided schools are eligible for the PM POSHAN scheme.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:24.402741"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "Children who are Indian citizens and are studying in Class 1 to Class 8 (Primary or Upper Primary) in Government or Government‑aided schools are eligible for the PM POSHAN scheme.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:25.977300"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "Children who are Indian citizens and are studying in Class 1 to Class 8 (Primary or Upper Primary) in Government or Government‑aided schools are eligible for the PM POSHAN scheme.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:27.546028"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "Children who are Indian citizens and are studying in Class 1 to Class 8 (Primary or Upper Primary) in Government or Government‑aided schools are eligible for the PM POSHAN scheme.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "application_process",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:29.175070"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "Children who are Indian citizens and are studying in Primary or Upper Primary classes (Class 1 to Class 8) in Government or Government‑aided schools are eligible for the PM POSHAN Scheme.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:30.878031"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "All Indian children studying in Class 1 to Class 8 (Primary or Upper‑Primary) in Government or Government‑aided schools are eligible for PM POSHAN, irrespective of gender or social class.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:32.540959"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "Children who are Indian citizens and are studying in Class 1 to Class 8 (Primary or Upper Primary) in Government or Government‑aided schools are eligible for the PM POSHAN Scheme.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:34.022693"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "Eligible beneficiaries are Indian citizens who are studying in Class 1 to Class 8 (Primary or Upper Primary) in Government or Government‑aided schools.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:35.649919"
+    },
+    {
+      "prompt_id": "en_01",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "All Indian citizen children studying in Class 1 to Class 8 (primary or upper‑primary) in Government or Government‑aided schools are eligible for the PM POSHAN Scheme.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:48:43.384531"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "The required documents are: passport‑size photograph, identity proof such as Aadhaar Card, caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th Standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:48:51.026564"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "The required documents are: passport‑size photograph, identity proof such as Aadhaar Card, caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th Standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:48:56.733914"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "The required documents are: passport-size photograph, identity proof (e.g., Aadhaar Card), caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:03.540429"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "The required documents are: passport‑size photograph, identity proof such as Aadhaar Card, caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th Standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:10.523903"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "The required documents are: passport-size photograph, identity proof (e.g., Aadhaar Card), caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:17.826662"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "The required documents are: passport-size photograph, identity proof (e.g., Aadhaar Card), caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:23.753008"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "The required documents are:\n- Passport‑size photograph\n- Identity proof (e.g., Aadhaar Card)\n- Caste Certificate issued by the competent authority\n- First page of bank passbook or cancelled cheque\n- Break affidavit (if the break gap is more than one year)\n- 12th Standard marksheet (if available)\n- College/School Identity Card\n- Any other documents required by the department",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:29.521870"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "The required documents are: passport-size photograph, identity proof (e.g., Aadhaar Card), caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the break gap is more than one year), 12th standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:37.243398"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "The required documents are: passport‑size photograph, identity proof (e.g., Aadhaar Card), caste certificate issued by the competent authority, first page of bank passbook or cancelled cheque, break affidavit (if the gap is more than one year), 12th standard marksheet (if available), college/school identity card, and any other documents required by the department.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:42.574710"
+    },
+    {
+      "prompt_id": "en_02",
+      "language": "en",
+      "question": "What documents are required for Tablet Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "The required documents are:\n- Passport‑size photograph\n- Identity proof (e.g., Aadhaar Card)\n- Caste Certificate issued by the competent authority\n- First page of bank passbook or a cancelled cheque\n- Break affidavit (if the break gap is more than one year)\n- 12th Standard marksheet (if available)\n- College/School Identity Card\n- Any other documents required by the department",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:49.907611"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker; the organization/company pays 25% of this amount (₹487.50).",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:49:56.175265"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker; the organization/company contributes 25% of this amount (₹487.50).",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:02.061349"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker. The organization/company contributes 25% of this amount, i.e., ₹487.50.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "faq",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:09.568402"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker; the organization/company contributes 25% of this amount (₹487.50).",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:17.185168"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker. The organization/company contributes 25% of this amount, i.e., ₹487.50.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        },
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "faq",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:23.864997"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker; the organization/company contributes 25% (₹487.50) of this amount.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:30.617845"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "The scheme provides a complete medical check‑up once a year for each eligible Shramyogi, with a fixed amount of ₹1,950 per worker (the organization/company pays 25%, i.e., ₹487.50).",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:37.534395"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker. The organization/company contributes 25% of this amount, i.e., ₹487.50.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:44.275825"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker (the organization/company pays 25%, i.e., ₹487.50).",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:50.994978"
+    },
+    {
+      "prompt_id": "en_03",
+      "language": "en",
+      "question": "What is the benefit under Medical Checkup Assistance scheme?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "The scheme provides a complete medical check‑up once a year for eligible Shramyogis, with a fixed amount of ₹1,950 per worker; the organization/company pays 25% of this amount (₹487.50).",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "en"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:50:57.700438"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "पात्रता के लिए आवेदक को भारत का नागरिक होना चाहिए और वह सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8) में पढ़ रहा होना चाहिए।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:51:07.638797"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "पात्रता के लिए आवेदक को भारत का नागरिक होना चाहिए और वह सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8) में पढ़ रहा होना चाहिए।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:51:15.614563"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "भारत का नागरिक होना चाहिए और सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक (कक्षा 1‑8) में पढ़ रहा होना चाहिए।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:51:23.390216"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "पात्रता के लिए आवेदक को भारत का नागरिक होना चाहिए और वह सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8) में पढ़ रहा होना चाहिए।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:51:33.220727"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "पात्रता के लिए आवेदक को भारत का नागरिक होना चाहिए और वह सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8) में पढ़ रहा होना चाहिए।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:51:40.978629"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "PM पोषण योजना के लिए पात्र होने हेतु: 1) आवेदक भारत का नागरिक होना चाहिए, 2) सरकारी या सरकारी‑सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8) में पढ़ रहा होना चाहिए। अर्थात, सभी पढ़ रहे बच्चे जो इन शर्तों को पूरा करते हैं, योजना के लाभार्थी बनते हैं।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:51:49.842882"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "पात्रता के अनुसार, भारत के नागरिक जो सरकारी या सरकारी सहायता प्राप्त स्कूलों में प्राथमिक या उच्च प्राथमिक (कक्षा 1 से 8) में पढ़ रहे हैं, वे सभी पीएम पोषण योजना के लाभार्थी बनते हैं।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:51:58.446635"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "PM पोषण योजना के लिए पात्र होने हेतु: \n1. आवेदक भारत का नागरिक होना चाहिए।\n2. वह सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक कक्षा (कक्षा 1 से 8) में पढ़ रहा होना चाहिए।\nइस प्रकार सभी पढ़ रहे बच्चे जो इन शर्तों को पूरा करते हैं, योजना के लाभार्थी बनते हैं।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:52:07.207097"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "PM पोषण योजना के पात्र होने के लिए: 1) आवेदक को भारत का नागरिक होना चाहिए, और 2) उसे सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च प्राथमिक कक्षा (कक्षा 1 से 8) में पढ़ना चाहिए।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:52:10.747651"
+    },
+    {
+      "prompt_id": "hi_01",
+      "language": "hi",
+      "question": "पीएम पोषण योजना के लिए कौन पात्र है?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "पात्रता के लिए आवेदक को (i) भारत का नागरिक होना चाहिए, और (ii) सरकारी या सरकारी सहायता प्राप्त स्कूल में प्राथमिक या उच्च‑प्राथमिक कक्षा (कक्षा 1 से 8) में पढ़ रहा होना चाहिए।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "hi"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:52:19.443801"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "इस योजना के लिए आवश्यक दस्तावेज़ हैं: पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र, और विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:52:27.316580"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "इस योजना के लिए आवश्यक दस्तावेज़ हैं: पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र, और विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:52:36.234037"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "‘12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता’ योजना के लिए आवश्यक दस्तावेज़ हैं: \n- पासपोर्ट आकार की तस्वीर\n- पहचान प्रमाण (जैसे आधार कार्ड)\n- सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र\n- बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक\n- यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र\n- 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो)\n- कॉलेज/स्कूल पहचान पत्र\n- विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:52:45.728588"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "इस योजना के लिए आवश्यक दस्तावेज़ हैं: पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र, और विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:52:53.658903"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "इस योजना के लिए आवश्यक दस्तावेज़ हैं: पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र, और विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:53:02.214028"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "'12वीं कक्षा के अनुसूचित जाति के छात्रों को टैबलेट सहायता' योजना के लिए आवश्यक दस्तावेज़ हैं: पासपोर्ट आकार की तस्वीर, आधार कार्ड जैसे पहचान प्रमाण, सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र और विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:53:11.849135"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "टैबलेट सहायता योजना के लिए आवश्यक दस्तावेज़ हैं: पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र और विभाग द्वारा माँगे गए कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:53:19.541920"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "टैबलेट सहायता योजना के लिए आवश्यक दस्तावेज़ हैं: 1. पासपोर्ट आकार की तस्वीर 2. पहचान प्रमाण (जैसे आधार कार्ड) 3. सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र 4. बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक 5. यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र 6. 12वीं कक्षा की मार्कशीट (यदि उपलब्ध) 7. कॉलेज/स्कूल पहचान पत्र 8. विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:53:28.471657"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र, तथा विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:53:31.210564"
+    },
+    {
+      "prompt_id": "hi_02",
+      "language": "hi",
+      "question": "टैबलेट सहायता योजना के लिए कौन से दस्तावेज चाहिए?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "पासपोर्ट आकार की तस्वीर, पहचान प्रमाण (जैसे आधार कार्ड), सक्षम प्राधिकारी द्वारा जारी जाति प्रमाण पत्र, बैंक पासबुक का पहला पृष्ठ या रद्द किया हुआ चेक, यदि ब्रेक गैप एक वर्ष से अधिक है तो ब्रेक शपथ‑पत्र, 12वीं कक्षा की मार्कशीट (यदि उपलब्ध हो), कॉलेज/स्कूल पहचान पत्र, और विभाग द्वारा आवश्यक कोई अन्य दस्तावेज़।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:53:40.170372"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। प्रत्येक श्रमिक के लिए यह जांच ₹1,950 की निश्चित राशि पर प्रदान की जाती है, जिसमें से 25 % (₹487.50) का भुगतान संगठन/कंपनी द्वारा किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:53:48.949870"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। प्रत्येक श्रमिक के लिए यह जांच ₹1,950 की निश्चित राशि पर प्रदान की जाती है, जिसमें से 25 % (₹487.50) का भुगतान संगठन/कंपनी द्वारा किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:53:57.034672"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। प्रत्येक श्रमिक के लिए यह जांच ₹1,950 की निश्चित राशि पर प्रदान की जाती है, जिसमें से 25 % (₹487.50) का भुगतान संगठन/कंपनी द्वारा किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:54:05.839811"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। प्रत्येक श्रमिक के लिए यह जांच ₹1,950 की निश्चित राशि पर प्रदान की जाती है, जिसमें से 25 % (₹487.50) का भुगतान संगठन/कंपनी द्वारा किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:54:13.608880"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। प्रत्येक श्रमिक के लिए यह जांच ₹1,950 की निश्चित राशि पर प्रदान की जाती है, जिसमें से 25 % (₹487.50) का भुगतान संगठन/कंपनी द्वारा किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:54:22.422454"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा दी जाती है। इस जांच की लागत प्रति श्रमिक ₹1,950 तय है, जिसमें से 25 % (₹487.50) उनका संगठन/कंपनी द्वारा भुगतान किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:54:31.086579"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "योजना के तहत पात्र श्रमिकों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। प्रत्येक श्रमिक के लिए निर्धारित राशि ₹1,950 है, जिसमें 25% यानी ₹487.50 संगठन/कंपनी द्वारा भुगतान किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:54:39.951216"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। इस जांच की कुल लागत प्रति श्रमिक ₹1,950 है, जिसमें से 25 % (₹487.50) उनका संगठन/कंपनी द्वारा भुगतान किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:54:47.678201"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "पूर्ण चिकित्सा जांच सहायता योजना के तहत पात्र श्रमयोगियों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। इस जांच की लागत प्रति श्रमिक ₹1,950 निर्धारित है, जिसमें से 25% यानी ₹487.50 संगठन/कंपनी द्वारा भुगतान किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:54:56.634705"
+    },
+    {
+      "prompt_id": "hi_03",
+      "language": "hi",
+      "question": "चिकित्सा जांच सहायता योजना का लाभ क्या है?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "पात्र श्रमिकों को वर्ष में एक बार पूर्ण चिकित्सा जांच की सुविधा मिलती है। इस जांच की कुल लागत प्रति श्रमिक ₹1,950 है, जिसमें 25 % यानी ₹487.50 संगठन/कंपनी द्वारा भुगतान किया जाता है।",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "hi"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T22:55:04.409718"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "भारताचा नागरिक असून, सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १ ते ८) वर्गात शिकत असलेली मुले पात्र आहेत.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:55:14.330090"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "भारताचा नागरिक असून, सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १ ते ८) वर्गात शिकत असलेली मुले पात्र आहेत.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:55:22.812776"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "भारताचा नागरिक असावा आणि सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १‑८) वर्गात शिकत असावा.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:55:32.620803"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "PM पोषण योजना (शिक्षण मंत्रालयाच्या शालेय शिक्षण आणि साक्षरता विभागाची) साठी पात्र होण्यासाठी अर्जदार (१) भारताचा नागरिक असावा आणि (२) सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १‑८) वर्गात शिकत असावा.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:55:42.483141"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "PM पोषण योजना ही शिक्षण मंत्रालयाच्या शालेय शिक्षण आणि साक्षरता विभागाची केंद्र पुरस्कृत योजना आहे. यासाठी पात्र होण्यासाठी अर्जदार (१) भारताचा नागरिक असावा आणि (२) सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १‑८) वर्गात शिकत असावा.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:55:52.200042"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "भारताचा नागरिक असून, सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता पहिली ते आठवी) वर्गात शिकत असलेली मुले पात्र आहेत.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:56:03.303381"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "भारताचा नागरिक असलेले आणि सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १ ते ८) वर्गात शिकणारे मुलं पात्र आहेत.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:56:04.683801"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "भारताचा नागरिक असून सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १ ते ८) वर्गात शिकत असलेली सर्व मुले पात्र आहेत.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "faq",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:56:08.404119"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "भारताचा नागरिक असावा आणि सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १‑८) वर्गात शिकत असावा.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:56:11.934993"
+    },
+    {
+      "prompt_id": "mr_01",
+      "language": "mr",
+      "question": "पीएम पोषण योजनेसाठी कोण पात्र आहे?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "भारताचा नागरिक असून सरकारी किंवा सरकारी अनुदानित शाळेत प्राथमिक किंवा उच्च प्राथमिक (इयत्ता १‑८) वर्गात शिकणारी सर्व मुले ही पीएम पोषण योजनेसाठी पात्र आहेत.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "eligibility",
+          "language": "mr"
+        },
+        {
+          "scheme_id": "scheme_01_pm_poshan",
+          "section": "details",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:56:21.694348"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, व विभागाला आवश्यक इतर कोणतीही कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:56:46.973535"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, व विभागाला आवश्यक इतर कोणतीही कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:57:11.006609"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "टॅब्लेट सहाय्य योजनेसाठी आवश्यक कागदपत्रे: \n- पारपत्र आकाराचे छायाचित्र\n- ओळख पुरावा (उदा. आधार कार्ड)\n- सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र\n- बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश\n- ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र\n- 12 वीचे गुणपत्रक (उपलब्ध असल्यास)\n- महाविद्यालय/शाळेचे ओळखपत्र\n- विभागाला आवश्यक असलेली इतर कोणतीही कागदपत्रे",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:57:36.031629"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, व विभागाला आवश्यक इतर कोणतीही कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:58:01.228683"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, व विभागाला आवश्यक इतर कोणतीही कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:58:25.403769"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, आणि विभागाला आवश्यक असलेली इतर कोणतीही कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:58:29.373681"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र आणि विभागाला आवश्यक असलेली इतर कोणतीही कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:58:54.660758"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, विभागाला आवश्यक असलेली इतर कोणतीही कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:59:19.769310"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "- पारपत्र आकाराचे छायाचित्र\n- ओळख पुरावा (उदा. आधार कार्ड)\n- सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र\n- बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश\n- ब्रेक गॅप एक वर्षापेक्षा जास्त असल्यास ब्रेक प्रतिज्ञापत्र\n- 12 वीचे गुणपत्रक (उपलब्ध असल्यास)\n- महाविद्यालय/शाळेचे ओळखपत्र\n- विभागाला आवश्यक असलेली इतर कोणतीही कागदपत्रे",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T22:59:43.364975"
+    },
+    {
+      "prompt_id": "mr_02",
+      "language": "mr",
+      "question": "टॅब्लेट सहाय्य योजनेसाठी कोणती कागदपत्रे लागतात?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "पारपत्र आकाराचे छायाचित्र, ओळख पुरावा (उदा. आधार कार्ड), सक्षम प्राधिकरणाने जारी केलेले जात प्रमाणपत्र, बँक पासबुकचे पहिले पान किंवा रद्द केलेला धनादेश, एक वर्षापेक्षा जास्त ब्रेक असल्यास ब्रेक प्रतिज्ञापत्र, 12 वीचे गुणपत्रक (उपलब्ध असल्यास), महाविद्यालय/शाळेचे ओळखपत्र, आणि विभागाला आवश्यक असलेली इतर कागदपत्रे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_05_tablet_assistance",
+          "section": "documents_required",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 6,
+      "timestamp": "2026-09-06T23:00:08.258833"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.0,
+      "repeat": 1,
+      "answer": "या योजनेअंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते. पूर्ण वैद्यकीय तपासणीसाठी प्रति कामगार निश्चित रक्कम ₹1,950 आहे, ज्यापैकी 25% म्हणजे ₹487.50 रक्कम संस्था/कंपनीने भरायची आहे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:00:19.238771"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.0,
+      "repeat": 2,
+      "answer": "या योजनेअंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते. पूर्ण वैद्यकीय तपासणीसाठी प्रति कामगार निश्चित रक्कम ₹1,950 आहे, ज्यापैकी 25% म्हणजे ₹487.50 रक्कम संस्था/कंपनीने भरायची आहे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:00:30.064277"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.0,
+      "repeat": 3,
+      "answer": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना, जी गुजरात कामगार कल्याण मंडळ, कामगार, कौशल्य विकास आणि रोजगार विभाग, गुजरात सरकारद्वारे राबवली जाते, याअंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते; प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 दिली जाते, त्यापैकी 25% म्हणजे ₹487.50 संस्था/कंपनीने भरायची आहे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:00:42.515003"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.0,
+      "repeat": 4,
+      "answer": "या योजनेअंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते. प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 आहे, ज्यापैकी 25% (₹487.50) संस्था/कंपनीने भरायची आहे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:00:55.481964"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.0,
+      "repeat": 5,
+      "answer": "या योजनेअंतर्गत पात्र कामगारांना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते; प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 दिली जाते, ज्यापैकी 25% म्हणजे ₹487.50 रक्कम संस्था/कंपनीने भरावी लागते.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        },
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "eligibility",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:01:07.814959"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.7,
+      "repeat": 1,
+      "answer": "या योजनेअंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा दिली जाते; प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 असून त्यातील 25% म्हणजे ₹487.50 रक्कम संस्था/कंपनीने भरावी लागते.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:01:22.154543"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.7,
+      "repeat": 2,
+      "answer": "पूर्ण वैद्यकीय तपासणी सहाय्य योजनेत (scheme_03_medical_checkup_assistance) पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा दिली जाते. प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 आहे, ज्यापैकी 25% म्हणजे ₹487.50 रक्कम संस्था/कंपनीने भरावी लागते. ही योजना गुजरात कामगार कल्याण मंडळ, कामगार, कौशल्य विकास आणि रोजगार विभाग, गुजरात सरकारद्वारे अंमलात आणली जाते.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:01:34.615898"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.7,
+      "repeat": 3,
+      "answer": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना (गुजरात कामगार कल्याण मंडळ, कामगार, कौशल्य विकास आणि रोजगार विभाग, गुजरात सरकार) अंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते. पूर्ण वैद्यकीय तपासणीसाठी प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 आहे, ज्यातील 25 % म्हणजे ₹487.50 ही रक्कम संस्था/कंपनीने भरावी.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        },
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "details",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:01:45.981102"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.7,
+      "repeat": 4,
+      "answer": "पूर्ण वैद्यकीय तपासणी सहाय्य योजना अंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा मिळते. प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 आहे, ज्यातील 25% म्हणजे ₹487.50 संस्था/कंपनीने भरायची आहे. ही योजना गुजरात कामगार कल्याण मंडळ, कामगार, कौशल्य विकास आणि रोजगार विभाग, गुजरात सरकार यांनी राबवली आहे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        },
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "details",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:01:59.661613"
+    },
+    {
+      "prompt_id": "mr_03",
+      "language": "mr",
+      "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?",
+      "temperature": 0.7,
+      "repeat": 5,
+      "answer": "या योजनेअंतर्गत पात्र श्रमयोगींना वर्षातून एकदा पूर्ण वैद्यकीय तपासणीची सुविधा दिली जाते; प्रत्येक कामगारासाठी निश्चित रक्कम ₹1,950 आहे, ज्यातील 25% (₹487.50) संस्था/कंपनीने भरायची आहे.",
+      "confidence": "high",
+      "citations": [
+        {
+          "scheme_id": "scheme_03_medical_checkup_assistance",
+          "section": "benefit",
+          "language": "mr"
+        }
+      ],
+      "raw_valid": true,
+      "parse_error": null,
+      "n_retrieved": 5,
+      "timestamp": "2026-09-06T23:02:13.736121"
+    }
+  ]
+}
