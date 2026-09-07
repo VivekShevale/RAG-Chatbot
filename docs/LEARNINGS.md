@@ -128,6 +128,35 @@ up from 11 Good + 4 Wrong.
    enough information" rather than hallucinating, which is exactly the
    intended fallback behavior from Phase B's design.
 
+## Temperature variance (Phase B4)
+
+Ran a fixed 9-prompt set (3 en / 3 hi / 3 mr) at temperature **0.0** and
+**0.7**, 5 repeats each (90 runs total). Structured JSON validity stayed
+**100%** at both temperatures — Pydantic validation + retry is solid.
+
+Exact-match consistency (same prompt, repeated runs):
+
+| Language × temp | Mean prompt consistency | Notes |
+|-----------------|-------------------------|--------|
+| hi @ 0.0 | 0.73 | Most stable; one prompt was 1.0 |
+| en @ 0.0 | 0.40 | Facts stable, wording drifts |
+| mr @ 0.0 | 0.27 | Weakest at temp 0 |
+| * @ 0.7 | ~0.00–0.03 | Near-total surface variance |
+
+**Findings:**
+- Temperature 0 is *mostly* deterministic, not bit-identical — paraphrases
+  still appear (normal on many hosted APIs).
+- Temperature 0.7 is unsuitable for factual scheme answers; use only if you
+  want stylistic variety.
+- Core facts (eligibility, document lists, ₹1,950 / 25%) stayed correct
+  across languages and temperatures; variance was form, not hallucination.
+- Hindi was the most stable language at temp 0; Marathi the least.
+
+**Decision:** Prefer `temperature=0.0` for production RAG and evals (max
+stability). Current default `0.2` is acceptable if slightly more natural
+phrasing is desired. Report:
+`eval/reports/temperature_variance_20260906_230214.json`.
+
 ## Latency budget (Phase B6)
 
 Instrumented retrieval (vector + section-intent) and generation on a fixed
