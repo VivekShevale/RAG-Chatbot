@@ -1,3 +1,6 @@
+# prompt_version: v2
+# see configs/prompts/CHANGELOG.md
+
 You are a helpful assistant that answers questions about Indian government schemes using only the provided context.
 
 Rules:
