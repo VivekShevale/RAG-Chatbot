@@ -8,8 +8,8 @@ Validates JSON with Pydantic; retries once on parse/validation failure.
 import json
 import os
 import re
-from pathlib import Path
 import time
+from pathlib import Path
 
 from dotenv import load_dotenv
 from groq import Groq
@@ -94,6 +94,8 @@ def generate_answer(
             "raw_valid": bool,
             "parse_error": str | None,
             "temperature": float,
+            "timings_ms": {"llm_ms", "parse_validate_ms", "generation_total_ms"},
+            "token_usage": {"prompt_tokens", "completion_tokens", "total_tokens"},
         }
     """
     refusal = REFUSAL_BY_LANG.get(language, REFUSAL_BY_LANG["en"])
@@ -113,6 +115,11 @@ def generate_answer(
                 "parse_validate_ms": 0.0,
                 "generation_total_ms": 0.0,
             },
+            "token_usage": {
+                "prompt_tokens": None,
+                "completion_tokens": None,
+                "total_tokens": None,
+            },
         }
 
     prompt_template = load_prompt(language)
@@ -123,6 +130,10 @@ def generate_answer(
     raw = ""
     llm_ms = 0.0
     parse_ms = 0.0
+
+    prompt_tokens = None
+    completion_tokens = None
+    total_tokens = None
 
     for attempt in range(2):
         messages = [{"role": "user", "content": full_prompt}]
@@ -148,6 +159,12 @@ def generate_answer(
         llm_ms += (time.perf_counter() - t_llm0) * 1000
         raw = response.choices[0].message.content.strip()
 
+        usage = getattr(response, "usage", None)
+        if usage is not None:
+            prompt_tokens = getattr(usage, "prompt_tokens", None)
+            completion_tokens = getattr(usage, "completion_tokens", None)
+            total_tokens = getattr(usage, "total_tokens", None)
+
         t_parse0 = time.perf_counter()
         try:
             data = _extract_json(raw)
@@ -166,6 +183,11 @@ def generate_answer(
                     "llm_ms": round(llm_ms, 2),
                     "parse_validate_ms": round(parse_ms, 2),
                     "generation_total_ms": round(llm_ms + parse_ms, 2),
+                },
+                "token_usage": {
+                    "prompt_tokens": prompt_tokens,
+                    "completion_tokens": completion_tokens,
+                    "total_tokens": total_tokens,
                 },
             }
         except Exception as e:
@@ -187,5 +209,10 @@ def generate_answer(
             "llm_ms": round(llm_ms, 2),
             "parse_validate_ms": round(parse_ms, 2),
             "generation_total_ms": round(llm_ms + parse_ms, 2),
+        },
+        "token_usage": {
+            "prompt_tokens": prompt_tokens,
+            "completion_tokens": completion_tokens,
+            "total_tokens": total_tokens,
         },
     }

@@ -1,29 +1,22 @@
 """
-eval/scripts/latency_breakdown.py
+eval/scripts/token_usage_eval.py
 
-Phase B6 — Latency budget breakdown.
+Phase B6 follow-up — Groq token usage by language.
 
-Runs a fixed prompt set, measures:
-  - vector_search_ms
-  - section_intent_ms
-  - retrieval_total_ms
-  - generation_total_ms (llm + parse)
-  - total_ms
-  - token_usage (if generate_answer provides it)
+Runs a fixed prompt set and records prompt_tokens / completion_tokens /
+total_tokens from generate_answer (via Groq response.usage), plus generation
+latency, so you can test whether hi/mr slowdown tracks completion length.
 
 Jobs are SHUFFLED so en/hi/mr are interleaved (avoids sequential-language
 confound from API throttling / queueing).
 
-Reports P50 / P95 (and mean) overall, by language, and by path
-(section-intent triggered vs pure vector).
-
 Usage (from project root):
-    python eval/scripts/latency_breakdown.py
-    python eval/scripts/latency_breakdown.py --repeats 5
-    python eval/scripts/latency_breakdown.py --language hi
-    python eval/scripts/latency_breakdown.py --seed 7
+    python eval/scripts/token_usage_eval.py
+    python eval/scripts/token_usage_eval.py --repeats 5
+    python eval/scripts/token_usage_eval.py --language mr
+    python eval/scripts/token_usage_eval.py --seed 7
 
-Output: eval/reports/latency_breakdown_<timestamp>.json
+Output: eval/reports/token_usage_<timestamp>.json
 """
 
 import argparse
@@ -31,14 +24,13 @@ import json
 import random
 import sys
 import time
-from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from pipeline.retrieval.retriever import retrieve_with_timings
+from pipeline.retrieval.retriever import retrieve
 from pipeline.generation.generate import generate_answer
 
 REPORTS_DIR = PROJECT_ROOT / "eval" / "reports"
@@ -56,7 +48,7 @@ FIXED_PROMPTS = [
     {"id": "mr_03", "language": "mr", "question": "वैद्यकीय तपासणी सहाय्य योजनेचा लाभ काय आहे?"},
 ]
 
-DEFAULT_REPEATS = 5
+DEFAULT_REPEATS = 3
 
 
 def percentile(values: list[float], p: float) -> float | None:
@@ -86,16 +78,8 @@ def stats(values: list[float]) -> dict:
     }
 
 
-def matched_via_counts(chunks: list[dict]) -> dict:
-    counts = defaultdict(int)
-    for c in chunks:
-        counts[c.get("matched_via") or "unknown"] += 1
-    return dict(counts)
-
-
 def run_one(prompt: dict, repeat: int) -> dict:
-    t_all0 = time.perf_counter()
-    chunks, ret_timings = retrieve_with_timings(
+    chunks = retrieve(
         query=prompt["question"],
         language=prompt["language"],
         top_k=5,
@@ -107,41 +91,33 @@ def run_one(prompt: dict, repeat: int) -> dict:
         temperature=0.0,
     )
     usage = gen.get("token_usage") or {}
-    total_ms = (time.perf_counter() - t_all0) * 1000
+    timings = gen.get("timings_ms") or {}
+    answer = gen.get("answer") or ""
 
-    gen_timings = gen.get("timings_ms") or {}
     return {
         "prompt_id": prompt["id"],
         "language": prompt["language"],
         "question": prompt["question"],
         "repeat": repeat,
-        "section_intent_triggered": ret_timings.get("section_intent_triggered"),
-        "matched_via": matched_via_counts(chunks),
         "n_retrieved": len(chunks),
-        "vector_search_ms": ret_timings.get("vector_search_ms"),
-        "section_intent_ms": ret_timings.get("section_intent_ms"),
-        "retrieval_total_ms": ret_timings.get("retrieval_total_ms"),
-        "llm_ms": gen_timings.get("llm_ms"),
-        "parse_validate_ms": gen_timings.get("parse_validate_ms"),
-        "generation_total_ms": gen_timings.get("generation_total_ms"),
-        "total_ms": round(total_ms, 2),
-        "raw_valid": gen.get("raw_valid"),
-        "timestamp": datetime.now().isoformat(),
+        "answer_chars": len(answer),
         "prompt_tokens": usage.get("prompt_tokens"),
         "completion_tokens": usage.get("completion_tokens"),
         "total_tokens": usage.get("total_tokens"),
+        "llm_ms": timings.get("llm_ms"),
+        "generation_total_ms": timings.get("generation_total_ms"),
+        "raw_valid": gen.get("raw_valid"),
+        "timestamp": datetime.now().isoformat(),
     }
 
 
 def summarize(runs: list[dict]) -> dict:
     metrics = [
-        "vector_search_ms",
-        "section_intent_ms",
-        "retrieval_total_ms",
-        "generation_total_ms",
-        "total_ms",
         "prompt_tokens",
         "completion_tokens",
+        "total_tokens",
+        "answer_chars",
+        "generation_total_ms",
     ]
 
     def bundle(subset: list[dict]) -> dict:
@@ -149,10 +125,6 @@ def summarize(runs: list[dict]) -> dict:
         for m in metrics:
             vals = [r[m] for r in subset if r.get(m) is not None]
             out[m] = stats(vals)
-        triggered = sum(1 for r in subset if r.get("section_intent_triggered"))
-        out["section_intent_triggered_rate"] = (
-            round(triggered / len(subset), 3) if subset else None
-        )
         pairs = [
             (r["completion_tokens"], r["generation_total_ms"])
             for r in subset
@@ -169,47 +141,50 @@ def summarize(runs: list[dict]) -> dict:
         lang: bundle([r for r in runs if r["language"] == lang])
         for lang in sorted({r["language"] for r in runs})
     }
-    by_path = {
-        "section_intent": bundle([r for r in runs if r.get("section_intent_triggered")]),
-        "pure_vector": bundle([r for r in runs if not r.get("section_intent_triggered")]),
+    by_prompt = {
+        pid: bundle([r for r in runs if r["prompt_id"] == pid])
+        for pid in sorted({r["prompt_id"] for r in runs})
     }
     return {
         "overall": bundle(runs),
         "by_language": by_lang,
-        "by_path": by_path,
+        "by_prompt": by_prompt,
     }
 
 
 def print_summary(summary: dict):
     def row(label: str, block: dict):
-        t = block.get("total_ms") or {}
-        r = block.get("retrieval_total_ms") or {}
-        g = block.get("generation_total_ms") or {}
+        pt = block.get("prompt_tokens") or {}
         ct = block.get("completion_tokens") or {}
+        gen = block.get("generation_total_ms") or {}
         tps = block.get("completion_tokens_per_sec") or {}
         print(
-            f"  {label:18s}  n={block.get('n', 0):3d}  "
-            f"total p50={t.get('p50')} p95={t.get('p95')}  "
-            f"retr p50={r.get('p50')}  gen p50={g.get('p50')}  "
-            f"comp_tok p50={ct.get('p50')}  tok/s p50={tps.get('p50')}"
+            f"  {label:10s}  n={block.get('n', 0):3d}  "
+            f"prompt_p50={pt.get('p50')}  "
+            f"completion_p50={ct.get('p50')}  "
+            f"gen_p50={gen.get('p50')}  "
+            f"tok/s_p50={tps.get('p50')}"
         )
 
     print("\n" + "=" * 78)
-    print("LATENCY BREAKDOWN (ms) — shuffled job order")
+    print("TOKEN USAGE EVAL (shuffled job order)")
     print("=" * 78)
     print("\nOverall:")
     row("all", summary["overall"])
     print("\nBy language:")
     for lang, block in summary["by_language"].items():
         row(lang, block)
-    print("\nBy path:")
-    for path, block in summary["by_path"].items():
-        row(path, block)
+    print("\nBy prompt:")
+    for pid, block in summary["by_prompt"].items():
+        row(pid, block)
     print("=" * 78)
+    print("If completion_tokens track gen_ms across languages → length-driven latency.")
+    print("If completion_tokens similar but gen_ms differs → model/API path slower.")
+    print("Shuffled order reduces sequential-language API throttling confound.")
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Latency budget breakdown (shuffled)")
+    parser = argparse.ArgumentParser(description="Groq token usage by language (shuffled)")
     parser.add_argument("--repeats", type=int, default=DEFAULT_REPEATS)
     parser.add_argument("--language", choices=["en", "hi", "mr"], default=None)
     parser.add_argument("--seed", type=int, default=42, help="Shuffle seed for job order")
@@ -253,11 +228,10 @@ def main():
             rec = run_one(prompt, rep)
             runs.append(rec)
             print(
-                f"         total={rec['total_ms']}ms  "
-                f"retr={rec['retrieval_total_ms']}  "
-                f"gen={rec['generation_total_ms']}  "
-                f"si={rec['section_intent_triggered']}  "
-                f"comp_tok={rec['completion_tokens']}"
+                f"         prompt={rec['prompt_tokens']}  "
+                f"completion={rec['completion_tokens']}  "
+                f"gen={rec['generation_total_ms']}ms  "
+                f"chars={rec['answer_chars']}"
             )
         except Exception as e:
             print(f"         ERROR: {e}")
@@ -267,7 +241,7 @@ def main():
     print_summary(summary)
 
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out = REPORTS_DIR / f"latency_breakdown_{ts}.json"
+    out = REPORTS_DIR / f"token_usage_{ts}.json"
     payload = {
         "config": {
             "repeats": args.repeats,

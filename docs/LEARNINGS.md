@@ -9,11 +9,11 @@ as valuable a portfolio artifact as the final code.
 
 15-question manual eval (5 schemes × 3 languages, `eval/manual_eval.py`):
 
-| Language | Result |
-|---|---|
-| English | 5/5 Good |
-| Hindi | 3/5 Good, 2 Wrong |
-| Marathi | 3/5 Good, 2 Wrong |
+| Language | Result            |
+| -------- | ----------------- |
+| English  | 5/5 Good          |
+| Hindi    | 3/5 Good, 2 Wrong |
+| Marathi  | 3/5 Good, 2 Wrong |
 
 English worked perfectly; Hindi and Marathi failed on structurally similar
 questions (asking for `documents_required` or `eligibility` details).
@@ -128,6 +128,8 @@ up from 11 Good + 4 Wrong.
    enough information" rather than hallucinating, which is exactly the
    intended fallback behavior from Phase B's design.
 
+---
+
 ## Temperature variance (Phase B4)
 
 Ran a fixed 9-prompt set (3 en / 3 hi / 3 mr) at temperature **0.0** and
@@ -136,14 +138,15 @@ Ran a fixed 9-prompt set (3 en / 3 hi / 3 mr) at temperature **0.0** and
 
 Exact-match consistency (same prompt, repeated runs):
 
-| Language × temp | Mean prompt consistency | Notes |
-|-----------------|-------------------------|--------|
-| hi @ 0.0 | 0.73 | Most stable; one prompt was 1.0 |
-| en @ 0.0 | 0.40 | Facts stable, wording drifts |
-| mr @ 0.0 | 0.27 | Weakest at temp 0 |
-| * @ 0.7 | ~0.00–0.03 | Near-total surface variance |
+| Language × temp | Mean prompt consistency | Notes                           |
+| --------------- | ----------------------- | ------------------------------- |
+| hi @ 0.0        | 0.73                    | Most stable; one prompt was 1.0 |
+| en @ 0.0        | 0.40                    | Facts stable, wording drifts    |
+| mr @ 0.0        | 0.27                    | Weakest at temp 0               |
+| * @ 0.7         | ~0.00–0.03              | Near-total surface variance     |
 
 **Findings:**
+
 - Temperature 0 is *mostly* deterministic, not bit-identical — paraphrases
   still appear (normal on many hosted APIs).
 - Temperature 0.7 is unsuitable for factual scheme answers; use only if you
@@ -154,26 +157,75 @@ Exact-match consistency (same prompt, repeated runs):
 
 **Decision:** Prefer `temperature=0.0` for production RAG and evals (max
 stability). Current default `0.2` is acceptable if slightly more natural
-phrasing is desired. Report:
-`eval/reports/temperature_variance_20260906_230214.json`.
+phrasing is desired.
+
+Report: `eval/reports/temperature_variance_20260906_230214.json`.
+
+---
 
 ## Latency budget (Phase B6)
 
 Instrumented retrieval (vector + section-intent) and generation on a fixed
-9-prompt set × 5 repeats (en/hi/mr). Generation dominates end-to-end latency;
-retrieval stays ~250–300 ms P50 even when section-intent routing fires.
-Section-intent’s extra `collection.get()` is cheap relative to embedding +
-LLM time — keep routing for quality.
+9-prompt set. Generation dominates end-to-end latency; retrieval stays
+~250–300 ms P50 even when section-intent routing fires. Section-intent’s
+extra `collection.get()` is cheap (~2 ms P50) — keep routing for quality.
 
-| Bucket | total P50 (ms) | total P95 (ms) | retr P50 | gen P50 |
-|--------|----------------|----------------|----------|---------|
-| Overall | 8524 | 24876 | 280 | 8237 |
-| en | 1494 | ~10k | 258 | 1204 |
-| hi | 8524 | ~8.8k | 275 | 8240 |
-| mr | 11713 | ~25k | 298 | 11444 |
+### Initial sequential run (misleading)
 
-All 45 runs in this set triggered section-intent (eligibility / documents /
-benefit keywords). English is ~1.5 s P50; Hindi and especially Marathi are
-much slower on generation (longest tails on document-list answers). First
-request shows embedding-model warmup (~1.2 s retrieval); use P50/P95, not
-mean. Report: `eval/reports/latency_breakdown_20260907_094717.json`.
+First latency pass ran **all English, then Hindi, then Marathi**. That
+design confounded language with API session position:
+
+| Bucket  | total P50 (ms) | retr P50 | gen P50 |
+| ------- | -------------- | -------- | ------- |
+| Overall | 8524           | 280      | 8237    |
+| en      | 1494           | 258      | 1204    |
+| hi      | 8524           | 275      | 8240    |
+| mr      | 11713          | 298      | 11444   |
+
+It looked like hi/mr were 6–8× slower than English. Report:
+`eval/reports/latency_breakdown_20260907_094717.json`.
+
+### Token usage (sequential) — incomplete story
+
+Logged Groq `prompt_tokens` / `completion_tokens` via `generate_answer`.
+Completion lengths were similar across languages; sequential numbers still
+suggested much lower tok/s for hi/mr. That mixed a real signal with the
+same order confound.
+
+Report: `eval/reports/token_usage_20260907_103524.json`.
+
+### Revised finding — shuffled job order
+
+Re-ran token and latency evals with **shuffled** `(prompt × repeat)` jobs
+(`--seed 42`) so en/hi/mr are interleaved, plus a warmup call.
+
+**Evidence against pure language slowdown:**
+
+- Early jobs were often **~1–1.5 s across all three languages** (hi, mr, and en).
+- Later jobs slowed down for **English as well** (several en runs at ~7 s gen).
+- Hindi P50 in the shuffled latency run was **~2.4 s gen** (tok/s P50 ~128) —
+  faster than English in that particular shuffle.
+
+**What remains real:**
+
+| Factor | Evidence |
+| ------ | -------- |
+| API session / throttling | Early-fast / late-slow pattern for every language |
+| Large Marathi prompts | **mr_02** always ~15–25 s gen with ~2971 prompt tokens |
+| Residual Marathi cost | mr median still higher on average, but not the old 6–8× story |
+| Retrieval | Stable ~250–300 ms; not the budget owner |
+
+**Method lesson:** For multilingual latency comparisons, shuffle language
+order (or fully randomize jobs) and report P50/P95. Do not run languages
+in fixed blocks.
+
+Shuffled reports:
+
+- `eval/reports/token_usage_20260907_105334.json`
+- `eval/reports/latency_breakdown_20260907_105856.json`
+
+**Mitigation direction (not implemented yet):**
+
+- Document the tradeoff honestly in the portfolio write-up.
+- For demos: reduce context size on long document-list queries (especially mr).
+- Optionally use a faster model path for non-English if product latency matters.
