@@ -1,0 +1,732 @@
+{
+  "summary": {
+    "overall": {
+      "baseline": {
+        "n": 20,
+        "scheme_hit_rate": 1.0,
+        "section_hit_rate": 1.0
+      },
+      "rerank": {
+        "n": 20,
+        "scheme_hit_rate": 1.0,
+        "section_hit_rate": 0.65
+      },
+      "fixed_count": 0,
+      "regressed_count": 7
+    },
+    "by_language": {
+      "en": {
+        "baseline": {
+          "n": 8,
+          "scheme_hit_rate": 1.0,
+          "section_hit_rate": 1.0
+        },
+        "rerank": {
+          "n": 8,
+          "scheme_hit_rate": 1.0,
+          "section_hit_rate": 0.625
+        },
+        "fixed_count": 0,
+        "regressed_count": 3
+      },
+      "hi": {
+        "baseline": {
+          "n": 8,
+          "scheme_hit_rate": 1.0,
+          "section_hit_rate": 1.0
+        },
+        "rerank": {
+          "n": 8,
+          "scheme_hit_rate": 1.0,
+          "section_hit_rate": 0.625
+        },
+        "fixed_count": 0,
+        "regressed_count": 3
+      },
+      "mr": {
+        "baseline": {
+          "n": 4,
+          "scheme_hit_rate": 1.0,
+          "section_hit_rate": 1.0
+        },
+        "rerank": {
+          "n": 4,
+          "scheme_hit_rate": 1.0,
+          "section_hit_rate": 0.75
+        },
+        "fixed_count": 0,
+        "regressed_count": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q1",
+      "language": "en",
+      "question": "What is PM POSHAN Scheme?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ]
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q2",
+      "language": "en",
+      "question": "Who is eligible to benefit from PM POSHAN?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq"
+      ]
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q3",
+      "language": "en",
+      "question": "What kind of meals are provided under this scheme?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_04_doodh_sanjivani|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_04_doodh_sanjivani|details"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_04_doodh_sanjivani|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|benefit"
+      ]
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_eligibility",
+      "language": "en",
+      "question": "Who is eligible for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "eligibility"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": false
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": true,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|eligibility"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq"
+      ]
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_documents_required",
+      "language": "en",
+      "question": "What documents are required for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "documents_required"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": false
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": true,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|documents_required"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process"
+      ]
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_benefit",
+      "language": "en",
+      "question": "What is the benefit under PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "benefit"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": false
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": true,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|benefit"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ]
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_application_process",
+      "language": "en",
+      "question": "How do I apply for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "application_process"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ]
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_details",
+      "language": "en",
+      "question": "What is PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ]
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q1",
+      "language": "hi",
+      "question": "पीएम पोषण योजना क्या है?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_03_medical_checkup_assistance|faq",
+        "scheme_04_doodh_sanjivani|faq",
+        "scheme_01_pm_poshan|details"
+      ]
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q2",
+      "language": "hi",
+      "question": "पीएम पोषण से कौन लाभान्वित हो सकता है?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|benefit"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_03_medical_checkup_assistance|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_04_doodh_sanjivani|faq"
+      ]
+    },
+    {
+      "id": "hi_faq_scheme_01_pm_poshan_q3",
+      "language": "hi",
+      "question": "इस योजना के तहत किस तरह का भोजन प्रदान किया जाता है?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_04_doodh_sanjivani|faq",
+        "scheme_04_doodh_sanjivani|details"
+      ],
+      "rerank_sections": [
+        "scheme_02_vahan_aksmat_sahay|details",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_05_tablet_assistance|details",
+        "scheme_04_doodh_sanjivani|details"
+      ]
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_eligibility",
+      "language": "hi",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना के लिए कौन पात्र है?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "eligibility"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": false
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": true,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|eligibility"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process"
+      ]
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_documents_required",
+      "language": "hi",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना के लिए कौन से दस्तावेज चाहिए?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "documents_required"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": false
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": true,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|documents_required"
+      ],
+      "rerank_sections": [
+        "scheme_04_doodh_sanjivani|documents_required",
+        "scheme_01_pm_poshan|details",
+        "scheme_05_tablet_assistance|documents_required",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ]
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_benefit",
+      "language": "hi",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना का लाभ क्या है?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "benefit"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": false
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": true,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|benefit"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process"
+      ]
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_application_process",
+      "language": "hi",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना के लिए आवेदन कैसे करें?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "application_process"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|application_process"
+      ]
+    },
+    {
+      "id": "hi_template_scheme_01_pm_poshan_details",
+      "language": "hi",
+      "question": "पीएम पोषण-समग्र पोषण के लिए प्रधानमंत्री की व्यापक योजना क्या है?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "details"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_03_medical_checkup_assistance|benefit"
+      ]
+    },
+    {
+      "id": "mr_faq_scheme_01_pm_poshan_q1",
+      "language": "mr",
+      "question": "पीएम पोषण योजना म्हणजे काय?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_04_doodh_sanjivani|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_03_medical_checkup_assistance|faq"
+      ]
+    },
+    {
+      "id": "mr_faq_scheme_01_pm_poshan_q2",
+      "language": "mr",
+      "question": "पीएम पोषणचा लाभ घेण्यासाठी कोण पात्र आहे?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_03_medical_checkup_assistance|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_04_doodh_sanjivani|faq"
+      ]
+    },
+    {
+      "id": "mr_faq_scheme_01_pm_poshan_q3",
+      "language": "mr",
+      "question": "या योजनेअंतर्गत कोणत्या प्रकारचे जेवण दिले जाते?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "faq"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": false,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_04_doodh_sanjivani|faq",
+        "scheme_01_pm_poshan|faq"
+      ],
+      "rerank_sections": [
+        "scheme_03_medical_checkup_assistance|benefit",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|details",
+        "scheme_05_tablet_assistance|faq",
+        "scheme_03_medical_checkup_assistance|eligibility"
+      ]
+    },
+    {
+      "id": "mr_template_scheme_01_pm_poshan_eligibility",
+      "language": "mr",
+      "question": "पंतप्रधान पोषण-सर्वांगीण पोषणासाठी पंतप्रधानांची व्यापक योजना साठी कोण पात्र आहे?",
+      "expected": {
+        "scheme_id": "scheme_01_pm_poshan",
+        "section": "eligibility"
+      },
+      "baseline": {
+        "scheme_hit": true,
+        "section_hit": true
+      },
+      "rerank": {
+        "scheme_hit": true,
+        "section_hit": false
+      },
+      "fixed_by_rerank": false,
+      "regressed_by_rerank": true,
+      "baseline_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|eligibility"
+      ],
+      "rerank_sections": [
+        "scheme_01_pm_poshan|details",
+        "scheme_03_medical_checkup_assistance|details",
+        "scheme_03_medical_checkup_assistance|faq",
+        "scheme_01_pm_poshan|faq",
+        "scheme_01_pm_poshan|faq"
+      ]
+    }
+  ]
+}

@@ -303,3 +303,15 @@ def retrieve_with_timings(
     return _retriever.retrieve_with_timings(
         query, language, top_k, search_all_languages
     )
+
+def retrieve_with_rerank(query, language, top_k=20, top_n=5, use_rerank=True):
+    # 1) Existing pipeline: vector + section-intent (keep as-is)
+    candidates = retrieve(query, language=language, top_k=top_k)
+
+    if not use_rerank:
+        return candidates[:top_n]
+
+    # 2) Rerank shortlist
+    from pipeline.retrieval.reranker import Reranker
+    reranker = Reranker()  # or a module-level singleton
+    return reranker.rerank(query, candidates, top_n=top_n)

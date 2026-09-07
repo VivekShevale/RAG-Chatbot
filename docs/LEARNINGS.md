@@ -229,3 +229,35 @@ Shuffled reports:
 - Document the tradeoff honestly in the portfolio write-up.
 - For demos: reduce context size on long document-list queries (especially mr).
 - Optionally use a faster model path for non-English if product latency matters.
+
+---
+
+## Cross-encoder rerank evaluation (Phase B2)
+
+**Hypothesis:** Retrieve top-20 with the existing vector + section-intent pipeline, then rerank with a cross-encoder and keep top-5, to improve section precision over baseline top-5.
+
+**Setup:**
+- Baseline: `retrieve(top_k=5)` (multilingual-e5 + section-intent routing)
+- Rerank path: `retrieve(top_k=20)` → `cross-encoder/ms-marco-MiniLM-L-6-v2` → top 5
+- Metrics: scheme_hit, section_hit on golden items with known `scheme_id` + `expected_section`
+- Sample: first 20 evaluable items from `eval/golden_dataset/golden_questions.json` (en/hi/mr, FAQ + template section questions)
+- Script: `eval/scripts/eval_rerank.py`
+- Report: `eval/reports/rerank_eval_20260907_214004.json`
+
+**Results (n=20):**
+
+| Path | scheme_hit | section_hit | fixed | regressed |
+| ---- | ---------- | ----------- | ----- | --------- |
+| Baseline top-5 | 1.00 | **1.00** | — | — |
+| Rerank 20→5 | 1.00 | **0.65** | 0 | **7** |
+
+Per language: baseline section_hit stayed 1.0; rerank dropped to ~0.63–0.75 with regressions in en, hi, and mr. No case where baseline missed the section and rerank recovered it.
+
+**Interpretation:**
+- On this structured scheme corpus, vector search already finds the right **scheme**, and section-intent routing already secures the right **section** for keyword-clear questions.
+- A generic English MS MARCO cross-encoder is a weak fit for short, list-like scheme sections and for Hindi/Marathi. It often prefers fluent FAQ-style text over the exact structural chunk (`eligibility`, `documents_required`, etc.).
+- Adding this reranker would cost latency for **worse** section ranking.
+
+**Decision:** Do **not** enable cross-encoder rerank in the production retrieve → generate path. Keep `eval/scripts/eval_rerank.py` and the report as evidence the option was measured and rejected for this domain.
+
+**Lesson:** Second-stage reranking is not automatically better. Validate on labeled section targets before adopting; domain structure (fixed section types + intent routing) can outperform a generic CE.

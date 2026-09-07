@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "overall": {
+      "baseline": {
+        "n": 0,
+        "scheme_hit_rate": 0.0,
+        "section_hit_rate": 0.0
+      },
+      "rerank": {
+        "n": 0,
+        "scheme_hit_rate": 0.0,
+        "section_hit_rate": 0.0
+      },
+      "fixed_count": 0,
+      "regressed_count": 0
+    },
+    "by_language": {}
+  },
+  "results": []
+}
