@@ -10,6 +10,8 @@ rank-bm25
 
 # --- LLM (Groq) ---
 groq
+langchain-openai
+langchain-community
 
 # --- Structured output validation ---
 pydantic

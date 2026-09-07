@@ -1,0 +1,176 @@
+{
+  "summary": {
+    "result": "{'faithfulness': 0.8750}"
+  },
+  "n": 10,
+  "lang_filter": "en",
+  "faithfulness_only": true,
+  "per_row": [
+    {
+      "user_input": "What is PM POSHAN Scheme?",
+      "retrieved_contexts": [
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Q: What is the objective of PM POSHAN Scheme?\nA: **The scheme aims to:**",
+        "Offline\n\nThere is no application process for this scheme. PM POSHAN is equally applicable to all children who are studying in Government and Government – aided schools.",
+        "Q: Is this scheme part of a broader initiative?\nA: **Yes**, PM POSHAN operates under the umbrella of the Integrated Child Development Services (**ICDS**), which includes:"
+      ],
+      "response": "PM POSHAN is a centrally sponsored scheme by the Ministry of Education (Department of School Education & Literacy) that provides one hot cooked meal daily to children studying in Government and Government‑aided schools, aiming to improve their nutritional status and encourage regular school attendance.",
+      "faithfulness": 0.8
+    },
+    {
+      "user_input": "Who is eligible to benefit from PM POSHAN?",
+      "retrieved_contexts": [
+        "Q: Who is eligible to benefit from PM POSHAN?\nA: **All children studying in:**",
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Offline\n\nThere is no application process for this scheme. PM POSHAN is equally applicable to all children who are studying in Government and Government – aided schools.",
+        "Q: Is there any discrimination based on caste, religion, or gender under PM POSHAN?\nA: **No**. The scheme is **universal and inclusive**, and benefits are provided to **all eligible children** without any discrimination."
+      ],
+      "response": "All children studying in Government and Government‑aided schools are eligible to benefit from PM POSHAN.",
+      "faithfulness": NaN
+    },
+    {
+      "user_input": "What kind of meals are provided under this scheme?",
+      "retrieved_contexts": [
+        "Q: What kind of meals are provided under this scheme?\nA: The scheme provides one **hot cooked meal** per school day that meets specific calorie and protein norms. The meal includes food **grains, pulses, vegetables, oil/fat, and condiments.**",
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Q: What type of milk is provided under the scheme?\nA: Fortified flavored milk is provided under the scheme to enhance nutritional intake.",
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "The \"Doodh Sanjivani Scheme\" launched by the Women and Child Development Department, Gujarat, is a welfare initiative designed to improve the nutritional status of children and women in tribal and underdeveloped communities. The scheme benefits children aged 6 months to 6 years and pregnant and lactating mothers registered at Anganwadi centers. It covers 138 tribal and developing communities in 20 districts and is implemented through Anganwadi centers."
+      ],
+      "response": "The scheme provides one hot cooked meal per school day that includes grains, pulses, vegetables, oil/fat, and condiments.",
+      "faithfulness": 1.0
+    },
+    {
+      "user_input": "Who is eligible for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "retrieved_contexts": [
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "Offline\n\nThere is no application process for this scheme. PM POSHAN is equally applicable to all children who are studying in Government and Government – aided schools.",
+        "Q: Who is eligible to benefit from PM POSHAN?\nA: **All children studying in:**",
+        "Q: Is this scheme part of a broader initiative?\nA: **Yes**, PM POSHAN operates under the umbrella of the Integrated Child Development Services (**ICDS**), which includes:",
+        "1. The applicant must be a citizen of India.\n2. The applicant must be studying in a Primary or Upper Primary class (Class 1st to Class 8th) in a Government or a Government-aided school."
+      ],
+      "response": "All children who are Indian citizens and are studying in Class 1st to Class 8th (Primary or Upper Primary) in Government or Government‑aided schools are eligible for the PM POSHAN scheme.",
+      "faithfulness": NaN
+    },
+    {
+      "user_input": "What documents are required for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "retrieved_contexts": [
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Offline\n\nThere is no application process for this scheme. PM POSHAN is equally applicable to all children who are studying in Government and Government – aided schools.",
+        "Q: Is this scheme part of a broader initiative?\nA: **Yes**, PM POSHAN operates under the umbrella of the Integrated Child Development Services (**ICDS**), which includes:",
+        "Q: Is there any discrimination based on caste, religion, or gender under PM POSHAN?\nA: **No**. The scheme is **universal and inclusive**, and benefits are provided to **all eligible children** without any discrimination.",
+        "No documents are required for availing the benefits of this scheme."
+      ],
+      "response": "No documents are required for availing the benefits of the PM POSHAN scheme.",
+      "faithfulness": NaN
+    },
+    {
+      "user_input": "What is the benefit under PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "retrieved_contexts": [
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "Q: Is this scheme part of a broader initiative?\nA: **Yes**, PM POSHAN operates under the umbrella of the Integrated Child Development Services (**ICDS**), which includes:",
+        "Q: Is there any discrimination based on caste, religion, or gender under PM POSHAN?\nA: **No**. The scheme is **universal and inclusive**, and benefits are provided to **all eligible children** without any discrimination.",
+        "Q: How many children and schools are covered under PM POSHAN?\nA: The scheme benefits approximately more than **11.80 crore children** across **11.20 lakh schools** throughout India, making it one of the world’s largest school nutrition programs.",
+        "**Nutrition norm per child per day:**\n\n1. Primary: Calorie – 450; Protein - 12 gms\n2. Upper Primary: Calorie – 700; Protein - 20 gms\n\n**Food norms per child per day:**\n\n1. Primary: Food grains - 100 gms; Pulses - 20 gms; Vegetables - 50 gms; Oil & fat - 5 gms, Salt & condiments - As per need.\n2. Upper Primary: Food grains - 150 gms; Pulses - 30 gms; Vegetables - 75 gms; Oil & fat – 7.5 gms, Salt & condiments - As per need.\n\nUnder the Scheme, there is the provision of hot cooked meals to children of pre-schools or Bal Vatika (before class I) in primary schools also in addition to the 11.80 crore children of classes I to VIII studying in 11.20 lakh schools."
+      ],
+      "response": "PM POSHAN provides a hot‑cooked meal to eligible children. The benefit includes daily nutrition norms of 450 kcal and 12 g protein for primary‑level children and 700 kcal and 20 g protein for upper‑primary children, along with specific food‑grain, pulse, vegetable, oil and salt quantities per child per day (e.g., 100 g grains, 20 g pulses, 50 g vegetables, 5 g oil for primary; 150 g grains, 30 g pulses, 75 g vegetables, 7.5 g oil for upper‑primary).",
+      "faithfulness": 0.95
+    },
+    {
+      "user_input": "How do I apply for PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "retrieved_contexts": [
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "Offline\n\nThere is no application process for this scheme. PM POSHAN is equally applicable to all children who are studying in Government and Government – aided schools.",
+        "Q: Is this scheme part of a broader initiative?\nA: **Yes**, PM POSHAN operates under the umbrella of the Integrated Child Development Services (**ICDS**), which includes:",
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Q: Who is eligible to benefit from PM POSHAN?\nA: **All children studying in:**"
+      ],
+      "response": "There is no application process for PM POSHAN; it is automatically applicable to all children studying in Government and Government‑aided schools.",
+      "faithfulness": NaN
+    },
+    {
+      "user_input": "What is PM POSHAN - Prime Minister's Overarching Scheme For Holistic Nourishment?",
+      "retrieved_contexts": [
+        "Q: What is PM POSHAN Scheme?\nA: **PM POSHAN** is a centrally sponsored scheme by the **Ministry of Education** that provides hot cooked meals to children studying in Government and Government-aided schools to improve their nutritional status and encourage **regular school attendance**.",
+        "PM POSHAN is a centrally sponsored scheme by the Department of School Education & Literacy, Ministry of Education. Under this scheme, one hot cooked meal will be provided to the children studying in Government and Government – aided schools. The Scheme is implemented across the country covering all the eligible children without any discrimination of gender and social class.\n\nThe main objectives of the PM POSHAN Abhiyaan are to address two of the pressing problems for the majority of children in India, viz. hunger and education by improving the nutritional status of eligible children in Government and Government-aided schools as well as encouraging poor children, belonging to disadvantaged sections, to attend school more regularly and help them concentrate on classroom activities.\n\nPOSHAN Abhiyaan is one of the many schemes under the umbrella scheme \"Integrated Child Development Services Scheme (ICDS)\". ICDS also includes Anganwadi Services Scheme, Pradhan Mantri Matru Vandana Yojana, and Scheme for Adolescent Girls.",
+        "Q: Is this scheme part of a broader initiative?\nA: **Yes**, PM POSHAN operates under the umbrella of the Integrated Child Development Services (**ICDS**), which includes:",
+        "Q: What is the objective of PM POSHAN Scheme?\nA: **The scheme aims to:**",
+        "Offline\n\nThere is no application process for this scheme. PM POSHAN is equally applicable to all children who are studying in Government and Government – aided schools."
+      ],
+      "response": "PM POSHAN (Prime Minister's Overarching Scheme for Holistic Nourishment) is a centrally‑sponsored scheme of the Ministry of Education that provides one hot cooked meal each day to children studying in Government and Government‑aided schools, aiming to improve their nutritional status and encourage regular school attendance.",
+      "faithfulness": 0.5
+    },
+    {
+      "user_input": "What is the highest amount of financial coverage available for the most severe road accident injuries under this medical assistance program?",
+      "retrieved_contexts": [
+        "Q: What is the highest amount of financial coverage available for the most severe road accident injuries under this medical assistance program?\nA: The maximum treatment package available is ₹45,000 for Pelvic Injury-External Fixation with Implant, which includes stabilization with external fixation and haemodynamic stabilization.",
+        "Q: How much financial assistance is available for treating simple wounds and basic injury care following a minor road traffic accident?\nA: Package 1 provides ₹1,000 for treating simple wounds, including tetanus vaccination, analgesics, antibiotics, general condition check, cleaning, suturing and dressing.",
+        "Launched in 2020, the Vahan Aksmat Sahay Scheme is implemented by the Health and Family Welfare Department, Government of Gujarat. It aims to provide immediate medical assistance and financial support to road traffic accident victims so that timely treatment is provided and mortality is reduced. The scheme provides treatment packages from ₹1,000 to ₹45,000 for different accident-related injuries, including emergency procedures, surgery and hospitalization, at empanelled hospitals.",
+        "Q: What is the coverage amount available for head injury cases that require Intensive Care Unit stay with ventilator support?\nA: Package 21 provides ₹15,000 for head injury with Intensive Care Unit stay, including ventilator support.",
+        "- The applicant must be a victim of a road traffic accident.\n- The applicant must require immediate medical treatment for injuries sustained in the accident.\n- The applicant must receive treatment at a hospital empanelled under the Vahan Aksmat Sahay Scheme.\n- A Medico Legal Case must be registered for the accident.\n- Police intimation with acknowledgment must be available for the road traffic accident.",
+        "The scheme provides cashless medical treatment at empanelled hospitals. Treatment packages range from ₹1,000 to ₹45,000 and cover different types of injuries and emergency care.\n\n### Package-wise Benefits\n\n- Simple Injury-I (Package 1): ₹1,000 for treating simple wounds, tetanus vaccination, analgesics, antibiotics, general condition check, cleaning, suturing and dressing.\n- Simple Injury-II (Package 2): ₹2,500 including face and scalp wounds, change of soiled cloth with disposable dressing, intravenous line and suturing of multiple lacerated wounds.\n- Deglove Injury of Extremities (Package 3): ₹12,000 for wound debridement in the operation theatre under anaesthesia, intravenous line, intravenous antibiotics, remaining wound suturing and inpatient treatment.\n- Simple Fracture Without Anaesthesia (Package 4): ₹1,500 for closed reduction, cleaning, suturing and dressing of wounds, and fracture stabilization with a splint.\n- Closed Fracture Reduction Under Anaesthesia for First Fracture (Package 5): ₹4,000 including closed fracture reduction under short general anaesthesia, plastering and inpatient treatment.\n- Closed Fracture Reduction Under Anaesthesia for Additional Fracture (Package 6): ₹5,500 for additional fractures with treatment similar to Package 5.\n- Dislocation Reduction Under Anaesthesia (Package 7): ₹8,000 for joint dislocation reduction under general anaesthesia and inpatient treatment.\n- Open Reduction Internal Fixation-Small Bone (Package 8): ₹17,250 including internal/external fixation of compound fractures, flap cover and inpatient treatment.\n- Open Reduction Internal Fixation-Large Bone (Package 9): ₹40,250 for large bone fractures with treatment similar to Package 8.\n- Inter Costal Drainage One Side (Package 10): ₹8,000 including intercostal drainage and inpatient treatment.\n- Inter Costal Drainage Bilateral (Package 11): ₹11,000 for bilateral intercostal drainage with inpatient treatment.\n- Inter Costal Drainage Bilateral with Intensive Care Unit (Package 12): ₹12,000 including Intensive Care Unit stay.\n- Inter Costal Drainage Bilateral with Intensive Care Unit and Ventilator (Package 13): ₹14,000 including ventilator support.\n- Blunt Injury Abdomen (Package 14): ₹10,000 for suspected blunt abdominal injury with stabilization as an inpatient.\n- Blunt Injury Abdomen with Intensive Care Unit Stay (Package 15): ₹12,000 including Intensive Care Unit stay.\n- Supra Pubic Cystostomy (Package 16): ₹5,000 including supra pubic cystostomy and inpatient treatment.\n- Immobilization for Suspected Spine Injury (Package 17): ₹5,000 for non-operative management using a spinal brace/collar.\n- Cervical Spine Injury-Skeletal Tong Traction (Package 17): ₹25,000 with tong traction.\n- Spine Injuries with Computed Tomography/Magnetic Resonance Imaging (Package 18): ₹7,000 including Computed Tomography scan/Magnetic Resonance Imaging.\n- Tracheostomy (Package 19): ₹5,000 for the tracheostomy procedure.\n- Head Injury with Intensive Care Unit Stay Conservative (Package 20): ₹7,000 for non-operative management with Intensive Care Unit stay.\n- Head Injury with Intensive Care Unit Stay with Ventilator (Package 21): ₹15,000 including ventilator support.\n- Head Injury with Intensive Care Unit Surgical Intervention (Package 22): ₹25,000 for operative management including burr hole surgery.\n- Blood Transfusion (Package 23): ₹1,500 per unit, with a maximum admissible limit of 3 units.\n- Road Traffic Accident Injuries Associated with Burns Conservative Management (Package 24): ₹4,000 for conservative management of burns.\n- Intensive Care Unit Stay Other than Head Injury (Package 25): ₹4,000 for non-head injury Intensive Care Unit care.\n- Pelvic Injury-Conservative Management (Package 26): ₹20,000 for non-operative management with pelvic belt and traction.\n- Pelvic Injury-External Fixation with Implant (Package 27): ₹45,000 for stabilization with external fixation and haemodynamic stabilization.\n\n**Mode of Disbursement:** Cashless treatment is provided at empanelled hospitals without upfront payment."
+      ],
+      "response": "The highest financial coverage available is ₹45,000, provided under Package 27 for Pelvic Injury‑External Fixation with Implant.",
+      "faithfulness": 1.0
+    },
+    {
+      "user_input": "Do I need to pay any upfront costs at the hospital when I receive emergency treatment for my road accident injuries?",
+      "retrieved_contexts": [
+        "Q: Do I need to pay any upfront costs at the hospital when I receive emergency treatment for my road accident injuries?\nA: No. Empanelled hospitals provide completely cashless treatment, so neither you nor your family members need to make upfront payments for covered treatments.",
+        "Q: Can I receive treatment at any hospital for my road accident injuries, or are there specific hospital requirements under this program?\nA: You must receive treatment at a hospital empanelled under the Vahan Aksmat Sahay Scheme to be eligible for benefits.",
+        "### At Time of Treatment\n- Scanned copy of the Medico Legal Case Register showing details of injury.\n- Police intimation copy with police acknowledgment.\n- Two photographs showing the wound before and after treatment, with the patient's face clearly visible along with the treating doctor, including a patient photograph for identity.\n- Out-Patient Record/Case Sheet showing the treatment given, including Operation Theatre notes if applicable.\n- Investigation report.\n- Hospital bill.\n\n### Package-Specific Additional Documents\n- **Fracture cases:** X-rays to rule out fracture and X-rays showing the fracture before and after stabilization.\n- **Chest injuries:** Chest X-ray before and after intercostal drainage.\n- **Abdominal injuries:** Blood investigation, chest X-ray, X-ray of erect abdomen, ultrasound, Computed Tomography scan report if required, and Electrocardiogram with report if required.\n- **Spine injuries:** X-ray spine anterior-posterior/lateral and Computed Tomography/Magnetic Resonance Imaging.\n- **Head injuries:** Computed Tomography scan report and other relevant investigations.",
+        "Q: How much financial assistance is available for treating simple wounds and basic injury care following a minor road traffic accident?\nA: Package 1 provides ₹1,000 for treating simple wounds, including tetanus vaccination, analgesics, antibiotics, general condition check, cleaning, suturing and dressing.",
+        "**Offline**\n\n1. **Emergency Treatment at Empanelled Hospital:** In case of a road traffic accident, the victim should be immediately taken to the nearest empanelled hospital under the scheme for emergency treatment. The hospital provides immediate care according to the severity of injuries.\n2. **Medico Legal Case Registration:** Hospital authorities ensure that a Medico Legal Case is registered with the local police station and coordinate with the police for accident and injury documentation.\n3. **Treatment Package Assessment:** The treating doctor assesses the nature and severity of injuries and determines the appropriate package from the 27 available packages.\n4. **Documentation Collection:** Hospital staff collect the required Medico Legal Case details, police intimation, before-and-after treatment photographs, medical records, investigation reports and hospital bills.\n5. **Cashless Treatment Provision:** The empanelled hospital provides cashless treatment according to the approved package amount. No upfront payment is required for covered treatment.\n6. **Claim Processing and Settlement:** The hospital submits the claim and required documents to the scheme authorities. Payment is settled directly between the government and the empanelled hospital.\n7. **Discharge and Follow-up Care:** After treatment, the patient is discharged with a discharge summary and follow-up instructions. Patients should retain copies of medical and treatment records."
+      ],
+      "response": "No, you do not need to pay any upfront costs. Empanelled hospitals provide completely cashless treatment for covered emergency injuries.",
+      "faithfulness": 1.0
+    }
+  ],
+  "meta_rows": [
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q1",
+      "language": "en"
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q2",
+      "language": "en"
+    },
+    {
+      "id": "en_faq_scheme_01_pm_poshan_q3",
+      "language": "en"
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_eligibility",
+      "language": "en"
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_documents_required",
+      "language": "en"
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_benefit",
+      "language": "en"
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_application_process",
+      "language": "en"
+    },
+    {
+      "id": "en_template_scheme_01_pm_poshan_details",
+      "language": "en"
+    },
+    {
+      "id": "en_faq_scheme_02_vahan_aksmat_sahay_q1",
+      "language": "en"
+    },
+    {
+      "id": "en_faq_scheme_02_vahan_aksmat_sahay_q2",
+      "language": "en"
+    }
+  ]
+}

@@ -261,3 +261,36 @@ Per language: baseline section_hit stayed 1.0; rerank dropped to ~0.63–0.75 wi
 **Decision:** Do **not** enable cross-encoder rerank in the production retrieve → generate path. Keep `eval/scripts/eval_rerank.py` and the report as evidence the option was measured and rejected for this domain.
 
 **Lesson:** Second-stage reranking is not automatically better. Validate on labeled section targets before adopting; domain structure (fixed section types + intent routing) can outperform a generic CE.
+
+---
+
+## RAGAS faithfulness baseline (Phase C2)
+
+**Goal:** Measure how well generated answers stay grounded in retrieved context (anti-hallucination), per language.
+
+**Setup:**
+- Library: `ragas==0.3.9` (0.4.x fails to import with modern `langchain-community` because of a removed `ChatVertexAI` path)
+- Import shim: `eval/scripts/_ragas_import_fix.py`
+- Runner: `eval/scripts/run_ragas_eval.py`
+- Pipeline: existing `retrieve` + `generate_answer` (Groq)
+- Judge LLM: Groq `qwen/qwen3.8-27b` via `LangchainLLMWrapper`
+- Metric: **faithfulness only** (`--faithfulness-only`). `answer_relevancy` was skipped because it defaults to OpenAI embeddings and requires `OPENAI_API_KEY`.
+- Sample: 10 golden questions per language from `eval/golden_dataset/golden_questions.json`
+
+**Results:**
+
+| Language | n  | Faithfulness | Report |
+| -------- | -- | ------------ | ------ |
+| English  | 10 | 0.875        | `eval/reports/ragas_eval_20260907_230523.json` |
+| Hindi    | 10 | 1.000        | `eval/reports/ragas_eval_20260907_232549.json` |
+| Marathi  | 10 | 0.971        | `eval/reports/ragas_eval_20260907_233734.json` |
+
+**Notes:**
+- Several judge jobs raised `TimeoutError` (~3 minute batch wall time). Failed jobs can slightly depress averages (especially English).
+- Scores still indicate strong grounding: answers largely stick to retrieved scheme chunks.
+- Hindi was perfect on this sample; Marathi near-perfect; English solid but lowest of the three here.
+
+**Operational lessons:**
+1. Pin or shim RAGAS carefully against LangChain churn; document the shim rather than fighting upstream mid-project.
+2. Prefer `--faithfulness-only` unless embeddings for relevancy are explicitly configured.
+3. For cleaner scores later: increase judge timeout, reduce concurrency, or retry 
