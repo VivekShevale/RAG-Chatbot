@@ -294,3 +294,53 @@ Per language: baseline section_hit stayed 1.0; rerank dropped to ~0.63–0.75 wi
 1. Pin or shim RAGAS carefully against LangChain churn; document the shim rather than fighting upstream mid-project.
 2. Prefer `--faithfulness-only` unless embeddings for relevancy are explicitly configured.
 3. For cleaner scores later: increase judge timeout, reduce concurrency, or retry 
+
+---
+
+## Groq model comparison (Phase C3, cloud)
+
+Compared three Groq chat models on the same RAG pipeline (retrieve top-5 +
+structured JSON generation). Jobs were **shuffled** (`seed=42`) across
+model × language so API session order would not bias latency.
+
+**Models:**
+- `openai/gpt-oss-120b`
+- `openai/gpt-oss-20b`
+- `qwen/qwen3.8-27b`
+
+**Setup:**
+- 15 golden questions (5 en / 5 hi / 5 mr) → 45 jobs
+- Warmup call before timed runs
+- Metrics: JSON validity (`raw_valid`), generation latency, completion tok/s
+- Script: `eval/scripts/compare_groq_models.py`
+- Token usage returned from Groq via `generate_answer` → `token_usage` / `usage`
+
+**Results (with tokens):**
+
+| Model | JSON valid | gen P50 (ms) | gen P95 (ms) | mean tok/s |
+| ----- | ---------- | ------------ | ------------ | ---------- |
+| openai/gpt-oss-120b | 1.00 | 1206 | 1652 | 219 |
+| qwen/qwen3.8-27b | 1.00 | 786 | 1747 | 168 |
+| openai/gpt-oss-20b | 1.00 | 970 | 5998 | 258 |
+
+Report: `eval/reports/groq_model_compare_20260908_002719.json`  
+(Earlier run without tokens: `eval/reports/groq_model_compare_20260908_001838.json`)
+
+**Findings:**
+- All three models achieved **100% structured JSON** validity on this set.
+- **120b** had the most **stable tail latency** (lowest P95) and consistent
+  timing across en/hi/mr — best default for production.
+- **Qwen 3.8 27B** had the best **median** latency but occasional slow
+  outliers (especially one Marathi job).
+- **20b** posted the highest average tok/s but the **worst long tail**
+  (multi-second spikes to ~6–10 s), so it is a poor sole production default
+  despite looking “fast” on mean tok/s.
+
+**Decision:** Default production model = `openai/gpt-oss-120b`
+(`GROQ_MODEL` env / `generate.py` default). Keep Qwen as a fast alternative
+when median latency matters more than P95. Do not prefer 20b on latency
+alone without checking P95.
+
+**Method lesson:** Always shuffle multi-model / multi-language jobs and
+report P50/P95, not only means — same confound pattern as the Phase B6
+latency study.
