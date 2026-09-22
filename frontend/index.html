@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scheme Assistant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo">
+          <span class="logo-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+          <div class="logo-text">
+            <strong>Scheme Assistant</strong>
+            <span>Maharashtra · grounded RAG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-center">
+        <div class="seg" id="langSeg" role="tablist" aria-label="Language">
+          <button type="button" class="seg-btn active" data-lang="en" role="tab">EN</button>
+          <button type="button" class="seg-btn" data-lang="hi" role="tab">HI</button>
+          <button type="button" class="seg-btn" data-lang="mr" role="tab">MR</button>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <div class="live">
+          <span class="live-dot" id="statusDot"></span>
+          <span id="statusText">Ready</span>
+        </div>
+        <button type="button" class="ghost-btn" id="btnNew" title="New chat">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button type="button" class="ghost-btn" id="btnTheme" title="Theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="stage">
+      <div class="stage-inner" id="chatScroll">
+        <section class="hero" id="welcome">
+          <p class="eyebrow">Government scheme help · EN / हिंदी / मराठी</p>
+          <h1>Ask clearly. Get cited answers.</h1>
+          <p class="lead">
+            Eligibility, documents, benefits, and application steps — answered only from retrieved scheme text.
+          </p>
+          <div class="prompt-grid" id="promptGrid"></div>
+        </section>
+
+        <div class="thread" id="messages"></div>
+      </div>
+    </div>
+
+    <footer class="dock">
+      <form class="composer" id="composer">
+        <div class="composer-box">
+          <textarea
+            id="input"
+            rows="1"
+            placeholder="Ask about a scheme — eligibility, documents, benefits…"
+            autocomplete="off"
+          ></textarea>
+          <div class="composer-bar">
+            <span class="hint"><i class="fa-solid fa-lock"></i> Citation-backed</span>
+            <button type="submit" class="primary-btn" id="btnSend">
+              <span>Send</span>
+              <i class="fa-solid fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </footer>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
