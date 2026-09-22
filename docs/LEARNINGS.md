@@ -344,3 +344,30 @@ alone without checking P95.
 **Method lesson:** Always shuffle multi-model / multi-language jobs and
 report P50/P95, not only means — same confound pattern as the Phase B6
 latency study.
+
+## Cross-language retrieval (Eval 13)
+
+Ran `eval/scripts/cross_language_retrieval.py` on the full 120-question
+golden set (top_k=5). Each question was retrieved twice: **same-lang**
+(language filter on) and **all-lang** (`search_all_languages=True`).
+
+| Query lang | n | same scheme | same section | all scheme | all section | cross-lingual scheme hit |
+| ---------- | - | ----------- | ------------ | ---------- | ----------- | ------------------------ |
+| overall | 120 | 99.2% | 98.3% | 99.2% | 62.5% | 78.3% |
+| en | 40 | 100% | 100% | 100% | 70% | 42.5% |
+| hi | 40 | 100% | 97.5% | 100% | 60% | 95% |
+| mr | 40 | 97.5% | 97.5% | 97.5% | 57.5% | 97.5% |
+
+**Findings:**
+- **Same-language retrieval is the right production default** — near-perfect
+  scheme + section hits with the language filter.
+- **Multilingual-e5 does provide cross-lingual signal** — with no language
+  filter, scheme hit stays ~99%, and hi/mr queries often retrieve chunks in
+  another language.
+- **Section precision falls without a language filter** (98% → 63%) because
+  top-5 is shared across three languages; the correct section is crowded out
+  more often. Keep the language filter for product quality.
+- English queries are less “cross-lingual” in ranking (42.5%) — same-language
+  English chunks usually win, which is desirable for en users.
+
+Report: `eval/reports/cross_language_retrieval_20260922_212614.json`
